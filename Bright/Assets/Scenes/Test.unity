@@ -247,9 +247,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c7744badd120074d81420d3ff85db62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomMaxWidth: 21
-  roomMaxHeight: 21
-  maxRoomNumber: 10
-  numberOfRooms: 0
-  levels: []
-  selectedLevel: 0
+  roomMaxWidth: 25
+  roomMaxHeight: 25
+  maxRoomNumber: 15
