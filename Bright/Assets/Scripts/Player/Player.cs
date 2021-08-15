@@ -4,29 +4,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Vector2 input;
-    public float speed;
-    public Rigidbody2D rigid;
-
-    public InteractState interactState = InteractState.Idle;
-
     public WispMode wispMode = WispMode.Idle;
     public WispMode previousMode;
+
+    public PlayerPhysics physics;
 
     public void Update()
     {
         Keypress();
         Interaction();
-
-        switch (interactState)
-        {
-            case InteractState.Idle:
-                input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-                break;
-            case InteractState.Occupied:
-                input = Vector2.zero;
-                break;
-        }
 
         switch (wispMode)
         {
@@ -48,14 +34,14 @@ public class Player : MonoBehaviour
                 previousMode = wispMode;
             }
             wispMode = WispMode.Healing;
-            interactState = InteractState.Occupied;
+            physics.interactState = InteractState.Slowed;
 
             Healing();
         }
         else if (Input.GetKeyUp(GameManager.keybind["Heal"]))
         {
             wispMode = previousMode;
-            interactState = InteractState.Idle;
+            physics.interactState = InteractState.Idle;
 
             ResetHealing();
         }
@@ -78,23 +64,13 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(GameManager.keybind["Interact"]))
         { 
         
-            }
+        }
     }
-
-    public void FixedUpdate()
-    {
-        Movement();
-    }
-
-    public void Movement()
-    {
-        rigid.velocity = input * speed;
-    }
-
-
 
     public void Blade()
     {
+        physics.PlayerRotation(WispMode.Blade);
+
         if (Input.GetKeyDown(GameManager.keybind["Melee"]))
         {
 
@@ -103,22 +79,7 @@ public class Player : MonoBehaviour
 
     public void Projectile()
     {
-        if (Input.GetKey(GameManager.keybind["ShootUp"]))
-        {
-
-        }
-        else if (Input.GetKey(GameManager.keybind["ShootDown"]))
-        { 
-        
-        }
-        else if (Input.GetKey(GameManager.keybind["ShootLeft"]))
-        {
-
-        }
-        else if (Input.GetKey(GameManager.keybind["ShootRight"]))
-        {
-
-        }
+        physics.PlayerRotation(WispMode.Projectile);
     }
 
     public void Healing()
@@ -130,12 +91,6 @@ public class Player : MonoBehaviour
     { 
     
     }
-}
-
-public enum InteractState
-{ 
-    Idle,
-    Occupied
 }
 
 public enum WispMode

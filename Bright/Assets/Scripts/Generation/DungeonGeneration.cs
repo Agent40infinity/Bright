@@ -6,11 +6,18 @@ public class DungeonGeneration : MonoBehaviour
 {
     public int roomMaxWidth;
     public int roomMaxHeight;
+    public Vector2Int roomRange;
     public int maxRoomNumber;
     private int numberOfRooms;
     public string[,] roomLayout;
-    public List<int[]> generateRoomCoords = new List<int[]>();
-    private int[] startRoom = new int[2];
+    public List<Vector2Int> generateRoomCoords = new List<Vector2Int>();
+    private Vector2Int startRoom;
+    public Vector2Int roomDimensions;
+    public Transform floorParent;
+
+    public float generationChance;
+    public int generateOffset;
+
 
     public Dictionary<string, int> directions = new Dictionary<string, int>
     {
@@ -20,7 +27,10 @@ public class DungeonGeneration : MonoBehaviour
         { "Down", -1 },
     };
 
-    private float[] generationChance = { 2.5f, 5, 7.5f, 10};
+    public int FloorSize(Vector2Int maxRooms)
+    {
+        return Random.Range(maxRooms.x, maxRooms.y);
+    }
 
     public void Start()
     {
@@ -29,24 +39,26 @@ public class DungeonGeneration : MonoBehaviour
 
     public void GenerationCall()
     {
+        maxRoomNumber = FloorSize(roomRange);
         GenerationStart();
     }
 
     public void GenerationStart()
     {
         numberOfRooms = maxRoomNumber;
-        startRoom[0] = roomMaxWidth / 2;
-        startRoom[1] = roomMaxWidth / 2;
+
+        startRoom = new Vector2Int(roomMaxWidth / 2, roomMaxWidth / 2);
 
         roomLayout = new string[roomMaxWidth, roomMaxHeight];
-        roomLayout[startRoom[0], startRoom[1]] = "S";
+        roomLayout[startRoom.x, startRoom.y] = "S";
 
         GenerateRoomLayout();
 
         switch (GeneratedCorrectly())
         {
             case false:
-                Debug.Log("Generation failed, re-starting!");
+                Debug.Log("Generation failed, re-starting!" + System.Environment.NewLine + "Number of Rooms Left: " + numberOfRooms);
+                generateRoomCoords.Clear();
                 GenerationStart();
                 break;
             case true:
@@ -57,14 +69,11 @@ public class DungeonGeneration : MonoBehaviour
 
     public void GenerateRoomLayout()
     {
-        int[] selectedRoom = { startRoom[0], startRoom[1] };
-
-        GenerateAjacentRooms(selectedRoom);
+        generateRoomCoords.Add(new Vector2Int(startRoom.x, startRoom.y));
 
         for (int i = 0; i < generateRoomCoords.Count; i++)
         {
-            selectedRoom = generateRoomCoords[i];
-            GenerateAjacentRooms(selectedRoom);
+            GenerateAjacentRooms(generateRoomCoords[i]);
         }
 
         for (int x = 0; x < roomLayout.GetLength(0); x++)
@@ -80,100 +89,97 @@ public class DungeonGeneration : MonoBehaviour
         MatrixDebug.CheckMatrix(roomLayout);
     }
 
-    public void GenerateAjacentRooms(int[] selectedRoom)
+    public void GenerateAjacentRooms(Vector2Int selectedRoom)
     {
         if (numberOfRooms > 0)
         {
-            List<string> possibleSides = CheckSides(selectedRoom);
+            List<Vector2Int> sidesToAdd = AddSides(selectedRoom);
 
-            List<string> generationOrder = GetSideOrder(possibleSides);
-
-            for (int i = generationOrder.Count - 1; i >= 0; i--)
+            for (int i = 0; i < sidesToAdd.Count; i++)
             {
-
-                if (CheckChance(generationChance[i]) && numberOfRooms > 0)
+                if (CheckChance(generationChance) && numberOfRooms > 0)
                 {
-                    switch (generationOrder[i])
-                    {
-                        case "Left":
-                            roomLayout[selectedRoom[0] + directions["Left"], selectedRoom[1]] = "R";
-                            generateRoomCoords.Add(new int[] { selectedRoom[0] + directions["Left"], selectedRoom[1] });
-                            numberOfRooms--;
-                            break;
-                        case "Right":
-                            roomLayout[selectedRoom[0] + directions["Right"], selectedRoom[1]] = "R";
-                            generateRoomCoords.Add(new int[] { selectedRoom[0] + directions["Right"], selectedRoom[1] });
-                            numberOfRooms--;
-                            break;
-                        case "Up":
-                            roomLayout[selectedRoom[0], selectedRoom[1] + directions["Up"]] = "R";
-                            generateRoomCoords.Add(new int[] { selectedRoom[0], selectedRoom[1] + directions["Up"] });
-                            numberOfRooms--;
-                            break;
-                        case "Down":
-                            roomLayout[selectedRoom[0], selectedRoom[1] + directions["Down"]] = "R";
-                            generateRoomCoords.Add(new int[] { selectedRoom[0], selectedRoom[1] + directions["Down"] });
-                            numberOfRooms--;
-                            break;
-                        default:
-                            Debug.Log("Error Log: Generation attempt failed");
-                            return;
-                    }
+                    roomLayout[sidesToAdd[i].x, sidesToAdd[i].y] = "R";
+                    generateRoomCoords.Add(new Vector2Int(sidesToAdd[i].x, sidesToAdd[i].y));
+                    numberOfRooms--;
                 }
             }
         }
         else
         {
             return;
-        }       
+        }
     }
 
-    public List<string> CheckSides(int[] selectedRoom)
+    public List<Vector2Int> AddSides(Vector2Int selectedRoom)
     {
-        List<string> temp = new List<string>();
+        List<Vector2Int> temp = new List<Vector2Int>();
+        List<Vector2Int> avaliableSides = CheckSides(selectedRoom);
+
+        for (int i = 0; i < avaliableSides.Count; i++)
+        {
+            if (CheckNeighbour(avaliableSides[i]))
+            {
+                temp.Add(avaliableSides[i]);
+            }
+        }
         
-        if (roomLayout[selectedRoom[0] + directions["Left"], selectedRoom[1]] == null)
-        {
-            temp.Add("Left");
-        }
-        if (roomLayout[selectedRoom[0] + directions["Right"], selectedRoom[1]] == null)
-        {
-            temp.Add("Right");
-        }
-        if (roomLayout[selectedRoom[0], selectedRoom[1] + directions["Up"]] == null)
-        {
-            temp.Add("Up");
-        }
-        if (roomLayout[selectedRoom[0], selectedRoom[1] + directions["Down"]] == null)
-        {
-            temp.Add("Down");
-        }
+        return temp;
+    }
 
-        //for (int i = 0; i < temp.Count; i++)
-        //{
-        //    Debug.Log("CheckSides " + i + ": " + temp[i]);
-        //}
+    public List<Vector2Int> CheckSides(Vector2Int selectedRoom)
+    {
+        List<Vector2Int> temp = new List<Vector2Int>();
+
+        if (roomLayout[selectedRoom.x + directions["Left"], selectedRoom.y] == null)
+        {
+            temp.Add(new Vector2Int(selectedRoom.x + directions["Left"], selectedRoom.y));
+        }
+        if (roomLayout[selectedRoom.x + directions["Right"], selectedRoom.y] == null)
+        {
+            temp.Add(new Vector2Int(selectedRoom.x + directions["Right"], selectedRoom.y));
+        }
+        if (roomLayout[selectedRoom.x, selectedRoom.y + directions["Up"]] == null)
+        {
+            temp.Add(new Vector2Int(selectedRoom.x, selectedRoom.y + directions["Up"]));
+        }
+        if (roomLayout[selectedRoom.x, selectedRoom.y + directions["Down"]] == null)
+        {
+            temp.Add(new Vector2Int(selectedRoom.x, selectedRoom.y + directions["Down"]));
+        }
 
         return temp;
     }
 
-    public List<string> GetSideOrder(List<string> sides)
+    public bool CheckNeighbour(Vector2Int neighbourRoom)
     {
-        List<string> temp = new List<string>();
+        int counter = 0;
 
-        for (int i = sides.Count - 1; i >= 0; i--)
+        if (roomLayout[neighbourRoom.x + directions["Left"], neighbourRoom.y] != null)
         {
-            int chance = Random.Range(0, sides.Count);
-            temp.Add(sides[chance]);
-            sides.RemoveAt(chance);
+            counter++;
+        }
+        if (roomLayout[neighbourRoom.x + directions["Right"], neighbourRoom.y] != null)
+        {
+            counter++;
+        }
+        if (roomLayout[neighbourRoom.x, neighbourRoom.y + directions["Up"]] != null)
+        {
+            counter++;
+        }
+        if (roomLayout[neighbourRoom.x, neighbourRoom.y + directions["Down"]] != null)
+        {
+            counter++;
         }
 
-        //for (int i = 0; i < temp.Count; i++)
-        //{
-        //    Debug.Log("GetSideOrder " + i + ": " + temp[i]);
-        //}
-
-        return temp;
+        if (counter > 1 || counter == 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }    
     }
 
     public bool CheckChance(float expected)
@@ -190,27 +196,14 @@ public class DungeonGeneration : MonoBehaviour
 
     public bool GeneratedCorrectly()
     {
-        int roomCounter = 0;
-
-        for (int x = 0; x < roomLayout.GetLength(0); x++)
-        {
-            for (int y = 0; y < roomLayout.GetLength(1); y++)
-            {
-                switch (roomLayout[x, y])
-                {
-                    case "R":
-                        roomCounter++;
-                        break;
-                }
-            }
-        }
-
-        if (roomCounter < maxRoomNumber)
+        if (numberOfRooms > 0)
         {
             return false;
         }
-
-        return true;
+        else
+        {
+            return true;
+        }
     }
 
     public void BuildRoomLayout()
@@ -222,10 +215,10 @@ public class DungeonGeneration : MonoBehaviour
                 switch (roomLayout[y, x])
                 {
                     case "S":
-                        Instantiate(Resources.Load("Prefabs/Start") as GameObject, new Vector2(x, -y), Quaternion.identity);
+                        Instantiate(Resources.Load("Prefabs/Generation/Start") as GameObject, Vector2.zero, Quaternion.identity, floorParent);
                         break;
                     case "R":
-                        Instantiate(Resources.Load("Prefabs/Room") as GameObject, new Vector2(x, -y), Quaternion.identity);
+                        Instantiate(Resources.Load("Prefabs/Generation/Room") as GameObject, new Vector2((x - generateOffset) * roomDimensions.x, (-y + generateOffset) * roomDimensions.y), Quaternion.identity, floorParent);
                         break;
                 }
             }
