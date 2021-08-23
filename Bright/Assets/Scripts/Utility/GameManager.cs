@@ -7,7 +7,6 @@ using UnityEngine.Audio;
 
 public class GameManager : MonoBehaviour
 {
-    public static string loadedSave; //Variable that stores the loaded save.
     public static bool gameActive = false; //Is the game paused.
     public static AudioMixer masterMixer; //Creates reference for the menu music
     public static Dictionary<string, KeyCode> keybind = new Dictionary<string, KeyCode> //Dictionary to store the keybinds.
@@ -22,13 +21,15 @@ public class GameManager : MonoBehaviour
         { "ShootRight", KeyCode.RightArrow },
         { "Melee", KeyCode.E },
         { "Heal", KeyCode.R },
+        { "Parry", KeyCode.LeftShift },
+        { "TrueSight", KeyCode.X },
         { "Interact", KeyCode.F },
         { "SwitchWeapon", KeyCode.Tab },
-        { "Pause", KeyCode.Escape },
         { "Inventory", KeyCode.I },
+        { "Pause", KeyCode.Escape }
     };
 
-    public void Start()
+    public void Awake()
     {
         masterMixer = Resources.Load("Music/Mixers/Master") as AudioMixer; //Loads the MasterMixer for renference.
 
@@ -41,4 +42,11 @@ public class GameManager : MonoBehaviour
             SystemConfig.SaveSettings(); //Saves the new data as a new file "Settings".
         }
     }
+
+    public void StartGame()
+    {
+        gameActive = true;
+        Instantiate(Resources.Load("Prefabs/Utility/World") as GameObject, Vector3.zero, Quaternion.identity);
+    }
 }
+

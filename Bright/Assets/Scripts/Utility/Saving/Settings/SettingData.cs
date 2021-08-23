@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 using System;
 
 [System.Serializable]
-public class SettingData : MonoBehaviour
+public class SettingData
 {
     public string output;
 

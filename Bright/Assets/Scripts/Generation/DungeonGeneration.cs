@@ -6,6 +6,7 @@ public class DungeonGeneration : DungeonLayout
 {
     public void Start()
     {
+        GameObject.FindWithTag("MainCamera").GetComponent<DungeonCamera>().generation = this;
         ContentStart();
     }
 

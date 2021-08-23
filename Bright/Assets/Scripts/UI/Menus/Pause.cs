@@ -4,10 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-/*---------------------------------/
- * Script by Aiden Nathan.
- *---------------------------------*/
-
 namespace PauseMenu
 {
     public class Pause : MonoBehaviour
@@ -25,7 +21,7 @@ namespace PauseMenu
         #region General
         public void Update() //Ensures the pause menu can function
         {
-            if (Input.GetKeyDown(KeyCode.Escape) && GameManager.gameActive) //Show pause menu
+            if (Input.GetKeyDown(GameManager.keybind["Pause"]) && GameManager.gameActive) //Show pause menu
             {
                 if (isPaused == true)
                 {
@@ -50,7 +46,6 @@ namespace PauseMenu
                     menuTimer = false;
                     Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
                     background.SetActive(false);
-                    SystemSave.SavePlayer(player, GameManager.loadedSave);
 
                     fade.GetComponent<FadeController>().FadeIn();
                     menu.music.Play();

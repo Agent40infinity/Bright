@@ -4,16 +4,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using TMPro;
 
 public class Settings : MonoBehaviour
 {
-    public GameObject mainMenu, options, general, video, audio, controls;
+    public GameObject mainMenu, options, general, video, audioRef, controls;
     public AudioMixer masterMixer;
 
     Resolution[] resolutions; //Creates reference for all resolutions within Unity
     public Dropdown resolutionDropdown; //Creates reference for the resolution dropdown 
 
-    public Text up, down, left, right, jump, attack, dash;
+    //public Text up, down, left, right, jump, attack, dash;
+    public TextMeshProUGUI moveLeft, moveRight, moveUp, moveDown, shootLeft, shootRight, shootUp, shootDown, attack, heal, parry, trueSight, interact, switchWeapon, inventory, pause;
     private GameObject currentKey;
 
     public LastMenuState lastMenuState;
@@ -37,17 +39,64 @@ public class Settings : MonoBehaviour
             }
         }
 
-        up.text = GameManager.keybind["Up"].ToString();
-        down.text = GameManager.keybind["Down"].ToString();
-        left.text = GameManager.keybind["Left"].ToString();
-        right.text = GameManager.keybind["Right"].ToString();
-        jump.text = GameManager.keybind["Jump"].ToString();
-        attack.text = GameManager.keybind["Attack"].ToString();
-        dash.text = GameManager.keybind["Dash"].ToString();
+        SetKeybinds();
 
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+    }
+
+    public void SetKeybinds()
+    {
+        moveLeft.text = CheckSpecial(GameManager.keybind["MoveLeft"]);
+        moveRight.text = CheckSpecial(GameManager.keybind["MoveRight"]);
+        moveUp.text = CheckSpecial(GameManager.keybind["MoveUp"]);
+        moveDown.text = CheckSpecial(GameManager.keybind["MoveDown"]);
+        shootLeft.text = CheckSpecial(GameManager.keybind["ShootLeft"]);
+        shootRight.text = CheckSpecial(GameManager.keybind["ShootRight"]);
+        shootUp.text = CheckSpecial(GameManager.keybind["ShootUp"]);
+        shootDown.text = CheckSpecial(GameManager.keybind["ShootDown"]);
+        attack.text = CheckSpecial(GameManager.keybind["Melee"]);
+        heal.text = CheckSpecial(GameManager.keybind["Heal"]);
+        parry.text = CheckSpecial(GameManager.keybind["Parry"]);
+        trueSight.text = CheckSpecial(GameManager.keybind["TrueSight"]);
+        interact.text = CheckSpecial(GameManager.keybind["Interact"]);
+        switchWeapon.text = CheckSpecial(GameManager.keybind["SwitchWeapon"]);
+        inventory.text = CheckSpecial(GameManager.keybind["Inventory"]);
+        pause.text = CheckSpecial(GameManager.keybind["Pause"]);
+    }
+
+    public string CheckSpecial(KeyCode keybind)
+    {
+        if (keybind == KeyCode.LeftArrow)
+        {
+            return "←";
+        }
+        else if (keybind == KeyCode.RightArrow)
+        {
+            return "→";
+        }
+        else if (keybind == KeyCode.UpArrow)
+        {
+            return "↑";
+        }
+        else if (keybind == KeyCode.DownArrow)
+        {
+            return "↓";
+        }
+        else if (keybind == KeyCode.LeftShift)
+        {
+            return "LS";
+        }
+        else if (keybind == KeyCode.Escape)
+        {
+            return "Esc";
+        }
+        else
+        {
+            return keybind.ToString();
+        }
+
     }
 
     public void OptionsCall(bool toggle)
@@ -86,7 +135,7 @@ public class Settings : MonoBehaviour
             case 0:
                 general.SetActive(true);
                 video.SetActive(false);
-                audio.SetActive(false);
+                audioRef.SetActive(false);
                 controls.SetActive(false);
 
                 SystemConfig.SaveSettings();
@@ -94,19 +143,19 @@ public class Settings : MonoBehaviour
             case 1:
                 general.SetActive(false);
                 video.SetActive(true);
-                audio.SetActive(false);
+                audioRef.SetActive(false);
                 controls.SetActive(false);
                 break;
             case 2:
                 general.SetActive(false);
                 video.SetActive(false);
-                audio.SetActive(true);
+                audioRef.SetActive(true);
                 controls.SetActive(false);
                 break;
             case 3:
                 general.SetActive(false);
                 video.SetActive(false);
-                audio.SetActive(false);
+                audioRef.SetActive(false);
                 controls.SetActive(true);
                 break;
         }
@@ -130,11 +179,6 @@ public class Settings : MonoBehaviour
     public void AmbienceVolume(float volume) //Trigger for changing volume of game's music channel
     {
         GameManager.masterMixer.SetFloat("Ambience", Mathf.Log10(volume) * 20);
-    }
-
-    public void ChangeQuality(int qualityIndex) //Trigger for applying level of quality - detailing of objects
-    {
-        QualitySettings.SetQualityLevel(qualityIndex);
     }
 
     public void ToggleFullscreen(int option) //Trigger for applying fullscreen
@@ -164,18 +208,19 @@ public class Settings : MonoBehaviour
         if (currentKey != null) //Checks whether or not there is a Keycode saved to 'currentKey'
         {
             Event keypress = Event.current; //Creates an event called keypress
-            if (keypress.isKey) //Checks whether or not the event "keypress" contains a keycode
-            {
-                GameManager.keybind[currentKey.name] = keypress.keyCode; //Saves the keycode from the event as the keycode attached to the keybind dictionary
-                currentKey.transform.GetChild(0).GetComponent<Text>().text = keypress.keyCode.ToString(); //Changes the text to match that of the keycode replacing the previous one
-                currentKey = null; //resets the currentKey putting it back to null
-            }
-            else if (keypress.shift)
+
+            if (keypress.shift)
             {
                 GameManager.keybind[currentKey.name] = KeyCode.LeftShift;
-                currentKey.transform.GetChild(0).GetComponent<Text>().text = GameManager.keybind[currentKey.name].ToString();
-                currentKey = null;
+                currentKey.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = CheckSpecial(keypress.keyCode);
+                currentKey = null; 
             }
+            else if (keypress.isKey) //Checks whether or not the event "keypress" contains a keycode
+            {
+                GameManager.keybind[currentKey.name] = keypress.keyCode; //Saves the keycode from the event as the keycode attached to the keybind dictionary
+                currentKey.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = CheckSpecial(keypress.keyCode); //Changes the text to match that of the keycode replacing the previous one
+                currentKey = null; //resets the currentKey putting it back to null
+            }            
         }
     }
 

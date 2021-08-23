@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Room
+  - Menu
+  - DeleteSave
+  - GameManager
   layers:
   - Default
   - TransparentFX

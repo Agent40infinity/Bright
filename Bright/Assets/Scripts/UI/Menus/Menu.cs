@@ -14,9 +14,9 @@ public class Menu : MonoBehaviour
 {
     #region Variables
     //General: 
-    public GameObject main, mainBackground, fade, overlay, saveload; //Allows for reference to GameObjects Meny and Options
-    public AudioMixer masterMixer;                                                                             //public bool toggle = false; //Toggle for switching between settings and main
-                                                                                                               //public int option = 0; //Changes between the 4 main screens in options.
+    public GameObject main, mainBackground, fade, overlay; //Allows for reference to GameObjects Meny and Options
+    public AudioMixer masterMixer;                         //public bool toggle = false; //Toggle for switching between settings and main
+                                                           //public int option = 0; //Changes between the 4 main screens in options.
     public bool quitTimer = false; //Check whether or not the exit button has been pressed
     public int qTimer = 0; //Timer for transition - exit
     public bool startTimer = false; //Checks whether or not the play button has been pressed
@@ -26,11 +26,13 @@ public class Menu : MonoBehaviour
     public AudioSource music;
     public GameObject pauseMenu;
     public Settings optionsMenu;
+
+    public GameManager gameManager;
     #endregion
 
     public void Start() //Used to load resolutions and create list for the dropdown, collects both Width and Height seperately
     {
-        music = GameObject.FindGameObjectWithTag("MenuMusic").GetComponent<AudioSource>();
+        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         music.Play();
     }
 
@@ -54,39 +56,22 @@ public class Menu : MonoBehaviour
             if (sTimer >= 120)
             {
                 sTimer = 0;
-                saveload.SetActive(false);
+                main.SetActive(false);
                 mainBackground.SetActive(false);
-                overlay.SetActive(true);
+                //overlay.SetActive(true);
                 startTimer = false;
-                Player player = GameObject.FindWithTag("Player").GetComponent<Player>();
-                SystemSave.LoadPlayer(player, GameManager.loadedSave);
 
-                fade.GetComponent<FadeController>().FadeIn();
-                GameManager.gameActive = true;
+                //fade.GetComponent<FadeController>().FadeIn();
+                gameManager.StartGame();
             }
         }
-    }
-
-    public void SaveSelection(bool toggle)
-    {
-        if (toggle == true)
-        {
-            main.SetActive(false);
-            saveload.SetActive(true);
-        }
-        else
-        {
-            main.SetActive(true);
-            saveload.SetActive(false);
-        }
-
     }
 
     public void StartGame() //Trigger for Play Button
     {
         startTimer = true;
         music.Stop();
-        fade.GetComponent<FadeController>().FadeOut();
+        //fade.GetComponent<FadeController>().FadeOut();
     }
 
     public void Quit() //Trigger for Exit Button
