@@ -270,7 +270,7 @@ MonoBehaviour:
   switchSpeed: 15
   followState: 0
   moveState: 1
-  generation: {fileID: 784289032}
+  generation: {fileID: 784289033}
 --- !u!1 &784289030
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +280,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 784289031}
-  - component: {fileID: 784289032}
+  - component: {fileID: 784289033}
   m_Layer: 0
   m_Name: WorldGenerator
   m_TagString: Untagged
@@ -302,7 +302,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &784289032
+--- !u!114 &784289033
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 784289030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c7744badd120074d81420d3ff85db62, type: 3}
+  m_Script: {fileID: 11500000, guid: a226b944bcc6a5c4ba42ff775d4c6a59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   roomMaxWidth: 25
