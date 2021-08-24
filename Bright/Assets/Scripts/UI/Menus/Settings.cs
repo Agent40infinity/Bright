@@ -88,6 +88,10 @@ public class Settings : MonoBehaviour
         {
             return "LS";
         }
+        else if (keybind == KeyCode.RightShift)
+        {
+            return "RS";
+        }
         else if (keybind == KeyCode.Escape)
         {
             return "Esc";

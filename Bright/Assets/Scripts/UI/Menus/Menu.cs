@@ -5,18 +5,15 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-/*---------------------------------/
- * Script by Aiden Nathan.
- * Set up Assistance by Helmi.
- *---------------------------------*/
-
 public class Menu : MonoBehaviour
 {
     #region Variables
     //General: 
-    public GameObject main, mainBackground, fade, overlay; //Allows for reference to GameObjects Meny and Options
-    public AudioMixer masterMixer;                         //public bool toggle = false; //Toggle for switching between settings and main
-                                                           //public int option = 0; //Changes between the 4 main screens in options.
+    public GameObject main, mainBackground, overlay; //Allows for reference to GameObjects Meny and Options
+    public AudioMixer masterMixer;                   //public bool toggle = false; //Toggle for switching between settings and main
+                                                     //public int option = 0;      //Changes between the 4 main screens in options.
+    public FadeController fade;
+
     public bool quitTimer = false; //Check whether or not the exit button has been pressed
     public int qTimer = 0; //Timer for transition - exit
     public bool startTimer = false; //Checks whether or not the play button has been pressed
@@ -28,16 +25,31 @@ public class Menu : MonoBehaviour
     public Settings optionsMenu;
 
     public GameManager gameManager;
+
+    public GameObject loadParent;
+    public GameObject logo;
+    public GameObject warning;
+    //public bool isLoadRunning;
+
     #endregion
 
     public void Start() //Used to load resolutions and create list for the dropdown, collects both Width and Height seperately
     {
         gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
-        music.Play();
+        StartCoroutine("LoadScreen");
     }
 
     public void Update()
     {
+        /*if (Input.GetKeyDown(GameManager.keybind["Pause"]) && isLoadRunning)
+        {
+            StopCoroutine("LoadScreen");
+            logo.SetActive(false);
+            warning.SetActive(false);
+            loadParent.SetActive(false);
+            fade.FadeIn();
+            music.Play();
+        }*/
 
         if (quitTimer == true) //Exit Transition
         {
@@ -61,7 +73,7 @@ public class Menu : MonoBehaviour
                 //overlay.SetActive(true);
                 startTimer = false;
 
-                //fade.GetComponent<FadeController>().FadeIn();
+                fade.FadeIn();
                 gameManager.StartGame();
             }
         }
@@ -71,7 +83,7 @@ public class Menu : MonoBehaviour
     {
         startTimer = true;
         music.Stop();
-        //fade.GetComponent<FadeController>().FadeOut();
+        fade.FadeOut();
     }
 
     public void Quit() //Trigger for Exit Button
@@ -83,5 +95,28 @@ public class Menu : MonoBehaviour
     public void OptionsCall(bool toggle)
     {
         optionsMenu.ToggleOptions(toggle, LastMenuState.MainMenu);
+    }
+
+    IEnumerator LoadScreen() //Called upon to show that the player has died; Makes the player un-hittable and dead.
+    {
+        //isLoadRunning = true;
+        fade.FadeOut();
+        yield return new WaitForSeconds(1);
+        logo.SetActive(true);
+        fade.FadeIn();
+        yield return new WaitForSeconds(3.5f);
+        fade.FadeOut();
+        yield return new WaitForSeconds(1);
+        logo.SetActive(false);
+        warning.SetActive(true);
+        fade.FadeIn();
+        yield return new WaitForSeconds(5);
+        fade.FadeOut();
+        yield return new WaitForSeconds(1);
+        warning.SetActive(false);
+        loadParent.SetActive(false);
+        fade.FadeIn();
+        music.Play();
+        //isLoadRunning = false;
     }
 }

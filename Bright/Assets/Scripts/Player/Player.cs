@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Header("Wisp/Weapon Mode")]
     public WispMode wispMode = WispMode.Idle;
-    public WispMode previousMode;
+    public ReturnState returnState = ReturnState.Idle;
+    private WispMode previousMode;
 
+    public Vector2 direction;
+
+    [Header("Reference")]
     public PlayerPhysics physics;
+    public WispPhysics wispPhysics;
 
     public void Update()
     {
@@ -80,6 +86,38 @@ public class Player : MonoBehaviour
     public void Projectile()
     {
         physics.PlayerRotation(WispMode.Projectile);
+
+        switch (returnState)
+        {
+            case ReturnState.Idle:
+                wispPhysics.Follow();
+
+                if (Input.GetKey(GameManager.keybind["ShootLeft"]))
+                {
+                    direction = Vector2.left;
+                    returnState = ReturnState.Out;
+                }
+                else if (Input.GetKey(GameManager.keybind["ShootRight"]))
+                {
+                    direction = Vector2.right;
+                    returnState = ReturnState.Out;
+                }
+                else if (Input.GetKey(GameManager.keybind["ShootUp"]))
+                {
+                    direction = Vector2.up;
+                    returnState = ReturnState.Out;
+                }
+                else if (Input.GetKey(GameManager.keybind["ShootDown"]))
+                {
+                    direction = Vector2.down;
+                    returnState = ReturnState.Out;
+                }
+                
+                break;
+            case ReturnState.Out:
+                wispPhysics.ShootOut(direction);
+                break;
+        }
     }
 
     public void Healing()
@@ -98,5 +136,11 @@ public enum WispMode
     Blade,
     Projectile,
     Healing,
+    Idle
+}
+
+public enum ReturnState
+{ 
+    Out, 
     Idle
 }

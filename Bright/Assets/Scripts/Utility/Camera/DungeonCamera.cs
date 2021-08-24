@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class DungeonCamera : MonoBehaviour
 {
+    [Header("Camera")]
     public Vector3 cameraPos;
-    public float switchSpeed;
-
     public FollowState followState = FollowState.Cell;
     public MoveState moveState = MoveState.Active;
 
+    [Header("Cell Mode")]
+    public float switchSpeed;
+
+    [Header("Reference")]
     public DungeonGeneration generation;
 
     public void Update()

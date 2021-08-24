@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class PlayerPhysics : MonoBehaviour
 {
+    [Header("Movement")]
     public Vector2 input;
     public float speed;
     public float slowMultiplier;
     public float slowApplied;
-    public Rigidbody2D rigid;
 
+    [Header("Reference")]
+    public Rigidbody2D rigid;
     public Transform head;
+    public Animator anim;
     
+    [Header("Interaction")]
     public InteractState interactState = InteractState.Idle;
 
     public void Update()
@@ -79,10 +83,12 @@ public class PlayerPhysics : MonoBehaviour
     {
         if (Input.GetKey(GameManager.keybind["MoveUp"]))
         {
+            anim.SetBool("Facing", true);
             input.y = 1;
         }
         else if (Input.GetKey(GameManager.keybind["MoveDown"]))
         {
+            anim.SetBool("Facing", false);
             input.y = -1;
         }
         else

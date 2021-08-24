@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class DungeonLayout : MonoBehaviour
 {
+    [Header("Room Attributes")]
     public int roomMaxWidth;
     public int roomMaxHeight;
     public Vector2Int roomRange;
     public int maxRoomNumber;
-    private int numberOfRooms;
-    public string[,] roomLayout;
-    public List<Vector2Int> generateRoomCoords = new List<Vector2Int>();
-    private Vector2Int startRoom;
     public Vector2Int roomDimensions;
-    public Transform floorParent;
 
+    [Header("Generation")]
     public float generationChance;
     public int generateOffset;
-
     bool[] generatedUniques = new bool[2];
+
+    private int numberOfRooms;
+    private Vector2Int startRoom;
+
+    [Header("Layout")]
+    public List<Vector2Int> generateRoomCoords = new List<Vector2Int>();
+    public string[,] roomLayout;
 
     public Dictionary<string, int> directions = new Dictionary<string, int>
     {
@@ -27,6 +30,9 @@ public class DungeonLayout : MonoBehaviour
         { "Up", 1 },
         { "Down", -1 },
     };
+
+    [Header("Reference")]
+    public Transform floorParent;
 
     public int FloorSize(Vector2Int maxRooms)
     {
