@@ -33,6 +33,7 @@ public class DungeonLayout : MonoBehaviour
 
     [Header("Reference")]
     public Transform floorParent;
+    public TrueWorldGeneration trueWorldGeneration;
 
     public int FloorSize(Vector2Int maxRooms)
     {
@@ -70,6 +71,7 @@ public class DungeonLayout : MonoBehaviour
                 break;
             case true:
                 BuildRoomLayout(); //Move to GameManager or Level script later
+                trueWorldGeneration.TrueGenerationCall();
                 break;
         }
     }

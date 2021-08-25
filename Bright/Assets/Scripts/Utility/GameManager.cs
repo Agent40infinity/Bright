@@ -8,6 +8,9 @@ using UnityEngine.Audio;
 public class GameManager : MonoBehaviour
 {
     public static bool gameActive = false; //Is the game paused.
+    public static bool enemiesExist = false;
+    public static WorldState worldState;
+    public static bool startTransition = false;
     public static AudioMixer masterMixer; //Creates reference for the menu music
     public static Dictionary<string, KeyCode> keybind = new Dictionary<string, KeyCode> //Dictionary to store the keybinds.
     {
@@ -29,6 +32,9 @@ public class GameManager : MonoBehaviour
         { "Pause", KeyCode.Escape }
     };
 
+    public static GameObject dungeonRef;
+    public static GameObject trueWorldRef;
+
     public void Awake()
     {
         masterMixer = Resources.Load("Music/Mixers/Master") as AudioMixer; //Loads the MasterMixer for renference.
@@ -43,10 +49,55 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void Update()
+    {
+        switch (worldState)
+        {
+            case WorldState.Normal:
+                switch (startTransition)
+                {
+                    case true:
+                        ChangeWorld(false);
+                        break;
+                }
+                break;
+            case WorldState.Other:
+                switch (startTransition)
+                {
+                    case true:
+                        ChangeWorld(true);
+                        break;
+                }
+                break;
+        }
+    }
+
     public void StartGame()
     {
         gameActive = true;
         Instantiate(Resources.Load("Prefabs/Utility/World") as GameObject, Vector3.zero, Quaternion.identity);
     }
+
+    public void ChangeWorld(bool isTrueWorld)
+    {
+        switch (isTrueWorld)
+        {
+            case true:
+                trueWorldRef.SetActive(true);
+                dungeonRef.SetActive(false);
+                break;
+            case false:
+                dungeonRef.SetActive(true);
+                trueWorldRef.SetActive(false);
+                break;
+        }
+
+        startTransition = false;
+    }
 }
 
+public enum WorldState
+{ 
+    Normal,
+    Other
+}

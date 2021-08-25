@@ -121,6 +121,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &236021512 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5438225160522420381, guid: aecd507e9cccefb4aae7564449c4f47d,
+    type: 3}
+  m_PrefabInstance: {fileID: 4082147359181995167}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 931f7123efde20a4bb8470e9f341d682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &791654867
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,7 +267,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -316,7 +328,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15, y: 10}
+  m_Size: {x: 19, y: 11}
   m_EdgeRadius: 0
 --- !u!4 &3271494771094582513
 Transform:
@@ -356,11 +368,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2001498268055407989, guid: aecd507e9cccefb4aae7564449c4f47d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082147358694680832, guid: aecd507e9cccefb4aae7564449c4f47d,
+        type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 236021512}
     - target: {fileID: 4082147358694680895, guid: aecd507e9cccefb4aae7564449c4f47d,
         type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1475846718}
+    - target: {fileID: 4082147359811526183, guid: aecd507e9cccefb4aae7564449c4f47d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4082147360707670766, guid: aecd507e9cccefb4aae7564449c4f47d,
         type: 3}
       propertyPath: m_LocalPosition.x

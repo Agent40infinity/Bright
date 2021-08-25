@@ -29,6 +29,13 @@ public class Player : MonoBehaviour
                 Projectile();
                 break;
         }
+
+        switch (GameManager.enemiesExist)
+        {
+            case false:
+                TrueSight();
+                break;
+        }
     }
 
     public void Keypress()
@@ -68,8 +75,26 @@ public class Player : MonoBehaviour
     public void Interaction()
     {
         if (Input.GetKeyDown(GameManager.keybind["Interact"]))
-        { 
-        
+        {
+
+        }
+    }
+
+    public void TrueSight()
+    {
+        if (Input.GetKeyDown(GameManager.keybind["TrueSight"]))
+        {
+            switch (GameManager.worldState)
+            {
+                case WorldState.Normal:
+                    GameManager.worldState = WorldState.Other;
+                    break;
+                case WorldState.Other:
+                    GameManager.worldState = WorldState.Normal;
+                    break;
+            }
+
+            GameManager.startTransition = true;
         }
     }
 

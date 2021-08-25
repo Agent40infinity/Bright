@@ -105,14 +105,15 @@ public class Settings : MonoBehaviour
 
     public void OptionsCall(bool toggle)
     {
-        ToggleOptions(toggle, LastMenuState.MainMenu);
+        ToggleOptions(toggle, lastMenuState);
     }
 
     public void ToggleOptions(bool toggle, LastMenuState lastState) //Trigger for Settings - sets active layer/pannel
     {
+        lastMenuState = lastState;
+
         if (toggle == true)
         {
-            lastMenuState = lastState;
             mainMenu.SetActive(false);
             pauseMenu.SetActive(false);
             options.SetActive(true);
