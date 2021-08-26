@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {x: 0, y: 0}
-  speed: 10
+  speed: 8
   slowMultiplier: 0.15
   slowApplied: 1
   rigid: {fileID: 7039946160677048494}

@@ -21,7 +21,6 @@ public class Menu : MonoBehaviour
 
     //Music:
     public AudioSource music;
-    public GameObject pauseMenu;
     public Settings optionsMenu;
 
     public GameManager gameManager;
@@ -30,7 +29,6 @@ public class Menu : MonoBehaviour
     public GameObject logo;
     public GameObject warning;
     //public bool isLoadRunning;
-
     #endregion
 
     public void Start() //Used to load resolutions and create list for the dropdown, collects both Width and Height seperately
@@ -50,46 +48,36 @@ public class Menu : MonoBehaviour
             fade.FadeIn();
             music.Play();
         }*/
-
-        if (quitTimer == true) //Exit Transition
-        {
-            qTimer++;
-            if (qTimer >= 120)
-            {
-                qTimer = 0;
-                Application.Quit();
-                //UnityEditor.EditorApplication.isPlaying = false;
-                quitTimer = false;
-            }
-        }
-        if (startTimer == true) //Play Transition
-        {
-            sTimer++;
-            if (sTimer >= 120)
-            {
-                sTimer = 0;
-                main.SetActive(false);
-                mainBackground.SetActive(false);
-                //overlay.SetActive(true);
-                startTimer = false;
-
-                fade.FadeIn();
-                gameManager.StartGame();
-            }
-        }
     }
 
     public void StartGame() //Trigger for Play Button
     {
-        startTimer = true;
+        StartCoroutine("StartCall");
+    }
+
+    IEnumerator StartCall()
+    {
         music.Stop();
         fade.FadeOut();
+        yield return new WaitForSeconds(2);
+        main.SetActive(false);
+        mainBackground.SetActive(false);
+        //overlay.SetActive(true);
+
+        fade.FadeIn();
+        gameManager.StartGame();
     }
 
     public void Quit() //Trigger for Exit Button
     {
-        quitTimer = true;
+        StartCoroutine("QuitGame");
+    }
 
+    IEnumerator QuitGame()
+    {
+        fade.FadeOut();
+        yield return new WaitForSeconds(2);
+        Application.Quit();
     }
 
     public void OptionsCall(bool toggle)

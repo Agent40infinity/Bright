@@ -8,6 +8,8 @@ TagManager:
   - Menu
   - DeleteSave
   - GameManager
+  - TrueWorldGeneration
+  - DungeonGeneration
   layers:
   - Default
   - TransparentFX

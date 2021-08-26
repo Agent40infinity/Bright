@@ -7,6 +7,7 @@ public class DungeonGeneration : DungeonLayout
     public void Start()
     {
         GameObject.FindWithTag("MainCamera").GetComponent<DungeonCamera>().generation = this;
+        GameManager.dungeonRef = gameObject;
         ContentStart();
     }
 
@@ -58,10 +59,10 @@ public class DungeonGeneration : DungeonLayout
             switch (wallsToAdd[i])
             {
                 case "Left":
-                    Instantiate(Resources.Load("Prefabs/Generation/Wall_Horizontal") as GameObject, new Vector2((selectedRoom.y - generateOffset) * roomDimensions.x, ((-selectedRoom.x + generateOffset) * roomDimensions.y) + roomDimensions.y / 2 - 1), Quaternion.identity, floorParent);
+                    Instantiate(Resources.Load("Prefabs/Generation/Wall_Horizontal") as GameObject, new Vector2((selectedRoom.y - generateOffset) * roomDimensions.x, ((-selectedRoom.x + generateOffset) * roomDimensions.y) + roomDimensions.y / 2 - 0.5f), Quaternion.identity, floorParent);
                     break;
                 case "Right":
-                    Instantiate(Resources.Load("Prefabs/Generation/Wall_Horizontal") as GameObject, new Vector2((selectedRoom.y - generateOffset) * roomDimensions.x, ((-selectedRoom.x + generateOffset) * roomDimensions.y) - roomDimensions.y / 2), Quaternion.identity, floorParent);
+                    Instantiate(Resources.Load("Prefabs/Generation/Wall_Horizontal") as GameObject, new Vector2((selectedRoom.y - generateOffset) * roomDimensions.x, ((-selectedRoom.x + generateOffset) * roomDimensions.y) - roomDimensions.y / 2 - 0.5f), Quaternion.identity, floorParent);
                     break;
                 case "Up":
                     Instantiate(Resources.Load("Prefabs/Generation/Wall_Vertical") as GameObject, new Vector2(((selectedRoom.y - generateOffset) * roomDimensions.x) + roomDimensions.x / 2, (-selectedRoom.x + generateOffset) * roomDimensions.y), Quaternion.identity, floorParent);
