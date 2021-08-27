@@ -81,32 +81,34 @@ public class PlayerPhysics : MonoBehaviour
 
     public void Keypress()
     {
-        if (Input.GetKey(GameManager.keybind["MoveUp"]))
-        {
-            anim.SetBool("Facing", true);
-            input.y = 1;
-        }
-        else if (Input.GetKey(GameManager.keybind["MoveDown"]))
-        {
-            anim.SetBool("Facing", false);
-            input.y = -1;
-        }
-        else
-        {
-            input.y = 0;
-        }
-
         if (Input.GetKey(GameManager.keybind["MoveLeft"]))
         {
+            anim.SetInteger("Facing", 3);
             input.x = -1;
         }
         else if (Input.GetKey(GameManager.keybind["MoveRight"]))
         {
+            anim.SetInteger("Facing", 4);
             input.x = 1;
         }
         else
         {
             input.x = 0;
+        }
+
+        if (Input.GetKey(GameManager.keybind["MoveUp"]))
+        {
+            anim.SetInteger("Facing", 1);
+            input.y = 1;
+        }
+        else if (Input.GetKey(GameManager.keybind["MoveDown"]))
+        {
+            anim.SetInteger("Facing", 2);
+            input.y = -1;
+        }
+        else
+        {
+            input.y = 0;
         }
     }
 
