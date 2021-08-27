@@ -79,7 +79,7 @@ public class DungeonGeneration1 : MonoBehaviour
                 }
             }
         }
-        MatrixDebug.CheckMatrix(roomLayout);
+        //MatrixDebug.CheckMatrix(roomLayout);
     }
 
     public void GenerateAjacentRooms(int[] selectedRoom)

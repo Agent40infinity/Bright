@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MatrixDebug : MonoBehaviour
 {
-    public static void CheckMatrix(string[,] input)
+    public static void CheckMatrix(Room[,] input)
     {
 
         int rowLength = input.GetLength(0);
@@ -14,7 +14,14 @@ public class MatrixDebug : MonoBehaviour
         {
             for (int j = 0; j < colLength; j++)
             {
-                arrayString += string.Format("{0} ", input[i, j]);
+                if (input[i, j] != null)
+                {
+                    arrayString += string.Format("{0} ", input[i, j].type);
+                }
+                else
+                {
+                    arrayString += string.Format("{0} ", "-");
+                }
             }
             arrayString += System.Environment.NewLine;
         }

@@ -21,7 +21,7 @@ public class DungeonLayout : MonoBehaviour
 
     [Header("Layout")]
     public List<Vector2Int> generateRoomCoords = new List<Vector2Int>();
-    public string[,] roomLayout;
+    public Room[,] roomLayout;
 
     public Dictionary<string, int> directions = new Dictionary<string, int>
     {
@@ -57,8 +57,8 @@ public class DungeonLayout : MonoBehaviour
 
         startRoom = new Vector2Int(roomMaxWidth / 2, roomMaxWidth / 2);
 
-        roomLayout = new string[roomMaxWidth, roomMaxHeight];
-        roomLayout[startRoom.x, startRoom.y] = "S";
+        roomLayout = new Room[roomMaxWidth, roomMaxHeight];
+        CreateRoom(startRoom, "S");
 
         GenerateRoomLayout();
 
@@ -111,7 +111,7 @@ public class DungeonLayout : MonoBehaviour
             {
                 if (CheckChance(generationChance) && numberOfRooms > 0)
                 {
-                    roomLayout[sidesToAdd[i].x, sidesToAdd[i].y] = "R";
+                    CreateRoom(new Vector2Int(sidesToAdd[i].x, sidesToAdd[i].y), "R");
                     generateRoomCoords.Add(new Vector2Int(sidesToAdd[i].x, sidesToAdd[i].y));
                     numberOfRooms--;
                 }
@@ -121,6 +121,12 @@ public class DungeonLayout : MonoBehaviour
         {
             return;
         }
+    }
+
+    public void CreateRoom(Vector2Int selectedRoom, string type)
+    {
+        roomLayout[selectedRoom.x, selectedRoom.y] = new Room();
+        roomLayout[selectedRoom.x, selectedRoom.y].type = type;
     }
 
     public List<Vector2Int> AddSides(Vector2Int selectedRoom)
@@ -267,7 +273,7 @@ public class DungeonLayout : MonoBehaviour
             case SpecialState.Boss:
                 if (CheckNeighbour(selectedRoom, 1) && CheckChance(2.5f))
                 {
-                    roomLayout[selectedRoom.x, selectedRoom.y] = "B";
+                    CreateRoom(selectedRoom, "B");
                     return true;
                 }
                 else
@@ -277,7 +283,7 @@ public class DungeonLayout : MonoBehaviour
             case SpecialState.Shop:
                 if (CheckNeighbour(selectedRoom, 2) && CheckChance(2.5f))
                 {
-                    roomLayout[selectedRoom.x, selectedRoom.y] = "C";
+                    CreateRoom(selectedRoom, "C");
                     return true;
                 }
                 else
@@ -296,20 +302,23 @@ public class DungeonLayout : MonoBehaviour
         {
             for (int y = 0; y < roomLayout.GetLength(1); y++)
             {
-                switch (roomLayout[y, x])
+                if (roomLayout[y, x] != null)
                 {
-                    case "S":
-                        Instantiate(Resources.Load("Prefabs/Generation/Start") as GameObject, Vector2.zero, Quaternion.identity, floorParent);
-                        break;
-                    case "R":
-                        Instantiate(Resources.Load("Prefabs/Generation/Room") as GameObject, new Vector2((x - generateOffset) * roomDimensions.x, (-y + generateOffset) * roomDimensions.y), Quaternion.identity, floorParent);
-                        break;
-                    case "B":
-                        Instantiate(Resources.Load("Prefabs/Generation/Boss") as GameObject, new Vector2((x - generateOffset) * roomDimensions.x, (-y + generateOffset) * roomDimensions.y), Quaternion.identity, floorParent);
-                        break;
-                    case "C":
-                        Instantiate(Resources.Load("Prefabs/Generation/Shop") as GameObject, new Vector2((x - generateOffset) * roomDimensions.x, (-y + generateOffset) * roomDimensions.y), Quaternion.identity, floorParent);
-                        break;
+                    switch (roomLayout[y, x].type)
+                    {
+                        case "S":
+                            Instantiate(Resources.Load("Prefabs/Generation/Start") as GameObject, Vector2.zero, Quaternion.identity, floorParent);
+                            break;
+                        case "R":
+                            Instantiate(Resources.Load("Prefabs/Generation/Room") as GameObject, new Vector2((x - generateOffset) * roomDimensions.x, (-y + generateOffset) * roomDimensions.y), Quaternion.identity, floorParent);
+                            break;
+                        case "B":
+                            Instantiate(Resources.Load("Prefabs/Generation/Boss") as GameObject, new Vector2((x - generateOffset) * roomDimensions.x, (-y + generateOffset) * roomDimensions.y), Quaternion.identity, floorParent);
+                            break;
+                        case "C":
+                            Instantiate(Resources.Load("Prefabs/Generation/Shop") as GameObject, new Vector2((x - generateOffset) * roomDimensions.x, (-y + generateOffset) * roomDimensions.y), Quaternion.identity, floorParent);
+                            break;
+                    }
                 }
             }
         }
