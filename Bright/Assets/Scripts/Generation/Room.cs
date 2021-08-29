@@ -6,5 +6,11 @@ public class Room
 {
     public string type;
     public int scaling;
-    public int variety;
+    public int varient;
+
+    public Room(string typeInput, int varientInput)
+    {
+        type = typeInput;
+        varient = varientInput;
+    }
 }

@@ -18,7 +18,7 @@ public class TrueWorldGeneration : MonoBehaviour
 
     public void TrueGenerationStart()   
     {
-        //trueRoomLayout = dungeonGeneration.roomLayout.type;
+        
 
         BuildTrueWorld();
 

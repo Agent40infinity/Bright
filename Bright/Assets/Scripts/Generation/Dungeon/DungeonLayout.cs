@@ -31,18 +31,24 @@ public class DungeonLayout : MonoBehaviour
         { "Down", -1 },
     };
 
+    public Dictionary<int, float[]> difficultyChance = new Dictionary<int, float[]>
+    {
+        { 1, new float[] { 7, 1.5f, 0.7f, 0.5f, 0.3f} },
+        { 2, new float[] { 2, 5, 1.5f, 1, 0.5f} },
+        { 3, new float[] { 1, 2, 4, 2, 1} },
+        { 4, new float[] { 0.5f, 0.5f, 1, 5, 3} },
+        { 5, new float[] { 0.5f, 0.5f, 1, 3, 5} },
+    };
+
     [Header("Reference")]
     public Transform floorParent;
     public TrueWorldGeneration trueWorldGeneration;
+    private string path = "Prefabs/Generation/Normal/";
+    public string[] wallPath = new string[] { "Prefabs/Generation/Wall_Horizontal", "Prefabs/Generation/Wall_Vertical" };
 
     public int FloorSize(Vector2Int maxRooms)
     {
         return Random.Range(maxRooms.x, maxRooms.y);
-    }
-
-    public void Awake()
-    {
-        GenerationCall();
     }
 
     public void GenerationCall()
@@ -58,7 +64,7 @@ public class DungeonLayout : MonoBehaviour
         startRoom = new Vector2Int(roomMaxWidth / 2, roomMaxWidth / 2);
 
         roomLayout = new Room[roomMaxWidth, roomMaxHeight];
-        CreateRoom(startRoom, "S");
+        CreateRoom(startRoom, "S", 0);
 
         GenerateRoomLayout();
 
@@ -76,6 +82,11 @@ public class DungeonLayout : MonoBehaviour
         }
     }
 
+    public void CreateRoom(Vector2Int selectedRoom, string type, int varient)
+    {
+        roomLayout[selectedRoom.x, selectedRoom.y] = new Room(type, varient);
+    }
+
     public void GenerateRoomLayout()
     {
         generateRoomCoords.Add(new Vector2Int(startRoom.x, startRoom.y));
@@ -86,17 +97,6 @@ public class DungeonLayout : MonoBehaviour
         }
 
         GenerateUniqueStart();
-
-        /*for (int x = 0; x < roomLayout.GetLength(0); x++)
-        {
-            for (int y = 0; y < roomLayout.GetLength(1); y++)
-            {
-                if (roomLayout[x, y] == null)
-                {
-                    roomLayout[x, y] = "X";
-                }
-            }
-        }*/
 
         MatrixDebug.CheckMatrix(roomLayout);
     }
@@ -111,7 +111,9 @@ public class DungeonLayout : MonoBehaviour
             {
                 if (CheckChance(generationChance) && numberOfRooms > 0)
                 {
-                    CreateRoom(new Vector2Int(sidesToAdd[i].x, sidesToAdd[i].y), "R");
+                    Vector2Int newRoom = new Vector2Int(sidesToAdd[i].x, sidesToAdd[i].y);
+                    CreateRoom(newRoom, "R", Random.Range(1, 6));
+                    GenerateRoomDifficulty(newRoom);
                     generateRoomCoords.Add(new Vector2Int(sidesToAdd[i].x, sidesToAdd[i].y));
                     numberOfRooms--;
                 }
@@ -121,12 +123,6 @@ public class DungeonLayout : MonoBehaviour
         {
             return;
         }
-    }
-
-    public void CreateRoom(Vector2Int selectedRoom, string type)
-    {
-        roomLayout[selectedRoom.x, selectedRoom.y] = new Room();
-        roomLayout[selectedRoom.x, selectedRoom.y].type = type;
     }
 
     public List<Vector2Int> AddSides(Vector2Int selectedRoom)
@@ -141,7 +137,7 @@ public class DungeonLayout : MonoBehaviour
                 temp.Add(avaliableSides[i]);
             }
         }
-        
+
         return temp;
     }
 
@@ -212,18 +208,6 @@ public class DungeonLayout : MonoBehaviour
         return false;
     }
 
-    public bool GeneratedCorrectly()
-    {
-        if (numberOfRooms == 0 && generatedUniques[0] && generatedUniques[1])
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-
     public void GenerateUniqueStart()
     {
 
@@ -240,7 +224,7 @@ public class DungeonLayout : MonoBehaviour
                         Vector2Int selectedRoom = new Vector2Int(x, y);
                         switch (generatedUniques[0])
                         {
-                            case false: 
+                            case false:
                                 if (GenerateUniqueRoom(SpecialState.Boss, selectedRoom))
                                 {
                                     generatedUniques[0] = true;
@@ -273,7 +257,7 @@ public class DungeonLayout : MonoBehaviour
             case SpecialState.Boss:
                 if (CheckNeighbour(selectedRoom, 1) && CheckChance(2.5f))
                 {
-                    CreateRoom(selectedRoom, "B");
+                    CreateRoom(selectedRoom, "B", 0);
                     return true;
                 }
                 else
@@ -283,7 +267,7 @@ public class DungeonLayout : MonoBehaviour
             case SpecialState.Shop:
                 if (CheckNeighbour(selectedRoom, 2) && CheckChance(2.5f))
                 {
-                    CreateRoom(selectedRoom, "C");
+                    CreateRoom(selectedRoom, "C", 0);
                     return true;
                 }
                 else
@@ -296,6 +280,58 @@ public class DungeonLayout : MonoBehaviour
         }
     }
 
+    public void GenerateRoomDifficulty(Vector2Int selectedRoom)
+    {
+        float roomsLeft = (float)numberOfRooms / maxRoomNumber;
+        int difficultyIndex = DetermineDifficultyScale(roomsLeft);
+
+        roomLayout[selectedRoom.x, selectedRoom.y].varient = difficultyIndex;
+        //DetermineDifficulty(difficultyChance[difficultyIndex]);
+    }
+
+    public int DetermineDifficultyScale(float roomsLeft)
+    {
+        if (roomsLeft <= 1 && roomsLeft > 0.8)
+        {
+            return 1;
+        }
+        else if (roomsLeft <= 0.8 && roomsLeft > 0.6)
+        {
+            return 2;
+        }
+        else if (roomsLeft <= 0.6 && roomsLeft > 0.4)
+        {
+            return 3;
+        }
+        else if (roomsLeft <= 0.4 && roomsLeft > 0.2)
+        {
+            return 4;
+        }
+        else
+        {
+            return 5;
+        }
+    }
+
+    public void DetermineDifficulty(float[] chance)
+    {
+        float selection = Random.Range(0, 1);
+        
+        //if (chance )
+    }
+
+    public bool GeneratedCorrectly()
+    {
+        if (numberOfRooms == 0 && generatedUniques[0] && generatedUniques[1])
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     public void BuildRoomLayout()
     {
         for (int x = 0; x < roomLayout.GetLength(0); x++)
@@ -304,21 +340,25 @@ public class DungeonLayout : MonoBehaviour
             {
                 if (roomLayout[y, x] != null)
                 {
+                    string varientPath = "";
+
                     switch (roomLayout[y, x].type)
                     {
                         case "S":
-                            Instantiate(Resources.Load("Prefabs/Generation/Start") as GameObject, Vector2.zero, Quaternion.identity, floorParent);
-                            break;
-                        case "R":
-                            Instantiate(Resources.Load("Prefabs/Generation/Room") as GameObject, new Vector2((x - generateOffset) * roomDimensions.x, (-y + generateOffset) * roomDimensions.y), Quaternion.identity, floorParent);
+                            varientPath = path + "Start";
                             break;
                         case "B":
-                            Instantiate(Resources.Load("Prefabs/Generation/Boss") as GameObject, new Vector2((x - generateOffset) * roomDimensions.x, (-y + generateOffset) * roomDimensions.y), Quaternion.identity, floorParent);
+                            varientPath = path + "Boss";
                             break;
                         case "C":
-                            Instantiate(Resources.Load("Prefabs/Generation/Shop") as GameObject, new Vector2((x - generateOffset) * roomDimensions.x, (-y + generateOffset) * roomDimensions.y), Quaternion.identity, floorParent);
+                            varientPath = path + "Shop";
+                            break;
+                        case "R":
+                            varientPath = path + "Rooms/Varient_" + roomLayout[y, x].varient;
                             break;
                     }
+
+                    Instantiate(Resources.Load(varientPath) as GameObject, new Vector2((x - generateOffset) * roomDimensions.x, (-y + generateOffset) * roomDimensions.y), Quaternion.identity, floorParent);
                 }
             }
         }
