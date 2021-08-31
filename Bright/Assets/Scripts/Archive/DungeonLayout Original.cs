@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DungeonLayout : MonoBehaviour
+public class DungeonLayout1 : MonoBehaviour
 {
     [Header("Room Attributes")]
     public int roomMaxWidth;
@@ -169,20 +169,21 @@ public class DungeonLayout : MonoBehaviour
     {
         int counter = 0;
 
-        Vector2Int[] position = new Vector2Int[]
-{
-            new Vector2Int( neighbourRoom.x + directions["Left"], neighbourRoom.y ),
-            new Vector2Int( neighbourRoom.x + directions["Right"], neighbourRoom.y),
-            new Vector2Int( neighbourRoom.x, neighbourRoom.y + directions["Up"]),
-            new Vector2Int( neighbourRoom.x, neighbourRoom.y + directions["Down"]),
-};
-
-        for (int i = 0; i < position.Length; i++)
+        if (roomLayout[neighbourRoom.x + directions["Left"], neighbourRoom.y] != null)
         {
-            if (roomLayout[position[i].x, position[i].y] != null)
-            {
-                counter++;
-            }
+            counter++;
+        }
+        if (roomLayout[neighbourRoom.x + directions["Right"], neighbourRoom.y] != null)
+        {
+            counter++;
+        }
+        if (roomLayout[neighbourRoom.x, neighbourRoom.y + directions["Up"]] != null)
+        {
+            counter++;
+        }
+        if (roomLayout[neighbourRoom.x, neighbourRoom.y + directions["Down"]] != null)
+        {
+            counter++;
         }
 
         if (counter != neighbourMax || counter == 0)
@@ -209,6 +210,7 @@ public class DungeonLayout : MonoBehaviour
 
     public void GenerateUniqueStart()
     {
+
         generatedUniques = new bool[] { false, false };
 
         for (int x = 1; x < roomLayout.GetLength(0) - 1; x++)
@@ -253,7 +255,7 @@ public class DungeonLayout : MonoBehaviour
         switch (special)
         {
             case SpecialState.Boss:
-                if (CheckNeighbour(selectedRoom, 1) && CheckSpecialNeighbour(selectedRoom, SpecialState.Boss) && CheckChance(2.5f))
+                if (CheckNeighbour(selectedRoom, 1) && CheckChance(2.5f))
                 {
                     CreateRoom(selectedRoom, "B", 0);
                     return true;
@@ -263,7 +265,7 @@ public class DungeonLayout : MonoBehaviour
                     return false;
                 }
             case SpecialState.Shop:
-                if (CheckNeighbour(selectedRoom, 2) && CheckSpecialNeighbour(selectedRoom, SpecialState.Shop) && CheckChance(2.5f))
+                if (CheckNeighbour(selectedRoom, 2) && CheckChance(2.5f))
                 {
                     CreateRoom(selectedRoom, "C", 0);
                     return true;
@@ -281,9 +283,9 @@ public class DungeonLayout : MonoBehaviour
     public void GenerateRoomDifficulty(Vector2Int selectedRoom)
     {
         float roomsLeft = (float)numberOfRooms / maxRoomNumber;
+        int difficultyIndex = DetermineDifficultyScale(roomsLeft);
 
-        roomLayout[selectedRoom.x, selectedRoom.y].varient = DetermineDifficultyScale(roomsLeft);
-        roomLayout[selectedRoom.x, selectedRoom.y].scaling = DetermineDifficultyScale(roomsLeft);
+        roomLayout[selectedRoom.x, selectedRoom.y].varient = DetermineDifficulty(difficultyChance[difficultyIndex]);
     }
 
     public int DetermineDifficultyScale(float roomsLeft)
@@ -310,57 +312,43 @@ public class DungeonLayout : MonoBehaviour
         }
     }
 
-    public bool CheckSpecialNeighbour(Vector2Int neighbourRoom, SpecialState state)
+    public int DetermineDifficulty(float[] chance)
     {
-        Vector2Int[] position = new Vector2Int[]
-        {
-            new Vector2Int( neighbourRoom.x + directions["Left"], neighbourRoom.y ),
-            new Vector2Int( neighbourRoom.x + directions["Right"], neighbourRoom.y),
-            new Vector2Int( neighbourRoom.x, neighbourRoom.y + directions["Up"]),
-            new Vector2Int( neighbourRoom.x, neighbourRoom.y + directions["Down"]),
-        };
+        float selection = Random.Range(0, 11);
 
-        for (int i = 0; i < position.Length; i++)
+        if (selection <= AddChance(0, chance))
         {
-            if (roomLayout[position[i].x, position[i].y] != null)
-            {
-                if (CheckLowLevel(position[i], state))
-                {
-                    return false;
-                }
-            }
+            return 1;
         }
-
-        return true;
+        else if (selection <= AddChance(1, chance) && selection > AddChance(0, chance))
+        {
+            return 2;
+        }
+        else if (selection <= AddChance(2, chance) && selection > AddChance(1, chance))
+        {
+            return 3;
+        }
+        else if (selection <= AddChance(3, chance) && selection > AddChance(2, chance))
+        {
+            return 4;
+        }
+        else 
+        {
+            return 5;
+        }   
     }
 
-    public bool CheckLowLevel(Vector2Int neighbourRoom, SpecialState state)
+    public float AddChance(int index, float[] chance)
     {
-        switch (state)
+        float temp = 0;
+
+        for (int i = 0; i < index + 1; i++)
         {
-            case SpecialState.Boss:
-                if (roomLayout[neighbourRoom.x, neighbourRoom.y].type == "C")
-                {
-                    return true;
-                }
-                else if (roomLayout[neighbourRoom.x, neighbourRoom.y].scaling <= 2)
-                {
-                    return true;
-                }
-                break;
-            case SpecialState.Shop:
-                if (roomLayout[neighbourRoom.x, neighbourRoom.y].type == "B")
-                {
-                    return true;
-                }
-                else if (roomLayout[neighbourRoom.x, neighbourRoom.y].scaling <= 1)
-                {
-                    return true;
-                }
-                break;
+            temp += chance[i];
         }
 
-        return false;
+        Debug.Log(temp);
+        return temp;
     }
 
     public bool GeneratedCorrectly()
@@ -406,10 +394,4 @@ public class DungeonLayout : MonoBehaviour
             }
         }
     }
-}
-
-public enum SpecialState
-{
-    Boss,
-    Shop
 }
