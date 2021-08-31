@@ -84,7 +84,7 @@ public class DungeonLayout1 : MonoBehaviour
 
     public void CreateRoom(Vector2Int selectedRoom, string type, int varient)
     {
-        roomLayout[selectedRoom.x, selectedRoom.y] = new Room(type, varient);
+        //roomLayout[selectedRoom.x, selectedRoom.y] = new Room(type, varient);
     }
 
     public void GenerateRoomLayout()
@@ -285,7 +285,7 @@ public class DungeonLayout1 : MonoBehaviour
         float roomsLeft = (float)numberOfRooms / maxRoomNumber;
         int difficultyIndex = DetermineDifficultyScale(roomsLeft);
 
-        roomLayout[selectedRoom.x, selectedRoom.y].varient = DetermineDifficulty(difficultyChance[difficultyIndex]);
+        roomLayout[selectedRoom.x, selectedRoom.y].variant = DetermineDifficulty(difficultyChance[difficultyIndex]);
     }
 
     public int DetermineDifficultyScale(float roomsLeft)
@@ -385,7 +385,7 @@ public class DungeonLayout1 : MonoBehaviour
                             varientPath = path + "Shop";
                             break;
                         case "R":
-                            varientPath = path + "Rooms/Varient_" + roomLayout[y, x].varient;
+                            varientPath = path + "Rooms/Variant_" + roomLayout[y, x].variant;
                             break;
                     }
 

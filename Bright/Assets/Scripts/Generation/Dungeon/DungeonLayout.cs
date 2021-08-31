@@ -23,6 +23,10 @@ public class DungeonLayout : MonoBehaviour
     public List<Vector2Int> generateRoomCoords = new List<Vector2Int>();
     public Room[,] roomLayout;
 
+    [Header("Variants")]
+    public List<int> variantsLeft = new List<int>();
+    public int variantCount;
+
     public Dictionary<string, int> directions = new Dictionary<string, int>
     {
         { "Left", -1 },
@@ -43,12 +47,22 @@ public class DungeonLayout : MonoBehaviour
     [Header("Reference")]
     public Transform floorParent;
     public TrueWorldGeneration trueWorldGeneration;
+
+    [Header("File Paths")]
     private string path = "Prefabs/Generation/Normal/";
     public string[] wallPath = new string[] { "Prefabs/Generation/Wall_Horizontal", "Prefabs/Generation/Wall_Vertical" };
 
     public int FloorSize(Vector2Int maxRooms)
     {
         return Random.Range(maxRooms.x, maxRooms.y);
+    }
+
+    public void VariantSetUp()
+    {
+        for (int i = 0; i < variantCount; i++)
+        {
+            variantsLeft.Add(i + 1);
+        }
     }
 
     public void GenerationCall()
@@ -64,7 +78,9 @@ public class DungeonLayout : MonoBehaviour
         startRoom = new Vector2Int(roomMaxWidth / 2, roomMaxWidth / 2);
 
         roomLayout = new Room[roomMaxWidth, roomMaxHeight];
-        CreateRoom(startRoom, "S", 0);
+        CreateRoom(startRoom, "S");
+
+        VariantSetUp();
 
         GenerateRoomLayout();
 
@@ -73,6 +89,7 @@ public class DungeonLayout : MonoBehaviour
             case false:
                 Debug.Log("Generation failed, re-starting!" + System.Environment.NewLine + "Number of Rooms Left: " + numberOfRooms);
                 generateRoomCoords.Clear();
+                variantsLeft.Clear();
                 GenerationStart();
                 break;
             case true:
@@ -82,9 +99,14 @@ public class DungeonLayout : MonoBehaviour
         }
     }
 
-    public void CreateRoom(Vector2Int selectedRoom, string type, int varient)
+    public void CreateRoom(Vector2Int selectedRoom, string type, int difficulty, int variant)
     {
-        roomLayout[selectedRoom.x, selectedRoom.y] = new Room(type, varient);
+        roomLayout[selectedRoom.x, selectedRoom.y] = new Room(type, difficulty, variant);
+    }
+
+    public void CreateRoom(Vector2Int selectedRoom, string type)
+    {
+        roomLayout[selectedRoom.x, selectedRoom.y] = new Room(type);
     }
 
     public void GenerateRoomLayout()
@@ -112,8 +134,7 @@ public class DungeonLayout : MonoBehaviour
                 if (CheckChance(generationChance) && numberOfRooms > 0)
                 {
                     Vector2Int newRoom = new Vector2Int(sidesToAdd[i].x, sidesToAdd[i].y);
-                    CreateRoom(newRoom, "R", Random.Range(1, 6));
-                    GenerateRoomDifficulty(newRoom);
+                    CreateRoom(newRoom, "R", GenerateRoomDifficulty(newRoom), GenerateRoomVariant());
                     generateRoomCoords.Add(new Vector2Int(sidesToAdd[i].x, sidesToAdd[i].y));
                     numberOfRooms--;
                 }
@@ -255,7 +276,7 @@ public class DungeonLayout : MonoBehaviour
             case SpecialState.Boss:
                 if (CheckNeighbour(selectedRoom, 1) && CheckSpecialNeighbour(selectedRoom, SpecialState.Boss) && CheckChance(2.5f))
                 {
-                    CreateRoom(selectedRoom, "B", 0);
+                    CreateRoom(selectedRoom, "B");
                     return true;
                 }
                 else
@@ -265,7 +286,7 @@ public class DungeonLayout : MonoBehaviour
             case SpecialState.Shop:
                 if (CheckNeighbour(selectedRoom, 2) && CheckSpecialNeighbour(selectedRoom, SpecialState.Shop) && CheckChance(2.5f))
                 {
-                    CreateRoom(selectedRoom, "C", 0);
+                    CreateRoom(selectedRoom, "C");
                     return true;
                 }
                 else
@@ -278,12 +299,12 @@ public class DungeonLayout : MonoBehaviour
         }
     }
 
-    public void GenerateRoomDifficulty(Vector2Int selectedRoom)
+    public int GenerateRoomDifficulty(Vector2Int selectedRoom)
     {
         float roomsLeft = (float)numberOfRooms / maxRoomNumber;
 
-        roomLayout[selectedRoom.x, selectedRoom.y].varient = DetermineDifficultyScale(roomsLeft);
-        roomLayout[selectedRoom.x, selectedRoom.y].scaling = DetermineDifficultyScale(roomsLeft);
+        return DetermineDifficultyScale(roomsLeft);
+    
     }
 
     public int DetermineDifficultyScale(float roomsLeft)
@@ -308,6 +329,16 @@ public class DungeonLayout : MonoBehaviour
         {
             return 5;
         }
+    }
+
+    public int GenerateRoomVariant()
+    {
+        int index = Random.Range(0, variantsLeft.Count);
+        int temp = variantsLeft[index];
+
+        variantsLeft.RemoveAt(index);
+
+        return temp;
     }
 
     public bool CheckSpecialNeighbour(Vector2Int neighbourRoom, SpecialState state)
@@ -343,7 +374,7 @@ public class DungeonLayout : MonoBehaviour
                 {
                     return true;
                 }
-                else if (roomLayout[neighbourRoom.x, neighbourRoom.y].scaling <= 2)
+                else if (roomLayout[neighbourRoom.x, neighbourRoom.y].difficulty <= 2)
                 {
                     return true;
                 }
@@ -353,7 +384,7 @@ public class DungeonLayout : MonoBehaviour
                 {
                     return true;
                 }
-                else if (roomLayout[neighbourRoom.x, neighbourRoom.y].scaling <= 1)
+                else if (roomLayout[neighbourRoom.x, neighbourRoom.y].difficulty <= 1)
                 {
                     return true;
                 }
@@ -383,25 +414,25 @@ public class DungeonLayout : MonoBehaviour
             {
                 if (roomLayout[y, x] != null)
                 {
-                    string varientPath = "";
+                    string variantPath = "";
 
                     switch (roomLayout[y, x].type)
                     {
                         case "S":
-                            varientPath = path + "Start";
+                            variantPath = path + "Start";
                             break;
                         case "B":
-                            varientPath = path + "Boss";
+                            variantPath = path + "Boss";
                             break;
                         case "C":
-                            varientPath = path + "Shop";
+                            variantPath = path + "Shop";
                             break;
                         case "R":
-                            varientPath = path + "Rooms/Varient_" + roomLayout[y, x].varient;
+                            variantPath = path + "Rooms/Variant_" + roomLayout[y, x].variant;
                             break;
                     }
 
-                    Instantiate(Resources.Load(varientPath) as GameObject, new Vector2((x - generateOffset) * roomDimensions.x, (-y + generateOffset) * roomDimensions.y), Quaternion.identity, floorParent);
+                    Instantiate(Resources.Load(variantPath) as GameObject, new Vector2((x - generateOffset) * roomDimensions.x, (-y + generateOffset) * roomDimensions.y), Quaternion.identity, floorParent);
                 }
             }
         }

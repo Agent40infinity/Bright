@@ -437,6 +437,8 @@ MonoBehaviour:
   generationChance: 5
   generateOffset: 12
   generateRoomCoords: []
+  variantsLeft: 
+  variantCount: 20
   floorParent: {fileID: 6135541934867550436}
   trueWorldGeneration: {fileID: 1452691069}
   wallPath:

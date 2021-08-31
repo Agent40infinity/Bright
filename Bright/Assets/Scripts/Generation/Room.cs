@@ -5,12 +5,18 @@ using UnityEngine;
 public class Room
 {
     public string type;
-    public int scaling;
-    public int varient;
+    public int difficulty;
+    public int variant;
 
-    public Room(string typeInput, int varientInput)
+    public Room(string typeInput, int difficultyInput, int variantInput)
     {
         type = typeInput;
-        varient = varientInput;
+        difficulty = difficultyInput;
+        variant = variantInput;
+    }
+
+    public Room(string typeInput)
+    {
+        type = typeInput;
     }
 }
