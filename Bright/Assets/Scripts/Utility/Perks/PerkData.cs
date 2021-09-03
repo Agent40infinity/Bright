@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PerkData : MonoBehaviour
+public static class PerkData
 {
-    public static Perk AddPerk(string perkName)
+    public static Perk AddPerk(PerkType perk)
     {
         string name = "";
-        PerkType perkType = PerkType.None;
+        PerkType perkType = perk;
 
         string path = "Sprites/Perks/" + perkType.ToString();
 
-        Perk temp = new Perk()
+        Perk temp = new Perk
         {
             Name = name,
             PerkType = perkType,
@@ -24,5 +24,7 @@ public class PerkData : MonoBehaviour
 
 public enum PerkType
 { 
-    None
+    Test1,
+    Test2,
+    Test3
 }

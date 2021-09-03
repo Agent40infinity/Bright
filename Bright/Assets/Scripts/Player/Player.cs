@@ -11,6 +11,9 @@ public class Player : MonoBehaviour
 
     public Vector2 direction;
 
+    [Header("Perks")]
+    public List<Perk> perkList = new List<Perk>();
+
     [Header("Reference")]
     public PlayerPhysics physics;
     public WispPhysics wispPhysics;

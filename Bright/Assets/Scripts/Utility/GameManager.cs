@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
         { "Pause", KeyCode.Escape }
     };
 
+    public static bool maxPerks = false;
+
     public static GameObject dungeonRef;
     public static GameObject trueWorldRef;
 

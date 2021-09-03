@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Perk : MonoBehaviour
+public class Perk
 {
     private string perkName;
     private Sprite portrait;

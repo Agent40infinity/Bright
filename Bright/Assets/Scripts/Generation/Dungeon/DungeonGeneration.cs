@@ -38,7 +38,6 @@ public class DungeonGeneration : DungeonWallGenerate
                     int index = roomLayout[y, x].difficulty;
                     string path = difficultyPath + "Difficulty_" + index + GetDifficultyVariant(index);
 
-                    Debug.Log(path);
                     Instantiate(Resources.Load(path) as GameObject, new Vector2((x - generateOffset) * roomDimensions.x, (-y + generateOffset) * roomDimensions.y), Quaternion.identity, floorParent);
                 }
             }
