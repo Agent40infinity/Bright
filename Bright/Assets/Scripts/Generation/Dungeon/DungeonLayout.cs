@@ -27,6 +27,16 @@ public class DungeonLayout : MonoBehaviour
     public List<int> variantsLeft = new List<int>();
     public int variantCount;
 
+    [Header("Difficulty")]
+    public Dictionary<int, List<int>> difficultiesLeft = new Dictionary<int, List<int>>
+    {
+        { 1, new List<int> { 1, 2, 3, 4} },
+        { 2, new List<int> { 1, 2, 3, 4} },
+        { 3, new List<int> { 1, 2, 3, 4} },
+        { 4, new List<int> { 1, 2, 3, 4} },
+        { 5, new List<int> { 1, 2, 3, 4} },
+    };
+
     public Dictionary<string, int> directions = new Dictionary<string, int>
     {
         { "Left", -1 },
@@ -49,7 +59,8 @@ public class DungeonLayout : MonoBehaviour
     public TrueWorldGeneration trueWorldGeneration;
 
     [Header("File Paths")]
-    private string path = "Prefabs/Generation/Normal/";
+    public string varietyPath = "Prefabs/Generation/Normal/";
+    public string difficultyPath = "Prefabs/Generation/Normal/Content/";
     public string[] wallPath = new string[] { "Prefabs/Generation/Wall_Horizontal", "Prefabs/Generation/Wall_Vertical" };
 
     public int FloorSize(Vector2Int maxRooms)
@@ -419,16 +430,16 @@ public class DungeonLayout : MonoBehaviour
                     switch (roomLayout[y, x].type)
                     {
                         case "S":
-                            variantPath = path + "Start";
+                            variantPath = varietyPath + "Start";
                             break;
                         case "B":
-                            variantPath = path + "Boss";
+                            variantPath = varietyPath + "Boss";
                             break;
                         case "C":
-                            variantPath = path + "Shop";
+                            variantPath = varietyPath + "Shop";
                             break;
                         case "R":
-                            variantPath = path + "Rooms/Variant_" + roomLayout[y, x].variant;
+                            variantPath = varietyPath + "Rooms/Variant_" + roomLayout[y, x].variant;
                             break;
                     }
 
