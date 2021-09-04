@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44bbf86358c543d4ea5a29587a5e7ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dungeonGeneration: {fileID: 3271494771074570574}
+  dungeonGeneration: {fileID: 173640661}
   dungeon: {fileID: 3271494771074570561}
   trueWorldParent: {fileID: 9205655507191765089}
 --- !u!1 &3271494770973867490
@@ -88,7 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3271494771074570560}
-  - component: {fileID: 3271494771074570574}
+  - component: {fileID: 173640661}
   m_Layer: 0
   m_Name: WorldGenerator
   m_TagString: DungeonGeneration
@@ -110,7 +110,7 @@ Transform:
   m_Father: {fileID: 3271494770973867489}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3271494771074570574
+--- !u!114 &173640661
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3271494771074570561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a226b944bcc6a5c4ba42ff775d4c6a59, type: 3}
+  m_Script: {fileID: 11500000, guid: 778cb356c53458b448163c79c6af4b92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   roomMaxWidth: 25
@@ -130,8 +130,15 @@ MonoBehaviour:
   generationChance: 5
   generateOffset: 12
   generateRoomCoords: []
+  variantsLeft: 
+  variantCount: 20
   floorParent: {fileID: 3271494771074570560}
   trueWorldGeneration: {fileID: 766273096725587143}
+  varietyPath: Prefabs/Generation/Normal/
+  difficultyPath: Prefabs/Generation/Normal/Content/
+  wallPath:
+  - Prefabs/Generation/Wall_Horizontal
+  - Prefabs/Generation/Wall_Vertical
 --- !u!1001 &5536127437231467054
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -145,7 +145,7 @@ public class DungeonLayout : MonoBehaviour
                 if (CheckChance(generationChance) && numberOfRooms > 0)
                 {
                     Vector2Int newRoom = new Vector2Int(sidesToAdd[i].x, sidesToAdd[i].y);
-                    CreateRoom(newRoom, "R", GenerateRoomDifficulty(newRoom), GenerateRoomVariant());
+                    CreateRoom(newRoom, "R", GenerateRoomDifficulty(), GenerateRoomVariant());
                     generateRoomCoords.Add(new Vector2Int(sidesToAdd[i].x, sidesToAdd[i].y));
                     numberOfRooms--;
                 }
@@ -310,7 +310,7 @@ public class DungeonLayout : MonoBehaviour
         }
     }
 
-    public int GenerateRoomDifficulty(Vector2Int selectedRoom)
+    public int GenerateRoomDifficulty()
     {
         float roomsLeft = (float)numberOfRooms / maxRoomNumber;
 

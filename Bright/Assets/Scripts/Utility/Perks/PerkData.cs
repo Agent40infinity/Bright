@@ -24,7 +24,9 @@ public static class PerkData
 
 public enum PerkType
 { 
-    Test1,
-    Test2,
-    Test3
+    Test1 = 20,
+    Test2 = 5,
+    Test3 = 15,
+    Test4 = 25,
+    Test5 = 35,
 }
