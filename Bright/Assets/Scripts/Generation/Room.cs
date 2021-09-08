@@ -6,7 +6,8 @@ public class Room
 {
     public string type;
     public int difficulty;
-    public int variant; 
+    public int variant;
+    public GameObject room;
 
     public Room(string typeInput, int difficultyInput, int variantInput)
     {

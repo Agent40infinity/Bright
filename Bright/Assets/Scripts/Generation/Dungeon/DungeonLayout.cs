@@ -434,7 +434,8 @@ public class DungeonLayout : MonoBehaviour
                             break;
                     }
 
-                    Instantiate(Resources.Load(variantPath) as GameObject, new Vector2((x - generateOffset) * roomDimensions.x, (-y + generateOffset) * roomDimensions.y), Quaternion.identity, floorParent);
+                    GameObject room = Instantiate(Resources.Load(variantPath) as GameObject, new Vector2((x - generateOffset) * roomDimensions.x, (-y + generateOffset) * roomDimensions.y), Quaternion.identity, floorParent);
+                    roomLayout[y, x].room = room;
                 }
             }
         }
