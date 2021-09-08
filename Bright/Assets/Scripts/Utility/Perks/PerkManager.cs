@@ -38,19 +38,6 @@ public class PerkManager : MonoBehaviour
         }
     }
 
-    public bool PerkValid(PerkType perk)
-    {   
-        for (int i = 0; i < player.perkList.Count; i++)
-        {
-            if (player.perkList[i].PerkType == perk)
-            {
-                return false;
-            }
-        }
-
-        return true;
-    }
-
     public PerkType PerkDropTable()
     {
         List<int> perkChances = new List<int>();
@@ -91,6 +78,19 @@ public class PerkManager : MonoBehaviour
         }
 
         return temp;
+    }
+
+    public bool PerkValid(PerkType perk)
+    {
+        for (int i = 0; i < player.perkList.Count; i++)
+        {
+            if (player.perkList[i].PerkType == perk)
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     public void OnTriggerEnter2D(Collider2D other)

@@ -45,15 +45,6 @@ public class DungeonLayout : MonoBehaviour
         { "Down", -1 },
     };
 
-    public Dictionary<int, float[]> difficultyChance = new Dictionary<int, float[]>
-    {
-        { 1, new float[] { 7, 1.5f, 0.7f, 0.5f, 0.3f} },
-        { 2, new float[] { 2, 5, 1.5f, 1, 0.5f} },
-        { 3, new float[] { 1, 2, 4, 2, 1} },
-        { 4, new float[] { 0.5f, 0.5f, 1, 5, 3} },
-        { 5, new float[] { 0.5f, 0.5f, 1, 3, 5} },
-    };
-
     [Header("Reference")]
     public Transform floorParent;
     public TrueWorldGeneration trueWorldGeneration;
