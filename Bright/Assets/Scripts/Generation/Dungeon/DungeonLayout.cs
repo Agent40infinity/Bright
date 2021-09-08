@@ -52,7 +52,7 @@ public class DungeonLayout : MonoBehaviour
     [Header("File Paths")]
     public string varietyPath = "Prefabs/Generation/Normal/";
     public string difficultyPath = "Prefabs/Generation/Normal/Content/";
-    public string[] wallPath = new string[] { "Prefabs/Generation/Wall_Horizontal", "Prefabs/Generation/Wall_Vertical" };
+    public string fillPath = "Prefabs/Generation/Fill/";
 
     public int FloorSize(Vector2Int maxRooms)
     {

@@ -14,59 +14,93 @@ public class DungeonWallGenerate : DungeonLayout
                 {
                     Vector2Int selectedRoom = new Vector2Int(x, y);
 
-                    List<string> wallsToAdd = CheckNeighbour(selectedRoom);
-                    AddWalls(selectedRoom, wallsToAdd);
+                    List<string> wallsToAdd = CheckNeighbour(selectedRoom, FillType.Wall);
+                    AddWalls(selectedRoom, wallsToAdd, FillType.Wall);
+
+                    List<string> doorsToAdd = CheckNeighbour(selectedRoom, FillType.Door);
+                    AddWalls(selectedRoom, doorsToAdd, FillType.Door);
                 }
             }
         }
     }
 
-    public List<string> CheckNeighbour(Vector2Int neighbourRoom)
+    public List<string> CheckNeighbour(Vector2Int neighbourRoom, FillType type)
     {
         List<string> temp = new List<string>();
 
-        if (roomLayout[neighbourRoom.x + directions["Left"], neighbourRoom.y] == null)
+        switch (type)
         {
-            temp.Add("Left");
-        }
-        if (roomLayout[neighbourRoom.x + directions["Right"], neighbourRoom.y] == null)
-        {
-            temp.Add("Right");
-        }
-        if (roomLayout[neighbourRoom.x, neighbourRoom.y + directions["Up"]] == null)
-        {
-            temp.Add("Up");
-        }
-        if (roomLayout[neighbourRoom.x, neighbourRoom.y + directions["Down"]] == null)
-        {
-            temp.Add("Down");
+            case FillType.Wall:
+                if (roomLayout[neighbourRoom.x + directions["Left"], neighbourRoom.y] == null)
+                {
+                    temp.Add("Left");
+                }
+                if (roomLayout[neighbourRoom.x + directions["Right"], neighbourRoom.y] == null)
+                {
+                    temp.Add("Right");
+                }
+                if (roomLayout[neighbourRoom.x, neighbourRoom.y + directions["Up"]] == null)
+                {
+                    temp.Add("Up");
+                }
+                if (roomLayout[neighbourRoom.x, neighbourRoom.y + directions["Down"]] == null)
+                {
+                    temp.Add("Down");
+                }
+                break;
+            case FillType.Door:
+                if (roomLayout[neighbourRoom.x + directions["Left"], neighbourRoom.y] != null)
+                {
+                    temp.Add("Left");
+                }
+                if (roomLayout[neighbourRoom.x + directions["Right"], neighbourRoom.y] != null)
+                {
+                    temp.Add("Right");
+                }
+                if (roomLayout[neighbourRoom.x, neighbourRoom.y + directions["Up"]] != null)
+                {
+                    temp.Add("Up");
+                }
+                if (roomLayout[neighbourRoom.x, neighbourRoom.y + directions["Down"]] != null)
+                {
+                    temp.Add("Down");
+                }
+                break;
         }
 
         return temp;
     }
 
-    public void AddWalls(Vector2Int selectedRoom, List<string> wallsToAdd)
+    public void AddWalls(Vector2Int selectedRoom, List<string> sidesToAdd, FillType type)
     {
-        List<GameObject> walls = new List<GameObject>();
         Transform room = roomLayout[selectedRoom.x, selectedRoom.y].room.transform;
 
-        for (int i = 0; i < wallsToAdd.Count; i++)
+        for (int i = 0; i < sidesToAdd.Count; i++)
         {
-            switch (wallsToAdd[i])
+            string path = fillPath + type.ToString() + "_" + sidesToAdd[i];
+            Debug.Log(path);
+
+            switch (sidesToAdd[i])
             {
                 case "Left":
-                    walls.Add(Instantiate(Resources.Load(wallPath[0]) as GameObject, new Vector2((selectedRoom.y - generateOffset) * roomDimensions.x, ((-selectedRoom.x + generateOffset) * roomDimensions.y) + roomDimensions.y / 2 - 0.5f), Quaternion.identity, room));
+                    Instantiate(Resources.Load(path) as GameObject, new Vector2((selectedRoom.y - generateOffset) * roomDimensions.x, ((-selectedRoom.x + generateOffset) * roomDimensions.y) + roomDimensions.y / 2 - 0.5f), Quaternion.identity, room);
                     break;
                 case "Right":
-                    walls.Add(Instantiate(Resources.Load(wallPath[0]) as GameObject, new Vector2((selectedRoom.y - generateOffset) * roomDimensions.x, ((-selectedRoom.x + generateOffset) * roomDimensions.y) - roomDimensions.y / 2 - 0.5f), Quaternion.identity, room));
+                    Instantiate(Resources.Load(path) as GameObject, new Vector2((selectedRoom.y - generateOffset) * roomDimensions.x, ((-selectedRoom.x + generateOffset) * roomDimensions.y) - roomDimensions.y / 2 - 0.5f), Quaternion.identity, room);
                     break;
                 case "Up":
-                    walls.Add(Instantiate(Resources.Load(wallPath[1]) as GameObject, new Vector2(((selectedRoom.y - generateOffset) * roomDimensions.x) + roomDimensions.x / 2, (-selectedRoom.x + generateOffset) * roomDimensions.y), Quaternion.identity, room));
+                    Instantiate(Resources.Load(path) as GameObject, new Vector2(((selectedRoom.y - generateOffset) * roomDimensions.x) + roomDimensions.x / 2, (-selectedRoom.x + generateOffset) * roomDimensions.y), Quaternion.identity, room);
                     break;
                 case "Down":
-                    walls.Add(Instantiate(Resources.Load(wallPath[1]) as GameObject, new Vector2(((selectedRoom.y - generateOffset) * roomDimensions.x) - roomDimensions.x / 2, (-selectedRoom.x + generateOffset) * roomDimensions.y), Quaternion.identity, room));
+                    Instantiate(Resources.Load(path) as GameObject, new Vector2(((selectedRoom.y - generateOffset) * roomDimensions.x) - roomDimensions.x / 2, (-selectedRoom.x + generateOffset) * roomDimensions.y), Quaternion.identity, room);
                     break;
             }
         }
     }
+}
+
+public enum FillType
+{ 
+    Door,
+    Wall
 }
