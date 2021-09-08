@@ -78,7 +78,6 @@ public class DungeonWallGenerate : DungeonLayout
         for (int i = 0; i < sidesToAdd.Count; i++)
         {
             string path = fillPath + type.ToString() + "_" + sidesToAdd[i];
-            Debug.Log(path);
 
             switch (sidesToAdd[i])
             {
