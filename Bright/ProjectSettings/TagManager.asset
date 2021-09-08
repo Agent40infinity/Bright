@@ -10,6 +10,7 @@ TagManager:
   - GameManager
   - TrueWorldGeneration
   - DungeonGeneration
+  - PuzzleStart
   layers:
   - Default
   - TransparentFX
