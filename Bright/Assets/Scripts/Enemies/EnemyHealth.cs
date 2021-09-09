@@ -35,4 +35,13 @@ public class EnemyHealth : MonoBehaviour
     {
         curHealth--;
     }
+
+    // Temporary damage takes damage each time hit by player
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            TakeDamage(1);
+        }
+    }
 }
