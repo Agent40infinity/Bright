@@ -13,7 +13,6 @@ public class TempMushroom : MonoBehaviour
     private float jumpTimer;
     private float attackTimer;
 
-    public int health;
     public GameObject bullet;
 
     private Rigidbody2D rb;
@@ -30,11 +29,6 @@ public class TempMushroom : MonoBehaviour
         jumpTimer -= Time.deltaTime;
         attackTimer -= Time.deltaTime;
         rb.velocity = rb.velocity * 0.99f;
-
-        if (health <= 0)
-        {
-            Death();
-        }
 
         if (Vector2.Distance(transform.position, target.position) > targetDistance && jumpTimer <= 0)
         {
@@ -58,10 +52,15 @@ public class TempMushroom : MonoBehaviour
     void Attack()
     {
         Instantiate(bullet, transform.position, Quaternion.identity);
+        // add pew pew sound effect later xd 
     }
 
-    void Death()
+    // damage the player if they run into the mushroom
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<PlayerHealth>().DamagePlayer(1);
+        }
     }
 }

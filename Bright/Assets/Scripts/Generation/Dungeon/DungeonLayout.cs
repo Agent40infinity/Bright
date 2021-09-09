@@ -96,7 +96,7 @@ public class DungeonLayout : MonoBehaviour
                 break;
             case true:
                 BuildRoomLayout(); //Move to GameManager or Level script later
-                trueWorldGeneration.TrueGenerationCall();
+                //trueWorldGeneration.TrueGenerationCall();
                 break;
         }
     }

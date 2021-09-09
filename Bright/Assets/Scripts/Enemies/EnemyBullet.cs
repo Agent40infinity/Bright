@@ -5,13 +5,16 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
     public float movementSpeed;
+    public int damage;
 
     private Transform target;
     private Vector2 targetLoc;
+    private Rigidbody2D rb;
 
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        rb = GetComponent<Rigidbody2D>();
         targetLoc = new Vector2(target.position.x, target.position.y);
     }
 
@@ -25,8 +28,18 @@ public class EnemyBullet : MonoBehaviour
         }
     }
 
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<PlayerHealth>().DamagePlayer(damage);
+            Explode();
+        }
+    }
+
     void Explode()
     {
-        // implement particle pew pew
+        // implement particle pew pew later
+        Destroy(gameObject);
     }
 }

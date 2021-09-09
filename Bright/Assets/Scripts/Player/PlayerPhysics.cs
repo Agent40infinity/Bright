@@ -120,6 +120,15 @@ public class PlayerPhysics : MonoBehaviour
     public void Movement()
     {
         rigid.velocity = (input * slowApplied) * speed;
+
+        if (input != Vector2.zero)
+        {
+            anim.SetBool("isMoving", true);
+        }
+        else
+        {
+            anim.SetBool("isMoving", false);
+        }
     }
 }
 

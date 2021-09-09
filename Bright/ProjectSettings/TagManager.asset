@@ -11,6 +11,7 @@ TagManager:
   - TrueWorldGeneration
   - DungeonGeneration
   - PuzzleStart
+  - Enemy
   layers:
   - Default
   - TransparentFX

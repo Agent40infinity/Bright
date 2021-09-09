@@ -136,9 +136,7 @@ MonoBehaviour:
   trueWorldGeneration: {fileID: 766273096725587143}
   varietyPath: Prefabs/Generation/Normal/
   difficultyPath: Prefabs/Generation/Normal/Content/
-  wallPath:
-  - Prefabs/Generation/Wall_Horizontal
-  - Prefabs/Generation/Wall_Vertical
+  fillPath: Prefabs/Generation/Normal/Fill/
 --- !u!1001 &5536127437231467054
 PrefabInstance:
   m_ObjectHideFlags: 0
