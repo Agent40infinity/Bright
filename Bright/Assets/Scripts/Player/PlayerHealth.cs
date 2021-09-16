@@ -6,7 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [Header("Health")]
     public int curHealth; //Value for player's current health.
-    public static int maxHealth = 3; //default value for player's max health.
+    public int maxHealth = 3; //default value for player's max health.
 
     [Header("iFrame")]
     public float iFrameTimerReset;

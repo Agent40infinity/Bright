@@ -25,7 +25,7 @@ public class DungeonCamera : MonoBehaviour
         }
     }
 
-    public void LerpCamera()
+    public void LerpCamera()    
     {
         if (transform.position != cameraPos)
         {
@@ -33,9 +33,23 @@ public class DungeonCamera : MonoBehaviour
         }
         else
         {
+            OcclusionCulling();
             moveState = MoveState.Inactive;
         }
+    }
 
+    public void OcclusionCulling()
+    {
+        for (int i = 0; i < generation.roomLayout.GetLength(0); i++)
+        {
+            for (int j = 0; j < generation.roomLayout.GetLength(1); j++)
+            {
+                if (generation.roomLayout[i, j] != null)
+                {
+                    generation.roomLayout[i, j].room.SetActive(false);
+                }
+            }
+        }
     }
 
     public void OnTriggerExit2D(Collider2D other)
