@@ -11,10 +11,12 @@ namespace PauseMenu
         #region Variables
         public PauseState pauseState = PauseState.Playing; //Checks whether or not the game is paused
         public GameObject pauseMenu;
-        public GameObject options, main, mainBackground, overlay, background; //Creates reference for the pause menu
+        public GameObject options, main, mainBackground, background; //Creates reference for the pause menu
         public Settings optionsMenu;
         public Menu menu;
         public FadeController fade;
+
+        public GameManager gameManager;
         #endregion
 
         #region General
@@ -68,14 +70,12 @@ namespace PauseMenu
             pauseState = PauseState.Playing;
             pauseMenu.SetActive(false);
             main.SetActive(true);
-            //overlay.SetActive(false);
             mainBackground.SetActive(true);
             background.SetActive(false);
 
             fade.FadeIn();
             menu.music.Play();
-            GameManager.gameActive = false;
-
+            gameManager.LeaveGame();
         }
 
         public void OptionsCall(bool toggle)

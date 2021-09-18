@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour
     [Header("Reference")]
     public PlayerPhysics physics;
 
-    public void Start()
+    public void Awake()
     {
         curHealth = maxHealth;
     }

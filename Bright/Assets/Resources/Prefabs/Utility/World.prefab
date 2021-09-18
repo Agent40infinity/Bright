@@ -126,7 +126,7 @@ MonoBehaviour:
   roomMaxHeight: 25
   roomRange: {x: 15, y: 20}
   maxRoomNumber: 0
-  roomDimensions: {x: 19, y: 11}
+  roomDimensions: {x: 15, y: 9}
   generationChance: 5
   generateOffset: 12
   generateRoomCoords: []
@@ -144,6 +144,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3271494770973867489}
     m_Modifications:
+    - target: {fileID: 1539286380818861730, guid: 1ab570c5b2f332a468847fa11eafc0eb,
+        type: 3}
+      propertyPath: maxHealth
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7039946160677048493, guid: 1ab570c5b2f332a468847fa11eafc0eb,
         type: 3}
       propertyPath: m_Name

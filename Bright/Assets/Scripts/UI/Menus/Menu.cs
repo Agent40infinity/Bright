@@ -9,7 +9,7 @@ public class Menu : MonoBehaviour
 {
     #region Variables
     //General: 
-    public GameObject main, mainBackground, overlay; //Allows for reference to GameObjects Meny and Options
+    public GameObject main, mainBackground; //Allows for reference to GameObjects Meny and Options
     public AudioMixer masterMixer;                   //public bool toggle = false; //Toggle for switching between settings and main
                                                      //public int option = 0;      //Changes between the 4 main screens in options.
     public FadeController fade;
@@ -62,7 +62,6 @@ public class Menu : MonoBehaviour
         yield return new WaitForSeconds(2);
         main.SetActive(false);
         mainBackground.SetActive(false);
-        //overlay.SetActive(true);
 
         fade.FadeIn();
         gameManager.StartGame();

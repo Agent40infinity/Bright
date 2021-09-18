@@ -36,6 +36,9 @@ public class GameManager : MonoBehaviour
 
     public static GameObject dungeonRef;
     public static GameObject trueWorldRef;
+    public HealthManager healthManager;
+    public GoldManager goldManager;
+    public GameObject overlay;
 
     public void Awake()
     {
@@ -49,9 +52,16 @@ public class GameManager : MonoBehaviour
         {
             SystemConfig.SaveSettings(); //Saves the new data as a new file "Settings".
         }
+
+        overlay.SetActive(false);
     }
 
     public void Update()
+    {
+        CurrentWorld();
+    }
+
+    public void CurrentWorld()
     {
         switch (worldState)
         {
@@ -78,6 +88,16 @@ public class GameManager : MonoBehaviour
     {
         gameActive = true;
         Instantiate(Resources.Load("Prefabs/Utility/World") as GameObject, Vector3.zero, Quaternion.identity);
+        overlay.SetActive(true);
+        healthManager.SetUpHealth();
+    }
+
+    public void LeaveGame()
+    {
+        gameActive = false;
+        healthManager.ClearPrevious();
+        goldManager.ClearPrevious();
+        overlay.SetActive(false);
     }
 
     public void ChangeWorld(bool isTrueWorld)

@@ -22,16 +22,11 @@ public class HealthManager : MonoBehaviour
     public PlayerHealth health;
     public GameObject heartParent;
 
-    public void Start()
-    {
-        health = GameObject.FindWithTag("Player").GetComponent<PlayerHealth>();
-
-        SetUpHealth();
-    }
-
     public void SetUpHealth()
     {
         ClearPrevious();
+
+        health = GameObject.FindWithTag("Player").GetComponent<PlayerHealth>();
 
         for (int i = 0; i < health.maxHealth; i++)
         {
@@ -47,6 +42,8 @@ public class HealthManager : MonoBehaviour
 
     public void ClearPrevious()
     {
+        health = null;
+
         for (int i = 0; i < hearts.Count; i++)
         {
             Destroy(hearts[i]);
