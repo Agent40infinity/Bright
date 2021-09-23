@@ -286,6 +286,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2429dd408c5e64f96da43f94f9a442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2083104965 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6740516120160970101, guid: 4b7d10d9585ee574a9d87c4b451b21a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1124249405}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8b8221d766156478eacba1f1443d35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4082147359181995167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -293,6 +305,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1412082653, guid: aecd507e9cccefb4aae7564449c4f47d, type: 3}
+      propertyPath: m_Name
+      value: GoldManager
+      objectReference: {fileID: 0}
     - target: {fileID: 4082147358694680832, guid: aecd507e9cccefb4aae7564449c4f47d,
         type: 3}
       propertyPath: gameManager
@@ -413,6 +429,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 6457935997377708326, guid: aecd507e9cccefb4aae7564449c4f47d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7574017899950759596, guid: aecd507e9cccefb4aae7564449c4f47d,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthManager
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aecd507e9cccefb4aae7564449c4f47d, type: 3}
 --- !u!114 &4082147359181995169 stripped
@@ -459,6 +485,11 @@ PrefabInstance:
       propertyPath: overlay
       value: 
       objectReference: {fileID: 1012243913}
+    - target: {fileID: 5269418283305673642, guid: e6c29e17dead92341aa9c9c2e7b86e6e,
+        type: 3}
+      propertyPath: dungeonCamera
+      value: 
+      objectReference: {fileID: 2083104965}
     - target: {fileID: 5269418283305673643, guid: e6c29e17dead92341aa9c9c2e7b86e6e,
         type: 3}
       propertyPath: m_LocalPosition.x

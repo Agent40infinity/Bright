@@ -234,8 +234,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dungeonGeneration: {fileID: 6135541934867550442}
-  dungeon: {fileID: 6135541934867550437}
   trueWorldParent: {fileID: 1452691068}
+  varietyPath: Prefabs/Generation/True/
 --- !u!1 &1963751116
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,8 +7,9 @@ public class TrueWorldGeneration : MonoBehaviour
     public string[,] trueRoomLayout;
     public DungeonGeneration dungeonGeneration;
 
-    public GameObject dungeon;
     public Transform trueWorldParent;
+
+    public string varietyPath = "Prefabs/Generation/True/";
 
     public void TrueGenerationCall()
     {
@@ -18,25 +19,38 @@ public class TrueWorldGeneration : MonoBehaviour
 
     public void TrueGenerationStart()   
     {
-        
-
         BuildTrueWorld();
 
         gameObject.SetActive(false);
     }
 
+    public List<Transform> GetDungeonLayout()
+    {
+        List<Transform> temp = new List<Transform>();
+
+        for (int x = 0; x < dungeonGeneration.roomLayout.GetLength(0); x++)
+        {
+            for (int y = 0; y < dungeonGeneration.roomLayout.GetLength(1); y++)
+            {
+                if (dungeonGeneration.roomLayout[x, y] != null)
+                {
+                    temp.Add(dungeonGeneration.roomLayout[x, y].room.transform);
+                }
+            }
+        }
+
+        return temp;
+    }
+
     public void BuildTrueWorld()
     {
-        List<Transform> generatedFloor = new List<Transform>(dungeon.GetComponentsInChildren<Transform>());
+        List<Transform> generatedFloor = GetDungeonLayout();
 
-        for (int i = 1; i < generatedFloor.Count; i++)
+        for (int i = 0; i < generatedFloor.Count; i++)
         {
-            switch (generatedFloor[i].name.Contains("Room"))
-            {
-                case true:
-                    Instantiate(generatedFloor[i], trueWorldParent);
-                    break;
-            }
+            string path = varietyPath + "Rooms/Variant_1";
+
+            Instantiate(Resources.Load(path), generatedFloor[i].position, Quaternion.identity, trueWorldParent);
         }
     }
 }

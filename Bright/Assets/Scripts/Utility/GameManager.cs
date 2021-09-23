@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public static WorldState worldState;
     public static bool startTransition = false;
     public static AudioMixer masterMixer; //Creates reference for the menu music
+    public static Vector2Int currentRoom;
+    public static GameObject currentWorld;
     public static Dictionary<string, KeyCode> keybind = new Dictionary<string, KeyCode> //Dictionary to store the keybinds.
     {
         { "MoveUp", KeyCode.W },
@@ -34,11 +36,13 @@ public class GameManager : MonoBehaviour
 
     public static bool maxPerks = false;
 
-    public static GameObject dungeonRef;
-    public static GameObject trueWorldRef;
+    [Header("References")]
     public HealthManager healthManager;
     public GoldManager goldManager;
     public GameObject overlay;
+    public DungeonCamera dungeonCamera;
+    public static GameObject dungeonRef;
+    public static GameObject trueWorldRef;
 
     public void Awake()
     {
@@ -87,14 +91,18 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         gameActive = true;
-        Instantiate(Resources.Load("Prefabs/Utility/World") as GameObject, Vector3.zero, Quaternion.identity);
+        currentWorld = Instantiate(Resources.Load("Prefabs/Utility/World") as GameObject, Vector3.zero, Quaternion.identity);
         overlay.SetActive(true);
         healthManager.SetUpHealth();
+        dungeonCamera.OcclusionCulling();
     }
 
     public void LeaveGame()
     {
         gameActive = false;
+        Destroy(currentWorld);
+        currentWorld = null;
+        dungeonCamera.ResetCamera();
         healthManager.ClearPrevious();
         goldManager.ClearPrevious();
         overlay.SetActive(false);

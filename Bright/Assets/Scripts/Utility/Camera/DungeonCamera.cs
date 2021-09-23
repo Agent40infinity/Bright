@@ -33,7 +33,6 @@ public class DungeonCamera : MonoBehaviour
         }
         else
         {
-            OcclusionCulling();
             moveState = MoveState.Inactive;
         }
     }
@@ -46,7 +45,16 @@ public class DungeonCamera : MonoBehaviour
             {
                 if (generation.roomLayout[i, j] != null)
                 {
-                    generation.roomLayout[i, j].room.SetActive(false);
+                    Vector2Int room = new Vector2Int(i, j);
+
+                    if (room == GameManager.currentRoom)
+                    {
+                        generation.roomLayout[GameManager.currentRoom.x, GameManager.currentRoom.y].room.SetActive(true);
+                    }
+                    else
+                    {
+                        generation.roomLayout[i, j].room.SetActive(false);
+                    }
                 }
             }
         }
@@ -65,21 +73,26 @@ public class DungeonCamera : MonoBehaviour
                         if (position.x > cameraPos.x && (position.y < cameraPos.y + generation.roomDimensions.y / 2 && position.y > cameraPos.y - generation.roomDimensions.y / 2))
                         {
                             cameraPos.x += generation.roomDimensions.x;
+                            GameManager.currentRoom.y++;
                         }
                         else if (position.x < cameraPos.x && (position.y < cameraPos.y + generation.roomDimensions.y / 2 && position.y > cameraPos.y - generation.roomDimensions.y / 2))
                         {
                             cameraPos.x -= generation.roomDimensions.x;
+                            GameManager.currentRoom.y--;
                         }
                         else if (position.y > cameraPos.y && (position.x < cameraPos.x + generation.roomDimensions.x / 2 && position.x > cameraPos.x - generation.roomDimensions.x / 2))
                         {
                             cameraPos.y += generation.roomDimensions.y;
+                            GameManager.currentRoom.x--;
                         }
                         else if (position.y < cameraPos.y && (position.x < cameraPos.x + generation.roomDimensions.x / 2 && position.x > cameraPos.x - generation.roomDimensions.x / 2))
                         {
                             cameraPos.y -= generation.roomDimensions.y;
+                            GameManager.currentRoom.x++;
                         }
 
                         moveState = MoveState.Active;
+                        OcclusionCulling();
                         break;
                     case FollowState.Follow:
 
@@ -87,6 +100,11 @@ public class DungeonCamera : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    public void ResetCamera()
+    {
+        transform.position = Vector2.zero;
     }
 }
 
@@ -101,4 +119,4 @@ public enum MoveState
 { 
     Active,
     Inactive
-}
+} 
