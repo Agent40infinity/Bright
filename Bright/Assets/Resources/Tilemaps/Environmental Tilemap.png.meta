@@ -1,0 +1,3209 @@
+fileFormatVersion: 2
+guid: 42002b04e4170df4faa7bf48f0def273
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8794805964494245319
+    second: Environmental Tilemap_0
+  - first:
+      213: 8643736502692063158
+    second: Environmental Tilemap_1
+  - first:
+      213: 6449217148075546533
+    second: Environmental Tilemap_2
+  - first:
+      213: 4028193002140285322
+    second: Environmental Tilemap_3
+  - first:
+      213: 7146886661058897329
+    second: Environmental Tilemap_4
+  - first:
+      213: 1306735983643684924
+    second: Environmental Tilemap_5
+  - first:
+      213: -6049118251936385816
+    second: Environmental Tilemap_6
+  - first:
+      213: -2217863450360394504
+    second: Environmental Tilemap_7
+  - first:
+      213: 4054869079176629640
+    second: Environmental Tilemap_8
+  - first:
+      213: 304548109303632682
+    second: Environmental Tilemap_9
+  - first:
+      213: 8795457068913170167
+    second: Environmental Tilemap_10
+  - first:
+      213: 908890541393633388
+    second: Environmental Tilemap_11
+  - first:
+      213: -5040100677925273072
+    second: Environmental Tilemap_12
+  - first:
+      213: -9120175588064235216
+    second: Environmental Tilemap_13
+  - first:
+      213: -2920396585703257677
+    second: Environmental Tilemap_14
+  - first:
+      213: -1720459600902644242
+    second: Environmental Tilemap_15
+  - first:
+      213: -5833141764629220799
+    second: Environmental Tilemap_16
+  - first:
+      213: -5757578395155728803
+    second: Environmental Tilemap_17
+  - first:
+      213: 4286151699790719413
+    second: Environmental Tilemap_18
+  - first:
+      213: -4287288065970182898
+    second: Environmental Tilemap_19
+  - first:
+      213: -5775890551799938226
+    second: Environmental Tilemap_20
+  - first:
+      213: 4841889488861323653
+    second: Environmental Tilemap_21
+  - first:
+      213: -5718964729271300818
+    second: Environmental Tilemap_22
+  - first:
+      213: 8039379990370162332
+    second: Environmental Tilemap_23
+  - first:
+      213: 1154479053748611706
+    second: Environmental Tilemap_24
+  - first:
+      213: 8623109660268033438
+    second: Environmental Tilemap_25
+  - first:
+      213: 2944182471499241447
+    second: Environmental Tilemap_26
+  - first:
+      213: -4747715940336522259
+    second: Environmental Tilemap_27
+  - first:
+      213: 401729702470832886
+    second: Environmental Tilemap_28
+  - first:
+      213: 8894357285505711184
+    second: Environmental Tilemap_29
+  - first:
+      213: -5830426544825164857
+    second: Environmental Tilemap_30
+  - first:
+      213: 2878872173452675746
+    second: Environmental Tilemap_31
+  - first:
+      213: -8540498782308509722
+    second: Environmental Tilemap_32
+  - first:
+      213: -1948274544225368441
+    second: Environmental Tilemap_33
+  - first:
+      213: 923914584117079888
+    second: Environmental Tilemap_34
+  - first:
+      213: -3944470439843587016
+    second: Environmental Tilemap_35
+  - first:
+      213: 3447585596322202975
+    second: Environmental Tilemap_36
+  - first:
+      213: 5885490819947664845
+    second: Environmental Tilemap_37
+  - first:
+      213: 2305184762601110387
+    second: Environmental Tilemap_38
+  - first:
+      213: -79601471935410512
+    second: Environmental Tilemap_39
+  - first:
+      213: -1741063787927845448
+    second: Environmental Tilemap_40
+  - first:
+      213: -4992857120083255668
+    second: Environmental Tilemap_41
+  - first:
+      213: 4329753036926671174
+    second: Environmental Tilemap_42
+  - first:
+      213: 9088179702823865188
+    second: Environmental Tilemap_43
+  - first:
+      213: 8170027752837425999
+    second: Environmental Tilemap_44
+  - first:
+      213: -5802403335548043281
+    second: Environmental Tilemap_45
+  - first:
+      213: -5164220416233809358
+    second: Environmental Tilemap_46
+  - first:
+      213: -5545120947081396696
+    second: Environmental Tilemap_47
+  - first:
+      213: 2347276822623133702
+    second: Environmental Tilemap_48
+  - first:
+      213: 2080142423848585712
+    second: Environmental Tilemap_49
+  - first:
+      213: 2308075852654238835
+    second: Environmental Tilemap_50
+  - first:
+      213: -9068924009983430820
+    second: Environmental Tilemap_51
+  - first:
+      213: 7654939713080340467
+    second: Environmental Tilemap_52
+  - first:
+      213: 2041128018382074592
+    second: Environmental Tilemap_53
+  - first:
+      213: 6936226889917533367
+    second: Environmental Tilemap_54
+  - first:
+      213: 916703269530605498
+    second: Environmental Tilemap_55
+  - first:
+      213: 969552665272458196
+    second: Environmental Tilemap_0
+  - first:
+      213: 4445368366802349935
+    second: Environmental Tilemap_1
+  - first:
+      213: 5767823086049663277
+    second: Environmental Tilemap_2
+  - first:
+      213: -3042652568027589578
+    second: Environmental Tilemap_3
+  - first:
+      213: -6542789993855399209
+    second: Environmental Tilemap_4
+  - first:
+      213: -8055629175717591631
+    second: Environmental Tilemap_5
+  - first:
+      213: -8498388144079935161
+    second: Environmental Tilemap_6
+  - first:
+      213: 5861672383406626667
+    second: Environmental Tilemap_7
+  - first:
+      213: 3150889206083889396
+    second: Environmental Tilemap_8
+  - first:
+      213: -7086206416014045813
+    second: Environmental Tilemap_9
+  - first:
+      213: -2666902706496686839
+    second: Environmental Tilemap_10
+  - first:
+      213: 6890692063110376396
+    second: Environmental Tilemap_11
+  - first:
+      213: 4649741105533534658
+    second: Environmental Tilemap_12
+  - first:
+      213: -1251392004805531803
+    second: Environmental Tilemap_13
+  - first:
+      213: -2153721416099919133
+    second: Environmental Tilemap_14
+  - first:
+      213: 4613031098823314344
+    second: Environmental Tilemap_15
+  - first:
+      213: 7138047155945283108
+    second: Environmental Tilemap_16
+  - first:
+      213: 6958538716823083513
+    second: Environmental Tilemap_17
+  - first:
+      213: -6096972800327375137
+    second: Environmental Tilemap_18
+  - first:
+      213: 3048336346461541125
+    second: Environmental Tilemap_19
+  - first:
+      213: -1818066145302977714
+    second: Environmental Tilemap_20
+  - first:
+      213: -5447775731768841860
+    second: Environmental Tilemap_21
+  - first:
+      213: 4703209224346569902
+    second: Environmental Tilemap_22
+  - first:
+      213: 1992968166071098215
+    second: Environmental Tilemap_23
+  - first:
+      213: 2794679050792949479
+    second: Environmental Tilemap_24
+  - first:
+      213: 5902552916047949486
+    second: Environmental Tilemap_25
+  - first:
+      213: -8333885171786334994
+    second: Environmental Tilemap_26
+  - first:
+      213: 5018044908624087653
+    second: Environmental Tilemap_27
+  - first:
+      213: -3581623264167021419
+    second: Environmental Tilemap_28
+  - first:
+      213: 197944030452710206
+    second: Environmental Tilemap_29
+  - first:
+      213: 4250597859161471703
+    second: Environmental Tilemap_30
+  - first:
+      213: 8995771773588521101
+    second: Environmental Tilemap_31
+  - first:
+      213: -5515701011774717799
+    second: Environmental Tilemap_32
+  - first:
+      213: 5248462288389843911
+    second: Environmental Tilemap_33
+  - first:
+      213: 9202210794215569906
+    second: Environmental Tilemap_34
+  - first:
+      213: 8569232246581671766
+    second: Environmental Tilemap_35
+  - first:
+      213: 8319128951651802589
+    second: Environmental Tilemap_36
+  - first:
+      213: -6373890114238598773
+    second: Environmental Tilemap_37
+  - first:
+      213: -1477585905750094851
+    second: Environmental Tilemap_38
+  - first:
+      213: -9050535048582653687
+    second: Environmental Tilemap_39
+  - first:
+      213: -4338650478180242930
+    second: Environmental Tilemap_40
+  - first:
+      213: 1818586797787124799
+    second: Environmental Tilemap_41
+  - first:
+      213: -720827494963655843
+    second: Environmental Tilemap_42
+  - first:
+      213: -3875368374953963200
+    second: Environmental Tilemap_43
+  - first:
+      213: -7492780996190857684
+    second: Environmental Tilemap_44
+  - first:
+      213: 6553307937739767209
+    second: Environmental Tilemap_45
+  - first:
+      213: 430595135336799686
+    second: Environmental Tilemap_46
+  - first:
+      213: -8801192740535019599
+    second: Environmental Tilemap_47
+  - first:
+      213: 6082742215908846254
+    second: Environmental Tilemap_48
+  - first:
+      213: -709494254611864267
+    second: Environmental Tilemap_49
+  - first:
+      213: -6242861691643707832
+    second: Environmental Tilemap_50
+  - first:
+      213: 6437651818836641797
+    second: Environmental Tilemap_51
+  - first:
+      213: 755946547300956682
+    second: Environmental Tilemap_52
+  - first:
+      213: 3324105527670283624
+    second: Environmental Tilemap_53
+  - first:
+      213: 8375683988210374145
+    second: Environmental Tilemap_54
+  - first:
+      213: 5786667991765753508
+    second: Environmental Tilemap_55
+  - first:
+      213: -3745540319324447864
+    second: Environmental Tilemap_56
+  - first:
+      213: 7789062649483709013
+    second: Environmental Tilemap_57
+  - first:
+      213: -5712135309004548003
+    second: Environmental Tilemap_58
+  - first:
+      213: -4004475488898356887
+    second: Environmental Tilemap_59
+  - first:
+      213: 7198344035319152609
+    second: Environmental Tilemap_56
+  - first:
+      213: -5105077025914169732
+    second: Environmental Tilemap_57
+  - first:
+      213: -5042907361314863607
+    second: Environmental Tilemap_58
+  - first:
+      213: 5134590424576630815
+    second: Environmental Tilemap_59
+  - first:
+      213: 4602296134848937889
+    second: Environmental Tilemap_60
+  - first:
+      213: 2216739388983737958
+    second: Environmental Tilemap_61
+  - first:
+      213: 4456406412179543883
+    second: Environmental Tilemap_62
+  - first:
+      213: 8210922795570640078
+    second: Environmental Tilemap_63
+  - first:
+      213: 1919260837717166649
+    second: Environmental Tilemap_64
+  - first:
+      213: -2773626346509946762
+    second: Environmental Tilemap_65
+  - first:
+      213: 7067886323077296361
+    second: Environmental Tilemap_66
+  - first:
+      213: -5734702313229593815
+    second: Environmental Tilemap_67
+  - first:
+      213: -2584745384911905274
+    second: Environmental Tilemap_60
+  - first:
+      213: -2738213992495429816
+    second: Environmental Tilemap_61
+  - first:
+      213: 8856454660452509467
+    second: Environmental Tilemap_62
+  - first:
+      213: -4316128944982833039
+    second: Environmental Tilemap_63
+  - first:
+      213: 205556088454184208
+    second: Environmental Tilemap_64
+  - first:
+      213: -5951433120485948246
+    second: Environmental Tilemap_65
+  - first:
+      213: 651927728957895167
+    second: Environmental Tilemap_66
+  - first:
+      213: 6608590095579002017
+    second: Environmental Tilemap_67
+  - first:
+      213: -5658381168630159007
+    second: Environmental Tilemap_68
+  - first:
+      213: 6618002107541260577
+    second: Environmental Tilemap_69
+  - first:
+      213: 7084491552526678040
+    second: Environmental Tilemap_70
+  - first:
+      213: -7124885178602202534
+    second: Environmental Tilemap_71
+  - first:
+      213: 6137811939925544252
+    second: Environmental Tilemap_72
+  - first:
+      213: 1879706008679395271
+    second: Environmental Tilemap_73
+  - first:
+      213: -891049768082182582
+    second: Environmental Tilemap_74
+  - first:
+      213: 8479192425554949083
+    second: Environmental Tilemap_75
+  - first:
+      213: 3091688708584336495
+    second: Environmental Tilemap_76
+  - first:
+      213: -3669838240272967559
+    second: Environmental Tilemap_77
+  - first:
+      213: -7054210472789833461
+    second: Environmental Tilemap_78
+  - first:
+      213: -819206930211009148
+    second: Environmental Tilemap_79
+  - first:
+      213: -5307341002402994164
+    second: Environmental Tilemap_80
+  - first:
+      213: -8897227332266042850
+    second: Environmental Tilemap_81
+  - first:
+      213: 4449344799061980099
+    second: Environmental Tilemap_82
+  - first:
+      213: 8930280850082417097
+    second: Environmental Tilemap_83
+  - first:
+      213: 574769352343703272
+    second: Environmental Tilemap_84
+  - first:
+      213: 6755100155272361324
+    second: Environmental Tilemap_85
+  - first:
+      213: 7997325115657614741
+    second: Environmental Tilemap_86
+  - first:
+      213: 7240329067338890828
+    second: Environmental Tilemap_87
+  - first:
+      213: -2662865153929602059
+    second: Environmental Tilemap_88
+  - first:
+      213: -7869037092520441574
+    second: Environmental Tilemap_89
+  - first:
+      213: -7440984792134911837
+    second: Environmental Tilemap_90
+  - first:
+      213: 9130876725228316066
+    second: Environmental Tilemap_91
+  - first:
+      213: 1759300801718376954
+    second: Environmental Tilemap_92
+  - first:
+      213: 8840794673422480186
+    second: Environmental Tilemap_93
+  - first:
+      213: 9189094394376992609
+    second: Environmental Tilemap_94
+  - first:
+      213: -6661321282180880946
+    second: Environmental Tilemap_95
+  - first:
+      213: 6185042457151844749
+    second: Environmental Tilemap_96
+  - first:
+      213: 4363707253892860519
+    second: Environmental Tilemap_97
+  - first:
+      213: 7460653062032799417
+    second: Environmental Tilemap_98
+  - first:
+      213: 6837898405587133289
+    second: Environmental Tilemap_99
+  - first:
+      213: 5174881354474519761
+    second: Environmental Tilemap_100
+  - first:
+      213: -5444600556297802256
+    second: Environmental Tilemap_101
+  - first:
+      213: -7576958202527618944
+    second: Environmental Tilemap_102
+  - first:
+      213: -713486272620708231
+    second: Environmental Tilemap_103
+  - first:
+      213: -8806903256614375299
+    second: Environmental Tilemap_104
+  - first:
+      213: 4664421286320532779
+    second: Environmental Tilemap_105
+  - first:
+      213: -3793913011259688849
+    second: Environmental Tilemap_106
+  - first:
+      213: 3288288782770987341
+    second: Environmental Tilemap_68
+  - first:
+      213: 699065822304864133
+    second: Environmental Tilemap_69
+  - first:
+      213: -687694033400729540
+    second: Environmental Tilemap_70
+  - first:
+      213: -8954016907458700650
+    second: Environmental Tilemap_71
+  - first:
+      213: -6377991336594840819
+    second: Environmental Tilemap_72
+  - first:
+      213: 3788052741410275953
+    second: Environmental Tilemap_73
+  - first:
+      213: -6860755532897089659
+    second: Environmental Tilemap_74
+  - first:
+      213: -6235534078062743149
+    second: Environmental Tilemap_75
+  - first:
+      213: 6117199782394989519
+    second: Environmental Tilemap_76
+  - first:
+      213: -3943222930546264996
+    second: Environmental Tilemap_77
+  - first:
+      213: 3725682502196596961
+    second: Environmental Tilemap_78
+  - first:
+      213: -2776738032523767578
+    second: Environmental Tilemap_79
+  - first:
+      213: 9031492277532918655
+    second: Environmental Tilemap_80
+  - first:
+      213: -8288761088751766269
+    second: Environmental Tilemap_81
+  - first:
+      213: -5171193234043633894
+    second: Environmental Tilemap_82
+  - first:
+      213: 2589131697473206650
+    second: Environmental Tilemap_83
+  - first:
+      213: 1086852697226701495
+    second: Environmental Tilemap_84
+  - first:
+      213: 6800033526300944205
+    second: Environmental Tilemap_85
+  - first:
+      213: 4571487286879186424
+    second: Environmental Tilemap_86
+  - first:
+      213: -2868258572191055757
+    second: Environmental Tilemap_87
+  - first:
+      213: 4759658747013296688
+    second: Environmental Tilemap_88
+  - first:
+      213: 2272057669851885141
+    second: Environmental Tilemap_89
+  - first:
+      213: 2832398670622289480
+    second: Environmental Tilemap_90
+  - first:
+      213: -8223297741382196100
+    second: Environmental Tilemap_91
+  - first:
+      213: 1302037344132325469
+    second: Environmental Tilemap_92
+  - first:
+      213: 2768273132436076321
+    second: Environmental Tilemap_93
+  - first:
+      213: 2907715052919954760
+    second: Environmental Tilemap_94
+  - first:
+      213: -3419913386537902019
+    second: Environmental Tilemap_95
+  - first:
+      213: -1805104783976030157
+    second: Environmental Tilemap_96
+  - first:
+      213: -7387231219273054545
+    second: Environmental Tilemap_97
+  - first:
+      213: -2414963504321866918
+    second: Environmental Tilemap_98
+  - first:
+      213: 8602772556464385107
+    second: Environmental Tilemap_99
+  - first:
+      213: 7102626683607712588
+    second: Environmental Tilemap_100
+  - first:
+      213: 7614607217000794108
+    second: Environmental Tilemap_101
+  - first:
+      213: -1872526596178033641
+    second: Environmental Tilemap_102
+  - first:
+      213: 7276719557099278894
+    second: Environmental Tilemap_103
+  - first:
+      213: 1574092225177483534
+    second: Environmental Tilemap_104
+  - first:
+      213: -3894327189941884507
+    second: Environmental Tilemap_105
+  - first:
+      213: -7648319111876983988
+    second: Environmental Tilemap_106
+  - first:
+      213: 3204316952945578575
+    second: Environmental Tilemap_107
+  - first:
+      213: 1684407569611366693
+    second: Environmental Tilemap_108
+  - first:
+      213: -4354226191090453069
+    second: Environmental Tilemap_109
+  - first:
+      213: 7353309173342514200
+    second: Environmental Tilemap_110
+  - first:
+      213: 6683373752186925596
+    second: Environmental Tilemap_111
+  - first:
+      213: 1441165902280960861
+    second: Environmental Tilemap_112
+  - first:
+      213: -9026553306694486300
+    second: Environmental Tilemap_113
+  - first:
+      213: -8331614179591307081
+    second: Environmental Tilemap_114
+  - first:
+      213: -2343840460208362328
+    second: Environmental Tilemap_115
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 125
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Environmental Tilemap_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db199c130b847d00800000000000000
+      internalID: 969552665272458196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_1
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 2125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6f230f1afe11bd30800000000000000
+      internalID: 4445368366802349935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_2
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 2125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29994b998c6b0050800000000000000
+      internalID: 5767823086049663277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_3
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 2125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63419cb2c9356c5d0800000000000000
+      internalID: -3042652568027589578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_4
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 2125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dac4407a275335a0800000000000000
+      internalID: -6542789993855399209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_5
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 2125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5841bf1f7a43090800000000000000
+      internalID: -8055629175717591631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_6
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 2125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74969b46209af0a80800000000000000
+      internalID: -8498388144079935161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_7
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 2125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b675baae9f7d85150800000000000000
+      internalID: 5861672383406626667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_8
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f82e3fe9053abb20800000000000000
+      internalID: 3150889206083889396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2000
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d83681fccb8ad90800000000000000
+      internalID: -7086206416014045813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_10
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 2000
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 905bcb84e124dfad0800000000000000
+      internalID: -2666902706496686839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_11
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 2000
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb2c464ce7a0af50800000000000000
+      internalID: 6890692063110376396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_12
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 2000
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c1cbdc66e2378040800000000000000
+      internalID: 4649741105533534658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_13
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 2000
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5676dce0a9922aee0800000000000000
+      internalID: -1251392004805531803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_14
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 2000
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea863078c17c12e0800000000000000
+      internalID: -2153721416099919133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_15
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 2000
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab813fe757c40040800000000000000
+      internalID: 4613031098823314344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_16
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 2000
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e1b10c1107f0360800000000000000
+      internalID: 7138047155945283108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_17
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2000
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f9da045812b19060800000000000000
+      internalID: 6958538716823083513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1875
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd6a44f8a83336ba0800000000000000
+      internalID: -6096972800327375137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_19
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 1875
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50390ce91cddd4a20800000000000000
+      internalID: 3048336346461541125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_20
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1875
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e436d0f297ee4c6e0800000000000000
+      internalID: -1818066145302977714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_21
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 1875
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c79ace3e5dc9564b0800000000000000
+      internalID: -5447775731768841860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_22
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1875
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac8481fed7254140800000000000000
+      internalID: 4703209224346569902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_23
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 1875
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b5453ecf178ab10800000000000000
+      internalID: 1992968166071098215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_24
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1875
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e65db33ac1b8c620800000000000000
+      internalID: 2794679050792949479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_25
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 1875
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaeebf4aa941ae150800000000000000
+      internalID: 5902552916047949486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1750
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eecb7c05797185c80800000000000000
+      internalID: -8333885171786334994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_27
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 1750
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a0f75f14da3a540800000000000000
+      internalID: 5018044908624087653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_28
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1750
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 594bc041e948b4ec0800000000000000
+      internalID: -3581623264167021419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_29
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 1750
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3bfa840c0d3fb200800000000000000
+      internalID: 197944030452710206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_30
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1750
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dafa567b382dfa30800000000000000
+      internalID: 4250597859161471703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_31
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 1750
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80ca3534c667dc70800000000000000
+      internalID: 8995771773588521101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_32
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1750
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990c7e9372b4473b0800000000000000
+      internalID: -5515701011774717799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_33
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 1750
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cba28cc4a846d840800000000000000
+      internalID: 5248462288389843911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_34
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1625
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f9fb7146f1d4bf70800000000000000
+      internalID: 9202210794215569906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_35
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 1625
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 657b25793570ce670800000000000000
+      internalID: 8569232246581671766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1500
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd9fd374bb737370800000000000000
+      internalID: 8319128951651802589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_37
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 1500
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b813f6f16b46b87a0800000000000000
+      internalID: -6373890114238598773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_38
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1500
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb44a2827f8e7be0800000000000000
+      internalID: -1477585905750094851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_39
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 1500
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909120a335a066280800000000000000
+      internalID: -9050535048582653687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_40
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1500
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0aec7390640ac3c0800000000000000
+      internalID: -4338650478180242930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_41
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1500
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34115bae0bec3910800000000000000
+      internalID: 1818586797787124799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_42
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 1375
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b4b52663b1ff5f0800000000000000
+      internalID: -720827494963655843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_43
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1375
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041161ddefce73ac0800000000000000
+      internalID: -3875368374953963200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_44
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 1375
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c261f36e16b440890800000000000000
+      internalID: -7492780996190857684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_45
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1375
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9adf9b439d602fa50800000000000000
+      internalID: 6553307937739767209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_46
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 1375
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cdd2c38ef7c9f500800000000000000
+      internalID: 430595135336799686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_47
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1375
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7d9ac45d1ebd580800000000000000
+      internalID: -8801192740535019599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_48
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 1375
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaae48f41dd3a6450800000000000000
+      internalID: 6082742215908846254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_49
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 1375
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 535eda70cbe5726f0800000000000000
+      internalID: -709494254611864267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_50
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 1375
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ebea71e56ec59a0800000000000000
+      internalID: -6242861691643707832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_51
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 1375
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 508c7699832275950800000000000000
+      internalID: 6437651818836641797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_52
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1375
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a7e0d2169ad7a00800000000000000
+      internalID: 755946547300956682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_53
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 1375
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86d13b49d58912e20800000000000000
+      internalID: 3324105527670283624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_54
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 1250
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 106d43406386c3470800000000000000
+      internalID: 8375683988210374145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_55
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1250
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae125221ef5e4050800000000000000
+      internalID: 5786667991765753508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_56
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 1250
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1efff3cf2c7a5e360800000000000000
+      internalID: 7198344035319152609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_57
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1250
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c76d0672e7f1729b0800000000000000
+      internalID: -5105077025914169732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_58
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 1250
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90600ad297ef30ab0800000000000000
+      internalID: -5042907361314863607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_59
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1250
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f10230479cab14740800000000000000
+      internalID: 5134590424576630815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_60
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 1250
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60ede7954c3212cd0800000000000000
+      internalID: -2584745384911905274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_61
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1250
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8474e4aa1e8eff9d0800000000000000
+      internalID: -2738213992495429816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_62
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 1250
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17ef95179278ea70800000000000000
+      internalID: 8856454660452509467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_63
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 1250
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1784485a7970a14c0800000000000000
+      internalID: -4316128944982833039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_64
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 1250
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01dfab16c284ad200800000000000000
+      internalID: 205556088454184208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_65
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1250
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa4c0f4eb13486da0800000000000000
+      internalID: -5951433120485948246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_66
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 1250
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff133cfb0dc1c0900800000000000000
+      internalID: 651927728957895167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_67
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 1250
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4b6299dad66bb50800000000000000
+      internalID: 6608590095579002017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_68
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4167ffc93952ad20800000000000000
+      internalID: 3288288782770987341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_69
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 1125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587091d59a493b900800000000000000
+      internalID: 699065822304864133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_70
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c307ef09be1d476f0800000000000000
+      internalID: -687694033400729540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_71
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 1125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a15162011fcb380800000000000000
+      internalID: -8954016907458700650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_72
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03eeb1eba2dc77a0800000000000000
+      internalID: -6377991336594840819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_73
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172443af5edd19430800000000000000
+      internalID: 3788052741410275953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_74
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 1125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5878fd25133b9c0a0800000000000000
+      internalID: -6860755532897089659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_75
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3913a341bcee679a0800000000000000
+      internalID: -6235534078062743149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_76
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 1125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb00c1bac8a4e450800000000000000
+      internalID: 6117199782394989519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_77
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 1125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c547d9203abd649c0800000000000000
+      internalID: -3943222930546264996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_78
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e011590f7844b330800000000000000
+      internalID: 3725682502196596961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_79
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 1125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e09a11a87b0779d0800000000000000
+      internalID: -2776738032523767578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f738802206e465d70800000000000000
+      internalID: 9031492277532918655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_81
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 1000
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305fedc94b768fc80800000000000000
+      internalID: -8288761088751766269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_82
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1000
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ffcebd62b3c38b0800000000000000
+      internalID: -5171193234043633894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_83
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 1000
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a793890af817ee320800000000000000
+      internalID: 2589131697473206650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_84
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1000
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ba6f5d05c6451f00800000000000000
+      internalID: 1086852697226701495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_85
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 1000
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d472aebc6729e5e50800000000000000
+      internalID: 6800033526300944205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_86
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1000
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fde5a5777f217f30800000000000000
+      internalID: 4571487286879186424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_87
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 1000
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37045987606e138d0800000000000000
+      internalID: -2868258572191055757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 875
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032fec3a964bd0240800000000000000
+      internalID: 4759658747013296688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_89
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 875
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e29b0b968f78f10800000000000000
+      internalID: 2272057669851885141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_90
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 875
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84eeab09593be4720800000000000000
+      internalID: 2832398670622289480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_91
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 875
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7464aae54af0ed80800000000000000
+      internalID: -8223297741382196100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_92
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 875
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d50ec45e014c11210800000000000000
+      internalID: 1302037344132325469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_93
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 875
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1273c1c3fb1ea6620800000000000000
+      internalID: 2768273132436076321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_94
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 875
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d99555f674a5820800000000000000
+      internalID: 2907715052919954760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_95
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 875
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d302ec8f4e60a80d0800000000000000
+      internalID: -3419913386537902019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_96
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 875
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33020c843caf2f6e0800000000000000
+      internalID: -1805104783976030157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_97
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 875
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa6cd8568584b7990800000000000000
+      internalID: -7387231219273054545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 750
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a53dc53ec735c7ed0800000000000000
+      internalID: -2414963504321866918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_99
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 750
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ce9878f00336770800000000000000
+      internalID: 8602772556464385107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_100
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 750
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4306a06659919260800000000000000
+      internalID: 7102626683607712588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_101
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 750
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf745718be48ca960800000000000000
+      internalID: 7614607217000794108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_102
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 750
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714465a5bf27306e0800000000000000
+      internalID: -1872526596178033641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_103
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 750
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e225a0b22e91cf460800000000000000
+      internalID: 7276719557099278894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_104
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 750
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e097865f98c48d510800000000000000
+      internalID: 1574092225177483534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_105
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 750
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a96e54cd0294f9c0800000000000000
+      internalID: -3894327189941884507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_106
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 750
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c43cdbf4a46bbd590800000000000000
+      internalID: -7648319111876983988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_107
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 750
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f425510aa45087c20800000000000000
+      internalID: 3204316952945578575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 625
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5212aab92c7306710800000000000000
+      internalID: 1684407569611366693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_109
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 625
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5f950595ea293c0800000000000000
+      internalID: -4354226191090453069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_110
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 625
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ca3b0dbb33c0660800000000000000
+      internalID: 7353309173342514200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_111
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 625
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c127540840d10cc50800000000000000
+      internalID: 6683373752186925596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_112
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 625
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5bacd3a0cc000410800000000000000
+      internalID: 1441165902280960861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_113
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 625
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e6f850a79d3bb280800000000000000
+      internalID: -9026553306694486300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_114
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 625
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b04ad3eb09206c80800000000000000
+      internalID: -8331614179591307081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environmental Tilemap_115
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 625
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aca7170581097fd0800000000000000
+      internalID: -2343840460208362328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
