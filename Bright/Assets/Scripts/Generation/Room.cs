@@ -11,6 +11,7 @@ public class Room
 
     [Header("Active Slot")]
     public GameObject room;
+    public GameObject trueRoom;
     public VisitedState visitedState = VisitedState.Empty;
 
     public Room(string typeInput, int difficultyInput, int variantInput)

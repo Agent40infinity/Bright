@@ -8,6 +8,7 @@ public class DungeonGeneration : DungeonWallGenerate
     {
         GenerationCall();
         WallGenerationCall();
+        trueWorldGeneration.TrueGenerationCall();
         GameObject.FindWithTag("MainCamera").GetComponent<DungeonCamera>().generation = this;
         GameManager.dungeonRef = gameObject;
         ContentStart();
