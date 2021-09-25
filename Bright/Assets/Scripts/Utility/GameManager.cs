@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
         currentWorld = Instantiate(Resources.Load("Prefabs/Utility/World") as GameObject, Vector3.zero, Quaternion.identity);
         overlay.SetActive(true);
         healthManager.SetUpHealth();
-        dungeonCamera.OcclusionCulling();
+        dungeonCamera.OcclusionCulling(currentRoom);
     }
 
     public void LeaveGame()
