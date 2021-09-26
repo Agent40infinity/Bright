@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dungeonGeneration: {fileID: 173640661}
-  dungeon: {fileID: 3271494771074570561}
   trueWorldParent: {fileID: 9205655507191765089}
+  varietyPath: Prefabs/Generation/True/
 --- !u!1 &3271494770973867490
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,6 +208,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361383613262698162, guid: 1ab570c5b2f332a468847fa11eafc0eb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ab570c5b2f332a468847fa11eafc0eb, type: 3}
