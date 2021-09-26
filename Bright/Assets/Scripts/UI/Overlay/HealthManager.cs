@@ -31,7 +31,8 @@ public class HealthManager : MonoBehaviour
         for (int i = 0; i < health.maxHealth; i++)
         {
             Vector2 heartPos = new Vector2(heartOrigin.x + (heartOffset * i), heartOrigin.y);
-            GameObject heart = Instantiate(heartParent, heartPos, Quaternion.identity, transform);
+            GameObject heart = Instantiate(heartParent, heartPos, Quaternion.identity);
+            heart.transform.SetParent(transform, false);
 
             hearts.Add(heart);
             anim.Add(heart.GetComponent<Animator>());

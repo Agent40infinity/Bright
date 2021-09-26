@@ -38,7 +38,7 @@ public class DungeonCamera : MonoBehaviour
         }
     }
 
-    public void OcclusionCulling(Vector2Int previousRoom)
+    public void OcclusionCulling()
     {
         for (int i = 0; i < generation.roomLayout.GetLength(0); i++)
         {
@@ -52,21 +52,13 @@ public class DungeonCamera : MonoBehaviour
                     {
                         generation.roomLayout[GameManager.currentRoom.x, GameManager.currentRoom.y].room.SetActive(true);
                     }
-                    else if (room != previousRoom)
+                    else
                     {
                         generation.roomLayout[i, j].room.SetActive(false);
                     }
                 }
             }
         }
-
-        StartCoroutine(FadePrevious(previousRoom));
-    }
-
-    public IEnumerator FadePrevious(Vector2Int previousRoom)
-    {
-        yield return new WaitForSeconds(1);
-        generation.roomLayout[previousRoom.x, previousRoom.y].room.SetActive(false)
     }
 
     public void OnTriggerExit2D(Collider2D other)
@@ -78,7 +70,6 @@ public class DungeonCamera : MonoBehaviour
                 {
                     case FollowState.Cell:
                         Vector2 position = other.GetComponent<Transform>().position;
-                        Vector2Int previousRoom = GameManager.currentRoom;
 
                         if (position.x > cameraPos.x && (position.y < cameraPos.y + generation.roomDimensions.y / 2 && position.y > cameraPos.y - generation.roomDimensions.y / 2))
                         {
@@ -102,7 +93,7 @@ public class DungeonCamera : MonoBehaviour
                         }
 
                         moveState = MoveState.Active;
-                        OcclusionCulling(previousRoom);
+                        OcclusionCulling();
                         break;
                     case FollowState.Follow:
 
