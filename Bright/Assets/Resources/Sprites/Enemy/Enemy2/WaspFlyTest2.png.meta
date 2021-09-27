@@ -1,0 +1,470 @@
+fileFormatVersion: 2
+guid: 2334668b073f0604d85523b4a81ec2f4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7720505682145092101
+    second: WaspFlyTest2_0
+  - first:
+      213: 5412740392470078039
+    second: WaspFlyTest2_1
+  - first:
+      213: -2415541374362763044
+    second: WaspFlyTest2_0
+  - first:
+      213: -2063934009085427698
+    second: WaspFlyTest2_1
+  - first:
+      213: -6060309743630431604
+    second: WaspFlyTest2_2
+  - first:
+      213: 2331384741314956824
+    second: WaspFlyTest2_3
+  - first:
+      213: 4527356033053441320
+    second: WaspFlyTest2_2
+  - first:
+      213: -4324251395890513587
+    second: WaspFlyTest2_3
+  - first:
+      213: 8224532269442613002
+    second: WaspFlyTest2_4
+  - first:
+      213: 295848470299285746
+    second: WaspFlyTest2_5
+  - first:
+      213: -5983367723079072551
+    second: WaspFlyTest2_4
+  - first:
+      213: 9115628112879154833
+    second: WaspFlyTest2_5
+  - first:
+      213: -6559177928665408256
+    second: WaspFlyTest2_6
+  - first:
+      213: -6137047033879064831
+    second: WaspFlyTest2_7
+  - first:
+      213: 5892096874034299365
+    second: WaspFlyTest2_8
+  - first:
+      213: 3126376769948014545
+    second: WaspFlyTest2_9
+  - first:
+      213: -1774966363653476096
+    second: WaspFlyTest2_6
+  - first:
+      213: 3718510684434584151
+    second: WaspFlyTest2_7
+  - first:
+      213: 4249218394505643983
+    second: WaspFlyTest2_8
+  - first:
+      213: 5042271753706776351
+    second: WaspFlyTest2_9
+  - first:
+      213: -4641827826487531242
+    second: WaspFlyTest2_10
+  - first:
+      213: 5129574041004574104
+    second: WaspFlyTest2_11
+  - first:
+      213: -863866483168711419
+    second: WaspFlyTest2_12
+  - first:
+      213: 153115588665357524
+    second: WaspFlyTest2_13
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WaspFlyTest2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 805
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd049d80be54a7ed0800000000000000
+      internalID: -2415541374362763044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaspFlyTest2_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 805
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e008d9434fe6b53e0800000000000000
+      internalID: -2063934009085427698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaspFlyTest2_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 805
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d3fd9335664de30800000000000000
+      internalID: 4527356033053441320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaspFlyTest2_3
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 805
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d49757c244c2df3c0800000000000000
+      internalID: -4324251395890513587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaspFlyTest2_4
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 805
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d48551d1cec6fca0800000000000000
+      internalID: -5983367723079072551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaspFlyTest2_5
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 805
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196f9b4d877318e70800000000000000
+      internalID: 9115628112879154833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaspFlyTest2_6
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 805
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001fa261f7d0e57e0800000000000000
+      internalID: -1774966363653476096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaspFlyTest2_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 555
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752d73714cdca9330800000000000000
+      internalID: 3718510684434584151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaspFlyTest2_8
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 555
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc78091dd9148fa30800000000000000
+      internalID: 4249218394505643983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaspFlyTest2_9
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 555
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17ada4e17fb9f540800000000000000
+      internalID: 5042271753706776351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaspFlyTest2_10
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 555
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619efad6f2ae49fb0800000000000000
+      internalID: -4641827826487531242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaspFlyTest2_11
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 555
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8958423a968ef2740800000000000000
+      internalID: 5129574041004574104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaspFlyTest2_12
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 555
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50dec51b20ee204f0800000000000000
+      internalID: -863866483168711419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaspFlyTest2_13
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 555
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d439ff01d9ff1200800000000000000
+      internalID: 153115588665357524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
