@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class TrueWorldGeneration : MonoBehaviour
 {
+    public struct WorldData
+    {
+        public Transform roomLocation;
+        public Vector2Int roomPos;
+
+        public WorldData(Transform location, Vector2Int pos)
+        {
+            roomLocation = location;
+            roomPos = pos;
+        }
+    }
+
     public string[,] trueRoomLayout;
     public DungeonGeneration dungeonGeneration;
 
@@ -24,9 +36,9 @@ public class TrueWorldGeneration : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public List<Transform> GetDungeonLayout()
+    public List<WorldData> GetDungeonLayout()
     {
-        List<Transform> temp = new List<Transform>();
+        List<WorldData> temp = new List<WorldData>();
 
         for (int x = 0; x < dungeonGeneration.roomLayout.GetLength(0); x++)
         {
@@ -34,7 +46,10 @@ public class TrueWorldGeneration : MonoBehaviour
             {
                 if (dungeonGeneration.roomLayout[x, y] != null)
                 {
-                    temp.Add(dungeonGeneration.roomLayout[x, y].room.transform);
+                    Transform location = dungeonGeneration.roomLayout[x, y].room.transform;
+                    Vector2Int selectedRoom = new Vector2Int(x, y);
+
+                    temp.Add(new WorldData(location, selectedRoom));
                 }
             }
         }
@@ -44,13 +59,14 @@ public class TrueWorldGeneration : MonoBehaviour
 
     public void BuildTrueWorld()
     {
-        List<Transform> generatedFloor = GetDungeonLayout();
+        List<WorldData> generatedFloor = GetDungeonLayout();
 
         for (int i = 0; i < generatedFloor.Count; i++)
         {
             string path = varietyPath + "Rooms/Variant_1";
+            Vector2Int selectedRoom = generatedFloor[i].roomPos;
 
-            Instantiate(Resources.Load(path), generatedFloor[i].position, Quaternion.identity, trueWorldParent);
+            dungeonGeneration.roomLayout[selectedRoom.x, selectedRoom.y].trueRoom = Instantiate(Resources.Load(path) as GameObject, generatedFloor[i].roomLocation.position, Quaternion.identity, trueWorldParent);
         }
     }
 }
