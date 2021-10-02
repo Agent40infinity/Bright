@@ -60,12 +60,12 @@ public class PathfindingGrid : MonoBehaviour
     {
         float locationX = (worldPosition.x + gridSize.x / 2) / gridSize.x;
         float locationY = (worldPosition.y + gridSize.y / 2) / gridSize.y;
-        //locationX = Mathf.Clamp01(locationX);
-        //locationY = Mathf.Clamp01(locationY);
+        locationX = Mathf.Clamp01(locationX);
+        locationY = Mathf.Clamp01(locationY);
 
         int x = Mathf.RoundToInt((gridSizeX - 1) * locationX);
         int y = Mathf.RoundToInt((gridSizeY - 1) * locationY);
-        Debug.Log(type + " " + x+ " " +y);
+        Debug.Log(type + " " + x + " " + y);
         return grid[x, y];
     }
 

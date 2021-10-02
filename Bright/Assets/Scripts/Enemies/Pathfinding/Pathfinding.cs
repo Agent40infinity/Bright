@@ -21,9 +21,7 @@ public class Pathfinding : MonoBehaviour
     void FindPath(Vector3 startingPos, Vector3 targetPos)
     {
         PathfindingNode startingPoint = grid.NodeFromLocation(startingPos, "startingPos");
-        Debug.Log("Starting Point: " + grid.NodeFromLocation(startingPos));
         PathfindingNode targetPoint = grid.NodeFromLocation(targetPos, "targetPos");
-        Debug.Log("Target Point: " + grid.NodeFromLocation(targetPos));
 
         List<PathfindingNode> openList = new List<PathfindingNode>();
         HashSet<PathfindingNode> closedList = new HashSet<PathfindingNode>();

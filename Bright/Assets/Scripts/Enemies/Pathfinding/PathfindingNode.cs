@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PathfindingNode : MonoBehaviour
+public class PathfindingNode
 {
     public bool walkable;
     public Vector3 worldPosition;
