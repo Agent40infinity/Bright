@@ -5,7 +5,6 @@ using UnityEngine;
 public class TempMushroom : MonoBehaviour
 {
     public float delayBetweenJumps;
-    public float jumpSpeed;
     public float jumpDistance;
     public float targetDistance;
     public float delayBetweenAttacks;
@@ -16,12 +15,17 @@ public class TempMushroom : MonoBehaviour
     public GameObject bullet;
 
     private Rigidbody2D rb;
-    private Transform target;
+    private Transform targetPlayer;
+
+    [Header("Avoidance")]
+    public float raycastDistance;
+    public LayerMask walls;
+    private bool wallCheck;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        targetPlayer = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Update()
@@ -30,23 +34,34 @@ public class TempMushroom : MonoBehaviour
         attackTimer -= Time.deltaTime;
         rb.velocity = rb.velocity * 0.99f;
 
-        if (Vector2.Distance(transform.position, target.position) > targetDistance && jumpTimer <= 0)
+        if (Vector2.Distance(transform.position, targetPlayer.position) > targetDistance && jumpTimer <= 0)
         {
             jumpTimer = delayBetweenJumps;
-            Jump();
+            MoveCheck();
         }
-        else if (Vector2.Distance(transform.position, target.position) < targetDistance && attackTimer <=0)
+        else if (Vector2.Distance(transform.position, targetPlayer.position) < targetDistance && attackTimer <=0)
         {
             attackTimer = delayBetweenAttacks;
             Attack();
         }
     }
 
-    void Jump()
+    void MoveCheck()
     {
         var direction = Vector3.zero;
-        direction = target.position - transform.position;
-        rb.AddRelativeForce(direction.normalized * jumpSpeed * jumpDistance, ForceMode2D.Force);
+        direction = targetPlayer.position - transform.position;
+        wallCheck = Physics2D.Raycast(transform.position, direction, raycastDistance, walls);
+
+
+        if(wallCheck == true)
+        {
+            Debug.Log("i hit a wall lol");
+            
+        }
+        else
+        {
+            rb.AddRelativeForce(direction.normalized * jumpDistance, ForceMode2D.Force);
+        }
     }
 
     void Attack()
@@ -62,5 +77,12 @@ public class TempMushroom : MonoBehaviour
         {
             collision.gameObject.GetComponent<PlayerHealth>().DamagePlayer(1);
         }
+    }
+
+    public enum BehaviourState
+    {
+        Aggressive,
+        Retreat,
+        Idle
     }
 }

@@ -43,6 +43,10 @@ public class EnemyHealth : MonoBehaviour
         {
             // take no damage from another enemy
         }
+        else if (collision.gameObject.tag == "Terrain")
+        {
+            // take no damage from running into a wall
+        }
         else {
             TakeDamage(1);
         }
