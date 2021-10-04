@@ -18,6 +18,14 @@ public class PathfindingGrid : MonoBehaviour
         DrawGrid();
     }
 
+    public int MaxSize
+    {
+        get
+        {
+            return gridSizeX * gridSizeY;
+        }
+    }
+
     void DrawGrid()
     {
         grid = new PathfindingNode[gridSizeX, gridSizeY];
@@ -69,20 +77,16 @@ public class PathfindingGrid : MonoBehaviour
         return grid[x, y];
     }
 
-    public List<PathfindingNode> path;
     void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(transform.position, new Vector3(gridSize.x, 1, gridSize.y));
-
+    
         if (grid != null)
         {
             foreach (PathfindingNode pathNode in grid)
             {
                 Gizmos.color = (pathNode.walkable) ? Color.green : Color.red;
-                if (path != null)
-                    if (path.Contains(pathNode))
-                        Gizmos.color = Color.black;
-                Gizmos.DrawCube(pathNode.worldPosition, Vector3.one * ((nodeSize * 2)-.05f));
+                Gizmos.DrawCube(pathNode.worldPosition, Vector3.one * ((nodeSize *2) - .1f));
             }
         }
     }

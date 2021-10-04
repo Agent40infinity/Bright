@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PathfindingNode
+public class PathfindingNode : IHeapItem<PathfindingNode>
 {
     public bool walkable;
     public Vector3 worldPosition;
@@ -12,6 +12,7 @@ public class PathfindingNode
     public int gCost;
     public int hCost;
     public PathfindingNode parent;
+    int heapIndex;
 
 
     public PathfindingNode(bool isWalkable, Vector3 thisWorldPos, int gridPosX, int gridPosY) 
@@ -29,4 +30,26 @@ public class PathfindingNode
             return gCost + hCost;
         }
     }
+
+    public int HeapIndex {
+        get
+        {
+            return heapIndex;
+        }
+        set
+        {
+            heapIndex = value;
+        }
+    }
+
+    public int CompareTo(PathfindingNode nodeComparison)
+    {
+        int comparison = fCost.CompareTo(nodeComparison.fCost);
+        if (comparison == 0)
+        {
+            comparison = hCost.CompareTo(nodeComparison.hCost);
+        }
+        return -comparison;
+    }
+
 }
