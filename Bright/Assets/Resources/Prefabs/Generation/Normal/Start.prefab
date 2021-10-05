@@ -703,7 +703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9187887035923966839}
   m_Layer: 0
-  m_Name: RightDown
+  m_Name: RightLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3553,7 +3553,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press W, A, S, or D to Move
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 539dc84849715294b8224765f270dc61, type: 2}
   m_sharedMaterial: {fileID: 21458598949447144, guid: 539dc84849715294b8224765f270dc61,
@@ -3635,6 +3635,7 @@ GameObject:
   - component: {fileID: 1571980320125280949}
   - component: {fileID: 215075877195968194}
   - component: {fileID: 9194132056371406440}
+  - component: {fileID: 6995909752165441681}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -3722,6 +3723,25 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &6995909752165441681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5871328015946131698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d149f039bb4d08449f98abc6ef4cdaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interval: 0.002
+  dialogue: []
+  index: 0
+  display: 
+  dialogueState: 1
+  dialogueText: {fileID: 3664697080424440027}
+  dialogueParent: {fileID: 5871328015946131698}
 --- !u!1 &6087337659388579139
 GameObject:
   m_ObjectHideFlags: 0
@@ -5250,6 +5270,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameEvent
       objectReference: {fileID: 0}
+    - target: {fileID: 4386946517993350379, guid: 72f9f4e40568d434d9661e27ddab07c7,
+        type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 6995909752165441681}
+    - target: {fileID: 4386946517993350379, guid: 72f9f4e40568d434d9661e27ddab07c7,
+        type: 3}
+      propertyPath: oneTimeState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4386946517993350379, guid: 72f9f4e40568d434d9661e27ddab07c7,
+        type: 3}
+      propertyPath: dialogueRef
+      value: 
+      objectReference: {fileID: 6995909752165441681}
     - target: {fileID: 6310342845731981548, guid: 72f9f4e40568d434d9661e27ddab07c7,
         type: 3}
       propertyPath: m_LocalPosition.x

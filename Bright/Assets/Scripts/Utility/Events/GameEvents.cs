@@ -10,6 +10,10 @@ public class GameEvents : MonoBehaviour
 
     public EventState eventState;
     public TutorialState tutorialState;
+    public OneTimeState oneTimeState;
+
+    [Header("Reference")]
+    public Dialogue dialogueRef;
 
     public void Start()
     {
@@ -44,13 +48,15 @@ public class GameEvents : MonoBehaviour
     public void TutorialEvent()
     {
         KeyCode[] keybinds = null;
-        GameObject objective;
+        List<string> dialogue = new List<string>();
+        GameObject objective = null;
         int index = (int)tutorialState;
 
         switch (tutorialState)
         {
             case TutorialState.Move:
                 keybinds = new KeyCode[] { GameManager.keybind["MoveUp"], GameManager.keybind["MoveDown"], GameManager.keybind["MoveLeft"], GameManager.keybind["MoveRight"] };
+                dialogue.Add("Press " + GameManager.keybind["MoveUp"].ToString() + ", " + GameManager.keybind["MoveLeft"].ToString() + ", " + GameManager.keybind["MoveDown"].ToString() + ", or " + GameManager.keybind["MoveRight"].ToString() + " to Move");
                 break;
             case TutorialState.Shoot:
                 keybinds = new KeyCode[] { GameManager.keybind["ShootUp"], GameManager.keybind["ShootDown"], GameManager.keybind["ShootLeft"], GameManager.keybind["ShootRight"] };
@@ -69,7 +75,22 @@ public class GameEvents : MonoBehaviour
                 break;
         }
 
+        switch (oneTimeState)
+        {
+            case OneTimeState.None:
+                PushObjective(objective, dialogue);
+                break;
+        }
+
         SwitchStateCheck(index, keybinds);
+    }
+                
+    public void PushObjective(GameObject objective, List<string> dialogue)
+    {
+        /*dialogueRef.dialogue = dialogue;
+        dialogueRef.dialogueState = DialogueState.Load;
+
+        oneTimeState = OneTimeState.Finnished;*/
     }
 
     public void SwitchStateCheck(int index, KeyCode[] keybinds)
@@ -108,6 +129,7 @@ public class GameEvents : MonoBehaviour
 
         if (newIndex != System.Enum.GetValues(typeof(TutorialState)).Length)
         {
+            oneTimeState = OneTimeState.None;
             tutorialState = (TutorialState)System.Enum.GetValues(typeof(TutorialState)).GetValue(newIndex);
         }
         else
@@ -132,4 +154,10 @@ public enum TutorialState
     Melee,
     SwitchWorlds,
     Interact,
+}
+
+public enum OneTimeState
+{ 
+    Finnished,
+    None
 }
