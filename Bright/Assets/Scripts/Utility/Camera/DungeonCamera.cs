@@ -50,15 +50,21 @@ public class DungeonCamera : MonoBehaviour
 
                     if (room == GameManager.currentRoom)
                     {
-                        generation.roomLayout[GameManager.currentRoom.x, GameManager.currentRoom.y].room.SetActive(true);
+                        RoomStatus(room, true);
                     }
                     else
                     {
-                        generation.roomLayout[i, j].room.SetActive(false);
+                        RoomStatus(room, false);
                     }
                 }
             }
         }
+    }
+
+    public void RoomStatus(Vector2Int selectedRoom, bool active)
+    {
+        generation.roomLayout[selectedRoom.x, selectedRoom.y].room.SetActive(active);
+        generation.roomLayout[selectedRoom.x, selectedRoom.y].trueRoom.SetActive(active);
     }
 
     public void OnTriggerExit2D(Collider2D other)

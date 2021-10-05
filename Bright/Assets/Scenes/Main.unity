@@ -305,10 +305,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1412082653, guid: aecd507e9cccefb4aae7564449c4f47d, type: 3}
-      propertyPath: m_Name
-      value: GoldManager
-      objectReference: {fileID: 0}
     - target: {fileID: 4082147358694680832, guid: aecd507e9cccefb4aae7564449c4f47d,
         type: 3}
       propertyPath: gameManager
@@ -428,16 +424,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 6457935997377708326, guid: aecd507e9cccefb4aae7564449c4f47d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7574017899950759596, guid: aecd507e9cccefb4aae7564449c4f47d,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aecd507e9cccefb4aae7564449c4f47d, type: 3}

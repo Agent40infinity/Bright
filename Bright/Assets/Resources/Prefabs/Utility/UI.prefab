@@ -14301,7 +14301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3152196912011329489
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15528,7 +15528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebbe96e699e036347b78a66ead4c25cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heartOrigin: {x: 50, y: 395}
+  heartOrigin: {x: -350, y: 250}
   heartOffset: 25
   anim: []
   hearts: []

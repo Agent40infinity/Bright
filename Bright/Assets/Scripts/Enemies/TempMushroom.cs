@@ -4,63 +4,58 @@ using UnityEngine;
 
 public class TempMushroom : MonoBehaviour
 {
-    public float delayBetweenJumps;
-    public float jumpSpeed;
-    public float jumpDistance;
-    public float targetDistance;
-    public float delayBetweenAttacks;
+    public float movementSpeed;
 
-    private float jumpTimer;
-    private float attackTimer;
+    public int damageToPlayer;
 
-    public GameObject bullet;
+    private Vector3[] path;
+    private int targetWaypoint;
 
     private Rigidbody2D rb;
-    private Transform target;
+    private Transform targetPlayer;
+    private Transform currentTargetLocation;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        targetPlayer = GameObject.FindGameObjectWithTag("Player").transform;
+        PathfindingManager.PathRequest(transform.position, targetPlayer.position, OnPathFound); 
     }
 
-    void Update()
+    public void OnPathFound(Vector3[] newPath, bool pathActive)
     {
-        jumpTimer -= Time.deltaTime;
-        attackTimer -= Time.deltaTime;
-        rb.velocity = rb.velocity * 0.99f;
-
-        if (Vector2.Distance(transform.position, target.position) > targetDistance && jumpTimer <= 0)
+        if (pathActive)
         {
-            jumpTimer = delayBetweenJumps;
-            Jump();
-        }
-        else if (Vector2.Distance(transform.position, target.position) < targetDistance && attackTimer <=0)
-        {
-            attackTimer = delayBetweenAttacks;
-            Attack();
+            path = newPath;
+            StopCoroutine("FollowPath");
+            StartCoroutine("FollowPath");
         }
     }
 
-    void Jump()
+    IEnumerator FollowPath()
     {
-        var direction = Vector3.zero;
-        direction = target.position - transform.position;
-        rb.AddRelativeForce(direction.normalized * jumpSpeed * jumpDistance, ForceMode2D.Force);
+        Vector3 curWaypoint = path[0];
+        while (true)
+        {
+            if (transform.position == curWaypoint)
+            {
+                targetWaypoint++;
+                if (targetWaypoint >= path.Length)
+                {
+                    yield break;
+                }
+                curWaypoint = path[targetWaypoint];
+            }
+            transform.position = Vector3.MoveTowards(transform.position, curWaypoint, movementSpeed);
+            yield return null;
+        }
     }
 
-    void Attack()
-    {
-        Instantiate(bullet, transform.position, Quaternion.identity);
-        // add pew pew sound effect later xd 
-    }
-
-    // damage the player if they run into the mushroom
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerHealth>().DamagePlayer(1);
+            collision.gameObject.GetComponent<PlayerHealth>().DamagePlayer(damageToPlayer);
         }
     }
 }
