@@ -1,0 +1,1319 @@
+fileFormatVersion: 2
+guid: 0b96a766b3103df4187e53e30d912849
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4311351114890898324
+    second: ThornAttack_0
+  - first:
+      213: 9167339975779918716
+    second: ThornAttack_1
+  - first:
+      213: 2227006007401960532
+    second: ThornAttack_0
+  - first:
+      213: -6329547372152901258
+    second: ThornAttack_1
+  - first:
+      213: -769097279314979241
+    second: ThornAttack_2
+  - first:
+      213: 980250625439189403
+    second: ThornAttack_3
+  - first:
+      213: -7820264396303017026
+    second: ThornAttack_4
+  - first:
+      213: -6210643958283986338
+    second: ThornAttack_2
+  - first:
+      213: -8946170639888432019
+    second: ThornAttack_3
+  - first:
+      213: -9107264824061510433
+    second: ThornAttack_4
+  - first:
+      213: 5979165755395208224
+    second: ThornAttack_5
+  - first:
+      213: -339226910649281900
+    second: ThornAttack_5
+  - first:
+      213: -7636162464587730235
+    second: ThornAttack_6
+  - first:
+      213: 2080869939155594636
+    second: ThornAttack_7
+  - first:
+      213: -6725808736840401840
+    second: ThornAttack_8
+  - first:
+      213: 1789174751891063158
+    second: ThornAttack_9
+  - first:
+      213: -3028706059682558052
+    second: ThornAttack_10
+  - first:
+      213: 3877713661528889871
+    second: ThornAttack_11
+  - first:
+      213: 4498549761159774913
+    second: ThornAttack_12
+  - first:
+      213: 2343974479758914819
+    second: ThornAttack_13
+  - first:
+      213: -3586655331303431716
+    second: ThornAttack_14
+  - first:
+      213: 4038019615555776199
+    second: ThornAttack_15
+  - first:
+      213: -2247750869283788673
+    second: ThornAttack_16
+  - first:
+      213: -2002239043165416183
+    second: ThornAttack_17
+  - first:
+      213: 6893176104397774175
+    second: ThornAttack_18
+  - first:
+      213: -5199979079816295990
+    second: ThornAttack_19
+  - first:
+      213: 1686754504305438741
+    second: ThornAttack_20
+  - first:
+      213: -6286191773613544711
+    second: ThornAttack_21
+  - first:
+      213: 1186370664838924075
+    second: ThornAttack_22
+  - first:
+      213: 8107040851909222028
+    second: ThornAttack_23
+  - first:
+      213: -5115684230647880659
+    second: ThornAttack_24
+  - first:
+      213: 9177149795246876476
+    second: ThornAttack_25
+  - first:
+      213: -5551159411276326799
+    second: ThornAttack_26
+  - first:
+      213: -129425225821558428
+    second: ThornAttack_27
+  - first:
+      213: 5351427334017661498
+    second: ThornAttack_28
+  - first:
+      213: 3633534947121884096
+    second: ThornAttack_29
+  - first:
+      213: -3015901517074844477
+    second: ThornAttack_30
+  - first:
+      213: -8863427242168186416
+    second: ThornAttack_31
+  - first:
+      213: 5988165345192688825
+    second: ThornAttack_32
+  - first:
+      213: 3539278436117834766
+    second: ThornAttack_33
+  - first:
+      213: 1162181129737901665
+    second: ThornAttack_34
+  - first:
+      213: -590572405771215023
+    second: ThornAttack_35
+  - first:
+      213: -8862416985482926201
+    second: ThornAttack_36
+  - first:
+      213: 4941697840091936773
+    second: ThornAttack_37
+  - first:
+      213: 8554076991335375881
+    second: ThornAttack_38
+  - first:
+      213: -8136399125047407903
+    second: ThornAttack_39
+  - first:
+      213: -8431025415589748633
+    second: ThornAttack_6
+  - first:
+      213: 1771233055135358617
+    second: ThornAttack_7
+  - first:
+      213: 3383112435052881912
+    second: ThornAttack_8
+  - first:
+      213: 1256246336219685313
+    second: ThornAttack_9
+  - first:
+      213: -1385453284006693543
+    second: ThornAttack_10
+  - first:
+      213: -6882498335662948238
+    second: ThornAttack_11
+  - first:
+      213: -3716390499285284974
+    second: ThornAttack_12
+  - first:
+      213: -8527535198810886449
+    second: ThornAttack_13
+  - first:
+      213: -2621864139323748524
+    second: ThornAttack_14
+  - first:
+      213: -3782705470459951384
+    second: ThornAttack_15
+  - first:
+      213: -5225915358955529535
+    second: ThornAttack_16
+  - first:
+      213: 5093990101719555736
+    second: ThornAttack_17
+  - first:
+      213: 6993657828585033665
+    second: ThornAttack_18
+  - first:
+      213: 1838267608580088599
+    second: ThornAttack_19
+  - first:
+      213: -4103066401031243552
+    second: ThornAttack_20
+  - first:
+      213: -2109102856776129173
+    second: ThornAttack_21
+  - first:
+      213: 2504947896024089309
+    second: ThornAttack_22
+  - first:
+      213: 5216073557552685802
+    second: ThornAttack_23
+  - first:
+      213: -1238787159523263611
+    second: ThornAttack_24
+  - first:
+      213: 3073121485180149003
+    second: ThornAttack_25
+  - first:
+      213: -2171613122350018257
+    second: ThornAttack_26
+  - first:
+      213: -2774791161302327040
+    second: ThornAttack_27
+  - first:
+      213: -7566834624957616064
+    second: ThornAttack_28
+  - first:
+      213: 4759554291993062033
+    second: ThornAttack_29
+  - first:
+      213: -8005009793882915527
+    second: ThornAttack_30
+  - first:
+      213: 1183014943376741881
+    second: ThornAttack_31
+  - first:
+      213: 4302666455250859036
+    second: ThornAttack_32
+  - first:
+      213: 4402124534107037818
+    second: ThornAttack_33
+  - first:
+      213: 3656071582259559683
+    second: ThornAttack_34
+  - first:
+      213: -3258319176982212792
+    second: ThornAttack_35
+  - first:
+      213: -2764501157995145389
+    second: ThornAttack_36
+  - first:
+      213: -2455647793039808374
+    second: ThornAttack_37
+  - first:
+      213: 5670885808450915345
+    second: ThornAttack_38
+  - first:
+      213: -8824626783277672339
+    second: ThornAttack_39
+  - first:
+      213: 4643395482766267794
+    second: ThornAttack_40
+  - first:
+      213: 1264231450439073490
+    second: ThornAttack_41
+  - first:
+      213: -8418100825217198128
+    second: ThornAttack_42
+  - first:
+      213: 2828021095901304123
+    second: ThornAttack_43
+  - first:
+      213: 8123701436313445118
+    second: ThornAttack_44
+  - first:
+      213: -6582768856710848517
+    second: ThornAttack_40
+  - first:
+      213: -6686018505179948757
+    second: ThornAttack_41
+  - first:
+      213: -5722237882464803908
+    second: ThornAttack_42
+  - first:
+      213: 8059462496087614050
+    second: ThornAttack_43
+  - first:
+      213: -7670147472316868851
+    second: ThornAttack_44
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ThornAttack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2055
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 454dadf1a2ae7ee10800000000000000
+      internalID: 2227006007401960532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_1
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 2055
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671b1dd433ee828a0800000000000000
+      internalID: -6329547372152901258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_2
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2055
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a9e00b93c5fc9a0800000000000000
+      internalID: -6210643958283986338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_3
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 2055
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64cb6da331d8d380800000000000000
+      internalID: -8946170639888432019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_4
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2055
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc376615ee7c9180800000000000000
+      internalID: -9107264824061510433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_5
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 2055
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4921f7c0ce2da4bf0800000000000000
+      internalID: -339226910649281900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_6
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2055
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 760ab73dd0bfefa80800000000000000
+      internalID: -8431025415589748633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_7
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 2055
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ed5c9441fa49810800000000000000
+      internalID: 1771233055135358617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_8
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 2055
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f7a88ec5da33fe20800000000000000
+      internalID: 3383112435052881912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1555
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1a2cc03651f6110800000000000000
+      internalID: 1256246336219685313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_10
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1555
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955f1e12491e5cce0800000000000000
+      internalID: -1385453284006693543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_11
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1555
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 270c79f8a347c70a0800000000000000
+      internalID: -6882498335662948238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_12
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1555
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297c67bf78abc6cc0800000000000000
+      internalID: -3716390499285284974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_13
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1555
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fceac31eaeb18a980800000000000000
+      internalID: -8527535198810886449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_14
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1555
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45fc54ed4744d9bd0800000000000000
+      internalID: -2621864139323748524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_15
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1555
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e6ce4f8a61218bc0800000000000000
+      internalID: -3782705470459951384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_16
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 1555
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca923b4ba1d977b0800000000000000
+      internalID: -5225915358955529535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_17
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 1555
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e9956220d71b640800000000000000
+      internalID: 5093990101719555736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1055
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cfc079bdb67e0160800000000000000
+      internalID: 6993657828585033665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_19
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1055
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713e58386a6d28910800000000000000
+      internalID: 1838267608580088599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_20
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1055
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e831b4e8dafe07c0800000000000000
+      internalID: -4103066401031243552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_21
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1055
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b65e8135026fab2e0800000000000000
+      internalID: -2109102856776129173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_22
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1055
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd2c063f6dc53c220800000000000000
+      internalID: 2504947896024089309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_23
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1055
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae26c30c347336840800000000000000
+      internalID: 5216073557552685802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_24
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1055
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58bfc4c44a1fecee0800000000000000
+      internalID: -1238787159523263611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_25
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 1055
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d98cb65bbe5aa20800000000000000
+      internalID: 3073121485180149003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_26
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 1055
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2110c4fe51ecd1e0800000000000000
+      internalID: -2171613122350018257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 555
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0016ea8e326fd79d0800000000000000
+      internalID: -2774791161302327040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_28
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 555
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0407649dff33df690800000000000000
+      internalID: -7566834624957616064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_29
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 555
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19aae6f49655d0240800000000000000
+      internalID: 4759554291993062033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_30
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 555
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93df51c310e78e090800000000000000
+      internalID: -8005009793882915527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_31
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 555
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f513f7b2d9ea6010800000000000000
+      internalID: 1183014943376741881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_32
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 555
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c147734385426bb30800000000000000
+      internalID: 4302666455250859036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_33
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 555
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a706b78b0fc771d30800000000000000
+      internalID: 4402124534107037818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_34
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 555
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30d3bfdbbb9fcb230800000000000000
+      internalID: 3656071582259559683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_35
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 555
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84fc12bc8ff18c2d0800000000000000
+      internalID: -3258319176982212792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 55
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3571b8008d482a9d0800000000000000
+      internalID: -2764501157995145389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_37
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 55
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88e362c759cbedd0800000000000000
+      internalID: -2455647793039808374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_38
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 55
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c458ed89803be40800000000000000
+      internalID: 5670885808450915345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_39
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 55
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d68165b02b0a88580800000000000000
+      internalID: -8824626783277672339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_40
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 55
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bffde311a9e45a4a0800000000000000
+      internalID: -6582768856710848517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_41
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 55
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b299f05f79d7633a0800000000000000
+      internalID: -6686018505179948757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_42
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 55
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3e66fa6f68690b0800000000000000
+      internalID: -5722237882464803908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_43
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 55
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 262a2e77076f8df60800000000000000
+      internalID: 8059462496087614050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThornAttack_44
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 55
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0751b913892e8590800000000000000
+      internalID: -7670147472316868851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
