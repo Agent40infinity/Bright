@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Thorns : MonoBehaviour
 {
-    public int activateTime = 1;
-    public int damage = 2;
+    public float activateTime = 1;
+    public float deactivateTime = 0.5f;
+    public int damage = 1;
 
     public Collider2D col;
 
@@ -16,13 +17,15 @@ public class Thorns : MonoBehaviour
 
     public void Start()
     {
-        StartCoroutine("StartAttack");
+        StartCoroutine("Lifecycle");
     }
 
-    public IEnumerator StartAttack()
+    public IEnumerator Lifecycle()
     {
         yield return new WaitForSeconds(activateTime);
         col.enabled = true;
+        yield return new WaitForSeconds(deactivateTime);
+        Destroy(gameObject);
     }
 
     public void OnTriggerStay2D(Collider2D other)
