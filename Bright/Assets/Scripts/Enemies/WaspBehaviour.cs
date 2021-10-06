@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TempMushroom : MonoBehaviour
+public class WaspBehaviour : MonoBehaviour
 {
     public float movementSpeed;
-
+    public float targetDistance;
+    //public float minimumDistance;
+    public float shotDelay;
+    public GameObject projectile;
     public int damageToPlayer;
-
-    const float minUpdatePath = 0.1f;
-    //public float updatePath;
+    private float shotCooldown;
     private Vector3[] path;
     private int targetWaypoint;
-
+    const float minUpdatePath = 0.1f;
     private Rigidbody2D rb;
     private Transform targetPlayer;
     private Transform currentTargetLocation;
@@ -24,11 +25,6 @@ public class TempMushroom : MonoBehaviour
         StartCoroutine(UpdatePath());
     }
 
-    private void FixedUpdate()
-    {
-       // PathfindingManager.PathRequest(transform.position, targetPlayer.position, OnPathFound);
-    }
-
     IEnumerator UpdatePath()
     {
         PathfindingManager.PathRequest(transform.position, targetPlayer.position, OnPathFound);
@@ -36,7 +32,7 @@ public class TempMushroom : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(minUpdatePath);
-                PathfindingManager.PathRequest(transform.position, targetPlayer.position, OnPathFound);
+            PathfindingManager.PathRequest(transform.position, targetPlayer.position, OnPathFound);
         }
     }
 
@@ -52,6 +48,7 @@ public class TempMushroom : MonoBehaviour
 
     IEnumerator FollowPath()
     {
+        //float distanceFromPlayer = Vector2.Distance(targetPlayer.position, transform.position);
         Vector3 curWaypoint = path[0];
         while (true)
         {
@@ -64,7 +61,27 @@ public class TempMushroom : MonoBehaviour
                 }
                 curWaypoint = path[targetWaypoint];
             }
-            transform.position = Vector3.MoveTowards(transform.position, curWaypoint, movementSpeed * Time.deltaTime);
+
+            if(Vector2.Distance(targetPlayer.position, transform.position) < targetDistance)
+            {
+                if (shotCooldown < 0)
+                {
+                    shotCooldown = shotDelay;
+                    Instantiate(projectile, transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    shotCooldown -= Time.deltaTime;
+                }
+            }
+            //else if (distanceFromPlayer < minimumDistance)
+            //{
+            //    transform.position = Vector3.MoveTowards(transform.position, targetPlayer.position, movementSpeed * Time.deltaTime);
+            //}
+            else
+            {
+                transform.position = Vector3.MoveTowards(transform.position, curWaypoint, movementSpeed * Time.deltaTime);
+            }
             yield return null;
         }
     }

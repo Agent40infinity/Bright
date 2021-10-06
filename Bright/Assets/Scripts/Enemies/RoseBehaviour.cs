@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TempMushroom : MonoBehaviour
+public class RoseBehaviour : MonoBehaviour
 {
     public float movementSpeed;
-
+    public float minMovementRange;
+    public float movementRange;
+    public GameObject projectile;
     public int damageToPlayer;
-
-    const float minUpdatePath = 0.1f;
-    //public float updatePath;
+    private bool canShoot;
     private Vector3[] path;
     private int targetWaypoint;
-
+    const float minUpdatePath = 8f;
     private Rigidbody2D rb;
     private Transform targetPlayer;
     private Transform currentTargetLocation;
@@ -24,19 +24,17 @@ public class TempMushroom : MonoBehaviour
         StartCoroutine(UpdatePath());
     }
 
-    private void FixedUpdate()
-    {
-       // PathfindingManager.PathRequest(transform.position, targetPlayer.position, OnPathFound);
-    }
-
     IEnumerator UpdatePath()
     {
-        PathfindingManager.PathRequest(transform.position, targetPlayer.position, OnPathFound);
+        Vector2 moveLocation = Random.insideUnitCircle * movementRange;
+        PathfindingManager.PathRequest(transform.position, moveLocation, OnPathFound);
 
         while (true)
         {
+            canShoot = true;
             yield return new WaitForSeconds(minUpdatePath);
-                PathfindingManager.PathRequest(transform.position, targetPlayer.position, OnPathFound);
+            moveLocation = Random.insideUnitCircle * movementRange;
+            PathfindingManager.PathRequest(transform.position, moveLocation, OnPathFound);
         }
     }
 
@@ -64,6 +62,7 @@ public class TempMushroom : MonoBehaviour
                 }
                 curWaypoint = path[targetWaypoint];
             }
+
             transform.position = Vector3.MoveTowards(transform.position, curWaypoint, movementSpeed * Time.deltaTime);
             yield return null;
         }
