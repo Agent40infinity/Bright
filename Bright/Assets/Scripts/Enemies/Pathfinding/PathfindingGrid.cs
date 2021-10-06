@@ -36,7 +36,7 @@ public class PathfindingGrid : MonoBehaviour
             for (int y = 0; y < gridSizeY; y++)
             {
                 Vector3 thisWorldPos = bottomLeft + Vector3.right * (x * (nodeSize * 2) + nodeSize) + Vector3.up * (y * (nodeSize * 2) + nodeSize);
-                bool isWalkable = !(Physics.CheckSphere(thisWorldPos, nodeSize, wallMask));
+                bool isWalkable = !(Physics2D.OverlapCircle(thisWorldPos, nodeSize, wallMask));
                 grid[x, y] = new PathfindingNode(isWalkable, thisWorldPos, x , y);
             }
         }
@@ -64,7 +64,7 @@ public class PathfindingGrid : MonoBehaviour
         return neighbours;
     }
 
-    public PathfindingNode NodeFromLocation(Vector3 worldPosition, string type)
+    public PathfindingNode NodeFromLocation(Vector2 worldPosition, string type)
     {
         float locationX = (worldPosition.x + gridSize.x / 2) / gridSize.x;
         float locationY = (worldPosition.y + gridSize.y / 2) / gridSize.y;
