@@ -63,7 +63,13 @@ public class Pathfinding : MonoBehaviour
                         neighbour.parent = currentNode;
 
                         if (!openList.Contains(neighbour))
+                        {
                             openList.Add(neighbour);
+                        }
+                        else
+                        {
+                            openList.UpdateItem(neighbour);
+                        }
                     }
                 }
             }
