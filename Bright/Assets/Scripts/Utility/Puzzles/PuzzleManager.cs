@@ -6,9 +6,10 @@ public class PuzzleManager : MonoBehaviour
 {
     public PuzzleType puzzleType;
     public List<PuzzleObjective> objectives;
+    public GameObject puzzleStart;
     public Vector2Int puzzleSize;
     public int objectiveSize;
-    public bool puzzleComplete = false;
+    public PuzzleState puzzleState = PuzzleState.Idle;
 
     public Transform puzzleParent;
     public BoxCollider2D col;
@@ -24,12 +25,19 @@ public class PuzzleManager : MonoBehaviour
         col = gameObject.GetComponent<BoxCollider2D>();
         col.size = puzzleSize;
 
+        GetPuzzleList();
+    }
+
+    public void GetPuzzleList()
+    {
         PuzzleObjective[] objectivesToAdd = puzzleParent.GetComponentsInChildren<PuzzleObjective>();
 
         for (int i = 0; i < objectivesToAdd.Length; i++)
         {
             objectives.Add(objectivesToAdd[i]);
         }
+
+        puzzleStart = objectives[0].gameObject;
     }
 
     public void CheckComplete()
@@ -65,7 +73,7 @@ public class PuzzleManager : MonoBehaviour
 
     public void SetComplete()
     {
-        puzzleComplete = true;
+        puzzleState = PuzzleState.Complete;
 
         col.enabled = false;
 
@@ -84,9 +92,9 @@ public class PuzzleManager : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D other)
     {
-        switch (puzzleComplete)
+        switch (puzzleState)
         {
-            case false:
+            case PuzzleState.Started:
                 ResetPuzzle();
                 break;
         }
@@ -98,4 +106,11 @@ public enum PuzzleType
     PressurePlate,
     Lever,
     Memory,
+}
+
+public enum PuzzleState
+{ 
+    Idle,
+    Started,
+    Complete
 }

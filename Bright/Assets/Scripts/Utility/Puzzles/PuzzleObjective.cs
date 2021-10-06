@@ -39,13 +39,25 @@ public class PuzzleObjective : MonoBehaviour
         activateState = ActivateState.Inactive;
         spriteRenderer.sprite = sprites[1];
     }
-
+        
     public void OnTriggerEnter2D(Collider2D other)
     {
         switch (other.tag)
         {
             case "Player":
-                Activate();
+                switch (manager.puzzleState)
+                {
+                    case PuzzleState.Idle:
+                        if (gameObject == manager.puzzleStart)
+                        {
+                            Activate();
+                            manager.puzzleState = PuzzleState.Started;
+                        }
+                        break;
+                    case PuzzleState.Started:
+                        Activate();
+                        break;
+                } 
                 break;
         }
     }
