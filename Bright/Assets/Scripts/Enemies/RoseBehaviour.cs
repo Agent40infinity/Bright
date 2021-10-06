@@ -5,14 +5,13 @@ using UnityEngine;
 public class RoseBehaviour : MonoBehaviour
 {
     public float movementSpeed;
-    public float minMovementRange;
+    //public float minMovementRange;
     public float movementRange;
     public GameObject projectile;
     public int damageToPlayer;
-    private bool canShoot;
     private Vector3[] path;
     private int targetWaypoint;
-    const float minUpdatePath = 8f;
+    const float minUpdatePath = 6f;
     private Rigidbody2D rb;
     private Transform targetPlayer;
     private Transform currentTargetLocation;
@@ -28,11 +27,10 @@ public class RoseBehaviour : MonoBehaviour
     {
         Vector2 moveLocation = Random.insideUnitCircle * movementRange;
         PathfindingManager.PathRequest(transform.position, moveLocation, OnPathFound);
-
         while (true)
         {
-            canShoot = true;
-            yield return new WaitForSeconds(minUpdatePath);
+            Instantiate(projectile, targetPlayer.position, Quaternion.identity);
+            yield return new WaitForSeconds(minUpdatePath); 
             moveLocation = Random.insideUnitCircle * movementRange;
             PathfindingManager.PathRequest(transform.position, moveLocation, OnPathFound);
         }
