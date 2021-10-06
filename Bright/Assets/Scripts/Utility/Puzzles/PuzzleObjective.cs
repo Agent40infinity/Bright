@@ -5,21 +5,39 @@ using UnityEngine;
 public class PuzzleObjective : MonoBehaviour
 {
     public ActivateState activateState = ActivateState.Inactive;
-    public List<Sprite> sprites = new List<Sprite>();
 
     public PuzzleManager manager;
-    public SpriteRenderer spriteRenderer;
     public BoxCollider2D col;
+    public Animator anim;
 
     public void Start()
     {
         manager = gameObject.GetComponentInParent<PuzzleManager>();
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         col = gameObject.GetComponent<BoxCollider2D>();
+        anim = gameObject.GetComponent<Animator>();
+
+        if (gameObject == manager.puzzleStart)
+        {
+            anim.SetBool("Start", true);
+        }
     }
 
     public void Activate()
     {
+        switch (manager.puzzleState)
+        {
+            case PuzzleState.Idle:
+                if (gameObject == manager.puzzleStart)
+                {
+                    manager.puzzleState = PuzzleState.Started;
+                }
+                else
+                {
+                    return;
+                }
+                break;
+        }
+
         switch (activateState)
         {
             case ActivateState.Active:
@@ -27,8 +45,7 @@ public class PuzzleObjective : MonoBehaviour
                 break;
             case ActivateState.Inactive:
                 activateState = ActivateState.Active;
-                spriteRenderer.sprite = sprites[0];
-
+                anim.SetBool("Active", true);
                 manager.CheckComplete();
                 break;
         }
@@ -37,27 +54,16 @@ public class PuzzleObjective : MonoBehaviour
     public void Deactivate()
     {
         activateState = ActivateState.Inactive;
-        spriteRenderer.sprite = sprites[1];
+        anim.SetTrigger("Failed");
+        anim.SetBool("Active", false);
     }
         
     public void OnTriggerEnter2D(Collider2D other)
     {
         switch (other.tag)
         {
-            case "Player":
-                switch (manager.puzzleState)
-                {
-                    case PuzzleState.Idle:
-                        if (gameObject == manager.puzzleStart)
-                        {
-                            Activate();
-                            manager.puzzleState = PuzzleState.Started;
-                        }
-                        break;
-                    case PuzzleState.Started:
-                        Activate();
-                        break;
-                } 
+            case "PlayerGround":
+                Activate();
                 break;
         }
     }
@@ -66,7 +72,7 @@ public class PuzzleObjective : MonoBehaviour
     {
         switch (other.tag)
         {
-            case "Player":
+            case "PlayerGround":
                 switch (manager.puzzleType)
                 {
                     case PuzzleType.PressurePlate:

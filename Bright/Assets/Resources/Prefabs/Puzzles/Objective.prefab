@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4900184924393092384}
   - component: {fileID: 761922696}
+  - component: {fileID: 1340823031930272668}
   - component: {fileID: 6065062874750695703}
   - component: {fileID: 5597792320677189932}
   - component: {fileID: 2274259147252038722}
@@ -53,6 +54,25 @@ MonoBehaviour:
   manager: {fileID: 0}
   spriteRenderer: {fileID: 0}
   col: {fileID: 0}
+--- !u!95 &1340823031930272668
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3841462999757971777}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 78506eebdf284264e9155fd948a580e2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &6065062874750695703
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -148,5 +168,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8, y: 0.8}
   m_EdgeRadius: 0

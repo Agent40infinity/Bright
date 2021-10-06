@@ -13,6 +13,7 @@ TagManager:
   - PuzzleStart
   - Enemy
   - Terrain
+  - PlayerGround
   layers:
   - Default
   - TransparentFX

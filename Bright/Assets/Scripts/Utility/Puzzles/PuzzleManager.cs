@@ -31,13 +31,12 @@ public class PuzzleManager : MonoBehaviour
     public void GetPuzzleList()
     {
         PuzzleObjective[] objectivesToAdd = puzzleParent.GetComponentsInChildren<PuzzleObjective>();
+        puzzleStart = puzzleParent.transform.GetChild(0).gameObject;
 
         for (int i = 0; i < objectivesToAdd.Length; i++)
         {
             objectives.Add(objectivesToAdd[i]);
         }
-
-        puzzleStart = objectives[0].gameObject;
     }
 
     public void CheckComplete()
@@ -69,6 +68,8 @@ public class PuzzleManager : MonoBehaviour
         {
             objectives[i].Deactivate();
         }
+
+        puzzleState = PuzzleState.Idle;
     }
 
     public void SetComplete()
@@ -80,6 +81,7 @@ public class PuzzleManager : MonoBehaviour
         for (int i = 0; i < objectives.Count; i++)
         {
             objectives[i].col.enabled = false;
+            objectives[i].anim.SetTrigger("Complete");
         }
 
         RewardDrop();
