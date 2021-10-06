@@ -6,9 +6,11 @@ public class PlayerPhysics : MonoBehaviour
 {
     [Header("Movement")]
     public Vector2 input;
+    public Vector2 lastInput;
     public float speed;
     public float slowMultiplier;
     public float slowApplied;
+    public float rotation;
 
     [Header("Reference")]
     public Rigidbody2D rigid;
@@ -43,73 +45,80 @@ public class PlayerPhysics : MonoBehaviour
             case WispMode.Blade:
                 if (Input.GetKey(GameManager.keybind["MoveUp"]))
                 {
-                    head.rotation = Quaternion.Euler(0, 0, 180);
+                    rotation = 180;
                 }
                 else if (Input.GetKey(GameManager.keybind["MoveDown"]))
                 {
-                    head.rotation = Quaternion.Euler(0, 0, 0);
+                    rotation = 0;
                 }
                 else if (Input.GetKey(GameManager.keybind["MoveLeft"]))
                 {
-                    head.rotation = Quaternion.Euler(0, 0, 270);
+                    rotation = 270;
                 }
                 else if (Input.GetKey(GameManager.keybind["MoveRight"]))
                 {
-                    head.rotation = Quaternion.Euler(0, 0, 90);
+                    rotation = 90;
                 }
                 break;
             case WispMode.Projectile:
                 if (Input.GetKey(GameManager.keybind["ShootUp"]))
                 {
-                    head.rotation = Quaternion.Euler(0, 0, 180);
+                    rotation = 180;
                 }
                 else if (Input.GetKey(GameManager.keybind["ShootDown"]))
                 {
-                    head.rotation = Quaternion.Euler(0, 0, 0);
+                    rotation = 0;
                 }
                 else if (Input.GetKey(GameManager.keybind["ShootLeft"]))
                 {
-                    head.rotation = Quaternion.Euler(0, 0, 270);
+                    rotation = 270;
                 }
                 else if (Input.GetKey(GameManager.keybind["ShootRight"]))
                 {
-                    head.rotation = Quaternion.Euler(0, 0, 90);
+                    rotation = 90;
                 }
                 break;
         }
+
+        head.rotation = Quaternion.Euler(0, 0, rotation);
     }
 
     public void Keypress()
     {
+        Vector2 temp = Vector2.zero;
+
         if (Input.GetKey(GameManager.keybind["MoveLeft"]))
         {
-            anim.SetInteger("Facing", 3);
-            input.x = -1;
+            temp.x = -1;
         }
         else if (Input.GetKey(GameManager.keybind["MoveRight"]))
         {
-            anim.SetInteger("Facing", 4);
-            input.x = 1;
+            temp.x = 1;
         }
         else
         {
-            input.x = 0;
+            temp.x = 0;
         }
 
         if (Input.GetKey(GameManager.keybind["MoveUp"]))
         {
-            anim.SetInteger("Facing", 1);
-            input.y = 1;
+            temp.y = 1;
         }
         else if (Input.GetKey(GameManager.keybind["MoveDown"]))
         {
-            anim.SetInteger("Facing", 2);
-            input.y = -1;
+            temp.y = -1;
         }
         else
         {
-            input.y = 0;
+            temp.y = 0;
         }
+
+        if (temp.y == 0 && temp.y == 0 && input.x != 0 || input.y != 0)
+        {
+            lastInput = input;
+        }
+
+        input = temp;
     }
 
     public void FixedUpdate()
@@ -120,6 +129,14 @@ public class PlayerPhysics : MonoBehaviour
     public void Movement()
     {
         rigid.velocity = (input * slowApplied) * speed;
+
+        AnimationController();
+    }
+
+    public void AnimationController()
+    {
+        anim.SetFloat("FacingX", lastInput.x);
+        anim.SetFloat("FacingY", lastInput.y);
 
         if (input != Vector2.zero)
         {

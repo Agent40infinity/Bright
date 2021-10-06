@@ -87,10 +87,10 @@ public class GameEvents : MonoBehaviour
                 
     public void PushObjective(GameObject objective, List<string> dialogue)
     {
-        dialogueRef.dialogue = dialogue;
-        dialogueRef.dialogueState = DialogueState.Load;
+        //dialogueRef.dialogue = dialogue;
+        //dialogueRef.dialogueState = DialogueState.Load;
 
-        oneTimeState = OneTimeState.Finnished;
+        //oneTimeState = OneTimeState.Finnished;
     }
 
     public void SwitchStateCheck(int index, KeyCode[] keybinds)
