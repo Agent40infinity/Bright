@@ -270,8 +270,8 @@ GameObject:
   - component: {fileID: 7039946160677048483}
   - component: {fileID: 8647023159686334512}
   - component: {fileID: 7039946160677048492}
-  - component: {fileID: 7039946160677048494}
-  - component: {fileID: 7039946160677048480}
+  - component: {fileID: -1408300269394079280}
+  - component: {fileID: 3715450603112209599}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -345,7 +345,7 @@ MonoBehaviour:
   speed: 4.5
   slowMultiplier: 0.15
   slowApplied: 1
-  rigid: {fileID: 7039946160677048494}
+  rigid: {fileID: 3715450603112209599}
   head: {fileID: 7039946159175448074}
   anim: {fileID: 8647023159686334512}
   interactState: 0
@@ -418,28 +418,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &7039946160677048494
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7039946160677048493}
-  m_BodyType: 0
-  m_Simulated: 0
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &7039946160677048480
+--- !u!61 &-1408300269394079280
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -456,7 +435,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.5, y: 2.5}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -465,3 +444,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.55, y: 0.72}
   m_EdgeRadius: 0
+--- !u!50 &3715450603112209599
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7039946160677048493}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
