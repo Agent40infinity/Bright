@@ -66,7 +66,7 @@ public class Settings : MonoBehaviour
         pause.text = CheckSpecial(GameManager.keybind["Pause"]);
     }
 
-    public string CheckSpecial(KeyCode keybind)
+    public static string CheckSpecial(KeyCode keybind)
     {
         if (keybind == KeyCode.LeftArrow)
         {

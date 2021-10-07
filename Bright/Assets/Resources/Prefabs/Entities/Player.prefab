@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7039946160677048495}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &8427429966521299970
 BoxCollider2D:
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4744191181910983512}
   m_Layer: 0
   m_Name: Wisp
-  m_TagString: Untagged
+  m_TagString: Wisp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,7 +89,7 @@ Transform:
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 7039946160677048495}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2400772377662776980
 MonoBehaviour:
@@ -230,7 +230,7 @@ Transform:
   m_Children:
   - {fileID: 7039946159589684998}
   m_Father: {fileID: 7039946160677048495}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7039946159589684999
 GameObject:
@@ -329,7 +329,6 @@ GameObject:
   - component: {fileID: 7039946160677048492}
   - component: {fileID: -1408300269394079280}
   - component: {fileID: 3715450603112209599}
-  - component: {fileID: 5164354939400717985}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -348,8 +347,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6575953766157250133}
   - {fileID: 7039946159175448074}
+  - {fileID: 6440896236345135152}
+  - {fileID: 6575953766157250133}
   - {fileID: 4704513972866217043}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -391,6 +391,8 @@ MonoBehaviour:
   iFrameTimerReset: 1
   frameState: 0
   physics: {fileID: 7039946160677048483}
+  anim: {fileID: 8647023159686334512}
+  deathScreen: {fileID: 0}
 --- !u!114 &7039946160677048483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,7 +497,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.02}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -506,7 +508,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.55, y: 0.72}
+  m_Size: {x: 0.55, y: 0.78}
   m_EdgeRadius: 0
 --- !u!50 &3715450603112209599
 Rigidbody2D:
@@ -529,13 +531,44 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &5164354939400717985
+--- !u!1 &7185937173296886249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6440896236345135152}
+  - component: {fileID: 8164199514057596168}
+  m_Layer: 0
+  m_Name: BodyParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6440896236345135152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7185937173296886249}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7039946160677048495}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &8164199514057596168
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7039946160677048493}
+  m_GameObject: {fileID: 7185937173296886249}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}

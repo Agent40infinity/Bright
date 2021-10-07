@@ -56,22 +56,27 @@ public class GameEvents : MonoBehaviour
         {
             case TutorialState.Move:
                 keybinds = new KeyCode[] { GameManager.keybind["MoveUp"], GameManager.keybind["MoveDown"], GameManager.keybind["MoveLeft"], GameManager.keybind["MoveRight"] };
-                dialogue.Add("Press " + GameManager.keybind["MoveUp"].ToString() + ", " + GameManager.keybind["MoveLeft"].ToString() + ", " + GameManager.keybind["MoveDown"].ToString() + ", or " + GameManager.keybind["MoveRight"].ToString() + " to Move");
+                dialogue.Add("Press " + Settings.CheckSpecial(GameManager.keybind["MoveUp"]) + ", " + Settings.CheckSpecial(GameManager.keybind["MoveLeft"]) + ", " + Settings.CheckSpecial(GameManager.keybind["MoveDown"]) + ", or " + Settings.CheckSpecial(GameManager.keybind["MoveRight"]) + " to Move");
                 break;
             case TutorialState.Shoot:
                 keybinds = new KeyCode[] { GameManager.keybind["ShootUp"], GameManager.keybind["ShootDown"], GameManager.keybind["ShootLeft"], GameManager.keybind["ShootRight"] };
+                dialogue.Add("Press " + Settings.CheckSpecial(GameManager.keybind["ShootUp"]) + ", " + Settings.CheckSpecial(GameManager.keybind["ShootLeft"]) + ", " + Settings.CheckSpecial(GameManager.keybind["ShootDown"]) + ", or " + Settings.CheckSpecial(GameManager.keybind["ShootRight"]) + " to Shoot");
                 break;
             case TutorialState.Switch:
                 keybinds = new KeyCode[] { GameManager.keybind["SwitchWeapon"] };
+                dialogue.Add("Press " + Settings.CheckSpecial(GameManager.keybind["SwitchWeapon"]) + " to Switch Weapons");
                 break;
             case TutorialState.Melee:
                 keybinds = new KeyCode[] { GameManager.keybind["Melee"] };
+                dialogue.Add("Press " + Settings.CheckSpecial(GameManager.keybind["Melee"]) + " to perform a Close Range Attack");
                 break;
             case TutorialState.SwitchWorlds:
                 keybinds = new KeyCode[] { GameManager.keybind["TrueSight"] };
+                dialogue.Add("Press " + Settings.CheckSpecial(GameManager.keybind["TrueSight"]) + " to enter the 'True World'");
                 break;
             case TutorialState.Interact:
                 keybinds = new KeyCode[] { GameManager.keybind["Interact"] };
+                dialogue.Add("Press " + Settings.CheckSpecial(GameManager.keybind["Interact"]) + " to Interact");
                 break;
         }
 
@@ -87,10 +92,10 @@ public class GameEvents : MonoBehaviour
                 
     public void PushObjective(GameObject objective, List<string> dialogue)
     {
-        //dialogueRef.dialogue = dialogue;
-        //dialogueRef.dialogueState = DialogueState.Load;
+        dialogueRef.dialogue = dialogue;
+        dialogueRef.dialogueState = DialogueState.Load;
 
-        //oneTimeState = OneTimeState.Finnished;
+        oneTimeState = OneTimeState.Finnished;
     }
 
     public void SwitchStateCheck(int index, KeyCode[] keybinds)
@@ -126,6 +131,8 @@ public class GameEvents : MonoBehaviour
     public void NextState(int index)
     {
         int newIndex = index + 1;
+
+        dialogueRef.ClearDialogue();
 
         if (newIndex != System.Enum.GetValues(typeof(TutorialState)).Length)
         {

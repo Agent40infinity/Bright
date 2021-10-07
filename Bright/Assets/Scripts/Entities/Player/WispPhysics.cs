@@ -24,6 +24,7 @@ public class WispPhysics : MonoBehaviour
     public void Start()
     {
         transform.parent = null;
+        GameManager.wisp = gameObject;
     }
 
     public void Follow()

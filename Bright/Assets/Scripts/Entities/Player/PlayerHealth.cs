@@ -15,10 +15,15 @@ public class PlayerHealth : MonoBehaviour
 
     [Header("Reference")]
     public PlayerPhysics physics;
+    public Animator anim;
+    public GameObject deathScreen;
 
     public void Awake()
     {
         curHealth = maxHealth;
+
+        GameObject ui = GameObject.FindWithTag("UI");
+        deathScreen = ui.GetComponentInChildren<EndScreen>(true).gameObject;
     }
 
     public void Update()
@@ -38,7 +43,7 @@ public class PlayerHealth : MonoBehaviour
         if (curHealth <= 0) //Checks whether or not the curret health is less than or equal to 0 and that fadeIntoDeath has not already been activated.
         {
             physics.interactState = InteractState.Occupied;
-            //StartCoroutine("Death");
+            StartCoroutine("Death");
         }
     }
 
@@ -64,7 +69,7 @@ public class PlayerHealth : MonoBehaviour
             case FrameState.Idle:
                 if (curHealth >= 1)
                 {
-                    curHealth--;
+                    curHealth -= damage;
                     if (curHealth != 0) //Applies knockback to the player only while their health isn't 0.
                     {
                         frameState = FrameState.Active;
@@ -72,6 +77,13 @@ public class PlayerHealth : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    public IEnumerator Death()
+    {
+        anim.SetBool("isDead", true);
+        yield return new WaitForSeconds(1.9f);
+        deathScreen.SetActive(true);
     }
 }
 

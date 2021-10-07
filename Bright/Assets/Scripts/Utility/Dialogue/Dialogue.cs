@@ -26,8 +26,8 @@ public class Dialogue : MonoBehaviour
     public void ClearDialogue()
     {
         dialogue.Clear();
+        dialogueText.text = "";
         index = 0;
-        dialogueParent.SetActive(false);
     }
 
     public void UpdateText()

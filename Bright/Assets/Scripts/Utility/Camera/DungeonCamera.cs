@@ -101,9 +101,6 @@ public class DungeonCamera : MonoBehaviour
                         moveState = MoveState.Active;
                         OcclusionCulling();
                         break;
-                    case FollowState.Follow:
-
-                        break;
                 }
                 break;
         }
