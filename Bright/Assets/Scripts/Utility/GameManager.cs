@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public static AudioMixer masterMixer; //Creates reference for the menu music
     public static Vector2Int currentRoom;
     public static GameObject currentWorld;
+    public static GameObject wisp;
     public static Dictionary<string, KeyCode> keybind = new Dictionary<string, KeyCode> //Dictionary to store the keybinds.
     {
         { "MoveUp", KeyCode.W },
@@ -101,6 +102,7 @@ public class GameManager : MonoBehaviour
     {
         gameActive = false;
         Destroy(currentWorld);
+        Destroy(wisp);
         currentWorld = null;
         dungeonCamera.ResetCamera();
         healthManager.ClearPrevious();
