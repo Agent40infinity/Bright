@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7490285727798780819}
   - component: {fileID: 7490285727798780831}
   - component: {fileID: 7490285727798780830}
+  - component: {fileID: 7280017008204353232}
   m_Layer: 0
   m_Name: MushyMushyJR
   m_TagString: Enemy
@@ -161,3 +162,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 8
   curHealth: 0
+--- !u!95 &7280017008204353232
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7490285727798780820}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3ca96dc891cd8a243a95b2416113fa91, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
