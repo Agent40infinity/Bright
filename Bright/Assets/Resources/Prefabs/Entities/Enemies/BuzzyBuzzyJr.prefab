@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -910572193954635952}
   - component: {fileID: 8955561088523141993}
   - component: {fileID: 1486363005157471615}
+  - component: {fileID: 1089487315370445294}
   m_Layer: 0
   m_Name: BuzzyBuzzyJr
   m_TagString: Enemy
@@ -150,7 +151,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1486363005157471615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,3 +166,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 6
   curHealth: 0
+--- !u!95 &1089487315370445294
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146989811406363726}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bdf41769cccd6b641be9d8255f4f6940, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
