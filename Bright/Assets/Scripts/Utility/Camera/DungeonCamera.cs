@@ -10,11 +10,22 @@ public class DungeonCamera : MonoBehaviour
     public FollowState followState = FollowState.Cell;
     public MoveState moveState = MoveState.Active;
 
-    [Header("Cell Mode")]
+    [Header("Cell Mode")]   
     public float switchSpeed;
 
     [Header("Reference")]
     public DungeonGeneration generation;
+    public PathfindingGrid pathfinding;
+
+    public void PathfindingCall()
+    {
+    
+        {
+            pathfinding = GameObject.FindWithTag("Pathfinding").GetComponent<PathfindingGrid>();
+        }
+
+        pathfinding.BindCamera(transform);
+    }
 
     public void Update()
     {
@@ -35,6 +46,7 @@ public class DungeonCamera : MonoBehaviour
         else
         {
             moveState = MoveState.Inactive;
+            pathfinding.DrawGrid();
         }
     }
 
