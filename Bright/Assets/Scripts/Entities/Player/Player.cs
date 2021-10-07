@@ -11,6 +11,12 @@ public class Player : MonoBehaviour
 
     public Vector2 direction;
 
+    [Header("Melee")]
+    public float attackInterval;
+    public float attackRange;
+    public int damage;
+    private MeleeMode meleeMode;
+
     [Header("Perks")]
     public List<Perk> perkList = new List<Perk>();
 
@@ -105,10 +111,37 @@ public class Player : MonoBehaviour
     {
         physics.PlayerRotation(WispMode.Blade);
 
-        if (Input.GetKeyDown(GameManager.keybind["Melee"]))
+        switch (meleeMode)
         {
-
+            case MeleeMode.Idle:
+                if (Input.GetKeyDown(GameManager.keybind["Melee"]))
+                {
+                    StartCoroutine("Melee");
+                }
+                break;
         }
+    }
+
+    public IEnumerator Melee()
+    {
+        physics.anim.SetBool("Melee", true);
+        meleeMode = MeleeMode.Attack;
+
+        Vector2 attackPos = physics.head.GetChild(0).position;
+        Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(attackPos, attackRange);
+
+        for (int i = 0; i < enemiesInRange.Length; i++)
+        {
+            switch (enemiesInRange[i].tag)
+            {
+                case "Enemy":
+                    enemiesInRange[i].GetComponent<EnemyHealth>().TakeDamage(damage);
+                    break;
+            }
+        }
+        yield return new WaitForSeconds(attackInterval);
+        physics.anim.SetBool("Melee", false);
+        meleeMode = MeleeMode.Idle;
     }
 
     public void Projectile()
@@ -165,6 +198,12 @@ public enum WispMode
     Projectile,
     Healing,
     Idle
+}
+
+public enum MeleeMode
+{ 
+    Idle,
+    Attack
 }
 
 public enum ReturnState
