@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FlowerMoveDown
+  m_Name: RoseMoveDown
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -43,6 +43,9 @@ AnimationClip:
     - time: 0.23333333
       value: {fileID: -1941538280864932190, guid: 59e6c6bb2191ca74cb46b251d484083f,
         type: 3}
+    - time: 0.8333333
+      value: {fileID: -1941538280864932190, guid: 59e6c6bb2191ca74cb46b251d484083f,
+        type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -70,12 +73,13 @@ AnimationClip:
     - {fileID: -5706626340010316337, guid: 59e6c6bb2191ca74cb46b251d484083f, type: 3}
     - {fileID: -4173948151391030294, guid: 59e6c6bb2191ca74cb46b251d484083f, type: 3}
     - {fileID: -1941538280864932190, guid: 59e6c6bb2191ca74cb46b251d484083f, type: 3}
+    - {fileID: -1941538280864932190, guid: 59e6c6bb2191ca74cb46b251d484083f, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.25
+    m_StopTime: 0.84999996
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
