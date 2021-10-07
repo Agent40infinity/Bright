@@ -11,11 +11,24 @@ public class PathfindingGrid : MonoBehaviour
 
     private int gridSizeX, gridSizeY;
 
+    public bool UpdateMe = false;
+
     void Awake()
     {
         gridSizeX = Mathf.RoundToInt(gridSize.x / (nodeSize * 2));
         gridSizeY = Mathf.RoundToInt(gridSize.y / (nodeSize * 2));
         DrawGrid();
+    }
+
+    public void Update()
+    {
+        switch (UpdateMe)
+        {
+            case true:
+                DrawGrid();
+                UpdateMe = false;
+                break;
+        }
     }
 
     public int MaxSize
@@ -26,7 +39,12 @@ public class PathfindingGrid : MonoBehaviour
         }
     }
 
-    void DrawGrid()
+    public void BindCamera(Transform parent)
+    {
+        gameObject.transform.parent = parent;
+    }
+
+    public void DrawGrid()
     {
         grid = new PathfindingNode[gridSizeX, gridSizeY];
         Vector3 bottomLeft = transform.position - Vector3.right * ( gridSize.x / 2) - Vector3.up * gridSize.y / 2;

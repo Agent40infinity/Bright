@@ -96,6 +96,7 @@ public class GameManager : MonoBehaviour
         overlay.SetActive(true);
         healthManager.SetUpHealth();
         dungeonCamera.OcclusionCulling();
+        dungeonCamera.PathfindingCall();
     }
 
     public void LeaveGame()
