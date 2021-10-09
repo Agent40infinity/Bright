@@ -19,18 +19,7 @@ public class PathfindingGrid : MonoBehaviour
         gridSizeY = Mathf.RoundToInt(gridSize.y / (nodeSize * 2));
         DrawGrid();
     }
-
-    public void Update()
-    {
-        switch (UpdateMe)
-        {
-            case true:
-                DrawGrid();
-                UpdateMe = false;
-                break;
-        }
-    }
-
+   
     public int MaxSize
     {
         get
