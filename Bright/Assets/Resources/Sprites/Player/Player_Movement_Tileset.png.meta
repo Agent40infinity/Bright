@@ -80,6 +80,30 @@ TextureImporter:
   - first:
       213: 1604549081529875192
     second: Player_MoveLeft_9
+  - first:
+      213: -1162812432013494087
+    second: Player_MoveUp_1
+  - first:
+      213: 254446157919572476
+    second: Player_MoveUp_2
+  - first:
+      213: -8430907393425703733
+    second: Player_MoveUp_3
+  - first:
+      213: 4629477841900089628
+    second: Player_MoveUp_4
+  - first:
+      213: 5799993503743169488
+    second: Player_MoveUp_5
+  - first:
+      213: -1953236463760887739
+    second: Player_MoveUp_6
+  - first:
+      213: -7203965890541241479
+    second: Player_MoveUp_7
+  - first:
+      213: 3780450849519852940
+    second: Player_MoveUp_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -706,6 +730,174 @@ TextureImporter:
       bones: []
       spriteID: 8fa744d63e0844610800000000000000
       internalID: 1604549081529875192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_MoveUp_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b87d61014cdcdfe0800000000000000
+      internalID: -1162812432013494087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_MoveUp_2
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf15249be69f78300800000000000000
+      internalID: 254446157919572476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_MoveUp_3
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc75a005666ffa80800000000000000
+      internalID: -8430907393425703733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_MoveUp_4
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c113ff5b1953f3040800000000000000
+      internalID: 4629477841900089628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_MoveUp_5
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d35f2aac57bd7050800000000000000
+      internalID: 5799993503743169488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_MoveUp_6
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540313fe8c5b4e4e0800000000000000
+      internalID: -1953236463760887739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_MoveUp_7
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b3248d03f560c90800000000000000
+      internalID: -7203965890541241479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_MoveUp_8
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d5478940cd67430800000000000000
+      internalID: 3780450849519852940
       vertices: []
       indices: 
       edges: []
