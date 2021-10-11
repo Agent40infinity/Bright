@@ -1904,7 +1904,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8889654945361460928}
   m_Layer: 0
-  m_Name: Variant_1
+  m_Name: Variant_3
   m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
