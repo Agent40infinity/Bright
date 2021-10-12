@@ -8,6 +8,7 @@ public class Room
     public string type;
     public int difficulty;
     public int variant;
+    public RoomType roomType;
 
     [Header("Active Slot")]
     public GameObject room;
@@ -32,4 +33,10 @@ public enum VisitedState
     Empty,
     Occupied,
     Clear
+}
+
+public enum RoomType
+{
+    Normal,
+    Forest
 }

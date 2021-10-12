@@ -7,9 +7,13 @@ public class PerkManager : MonoBehaviour
     public Perk perkInfo;
     public Player player;
 
+    public SpriteRenderer sprite;
+
     public void Start()
     {
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
+        sprite = gameObject.GetComponent<SpriteRenderer>();
+
         PerkStart();
     }
 
@@ -23,6 +27,7 @@ public class PerkManager : MonoBehaviour
             {
                 case true:
                     perkInfo = PerkData.AddPerk(perk);
+                    sprite.sprite = perkInfo.Icon;
                     break;
                 case false:
                     PerkStart();

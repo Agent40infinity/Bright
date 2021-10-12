@@ -26,6 +26,11 @@ public class DungeonLayout : MonoBehaviour
     [Header("Variants")]
     public List<int> variantsLeft = new List<int>();
     public int variantCount;
+    public Dictionary<int, List<bool>> forestVariants = new Dictionary<int, List<bool>>
+    {
+        { 2, new List<bool> { true, true, true, true } },
+        { 4, new List<bool> { true, true, true, true } },
+    };
 
     [Header("Difficulty")]
     public Dictionary<int, List<int>> difficultiesLeft = new Dictionary<int, List<int>>

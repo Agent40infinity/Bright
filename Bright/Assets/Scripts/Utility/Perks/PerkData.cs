@@ -15,7 +15,7 @@ public static class PerkData
         {
             Name = name,
             PerkType = perkType,
-            Portrait = Resources.Load<Sprite>(path),
+            Icon = Resources.Load<Sprite>(path),
         };
 
         return temp;
@@ -24,9 +24,16 @@ public static class PerkData
 
 public enum PerkType
 { 
-    Test1 = 20,
-    Test2 = 5,
-    Test3 = 15,
-    Test4 = 25,
-    Test5 = 35,
+    Adrenaline = 20,
+    ShootingStar = 5,
+    GlassCannon = 15,
+    SoulHeart = 15,
+    Parasitic = 5,
+    Triplets = 5,
+    MoneyBags = 15,
+    Juggernaut = 10,
+    FollowTheLeader = 5,
+    WellFed = 10,
+    SpiritsWrath = 10,
+    Blinded = 15
 }

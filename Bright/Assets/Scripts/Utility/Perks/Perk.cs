@@ -5,7 +5,7 @@ using UnityEngine;
 public class Perk
 {
     private string perkName;
-    private Sprite portrait;
+    private Sprite icon;
     private PerkType perkType;
 
     public string Name
@@ -14,10 +14,10 @@ public class Perk
         set { perkName = value; }
     }
 
-    public Sprite Portrait
+    public Sprite Icon
     {
-        get { return portrait; }
-        set { portrait = value; }
+        get { return icon; }
+        set { icon = value; }
     }
 
     public PerkType PerkType

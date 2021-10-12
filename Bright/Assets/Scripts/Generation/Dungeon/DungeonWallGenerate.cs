@@ -71,13 +71,48 @@ public class DungeonWallGenerate : DungeonLayout
         return temp;
     }
 
+    public string DetermineType(int variant, int index)
+    {
+        if (forestVariants.ContainsKey(variant))
+        {
+            if (forestVariants[variant][index])
+            {
+                return "Forest/";
+            }
+        }
+
+        return "Normal/";
+    }
+
     public void AddWalls(Vector2Int selectedRoom, List<string> sidesToAdd, FillType type)
     {
         Transform room = roomLayout[selectedRoom.x, selectedRoom.y].room.transform;
+        int roomVariant = roomLayout[selectedRoom.x, selectedRoom.y].variant;
 
         for (int i = 0; i < sidesToAdd.Count; i++)
         {
-            string path = fillPath + type.ToString() + "_" + sidesToAdd[i];
+            string roomType = "";
+            int index = 0;
+
+            switch (sidesToAdd[i])
+            {
+                case "Left":
+                    index = 0;
+                    break;
+                case "Right":
+                    index = 1;
+                    break;
+                case "Up":
+                    index = 2;
+                    break;
+                case "Down":
+                    index = 3;
+                    break;
+            }
+
+            roomType = DetermineType(roomVariant, index);
+
+            string path = fillPath + roomType + type.ToString() + "_" + sidesToAdd[i];
 
             switch (sidesToAdd[i])
             {

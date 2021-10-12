@@ -133,6 +133,7 @@ MonoBehaviour:
   generateRoomCoords: []
   variantsLeft: 
   variantCount: 20
+  forestVariants: 
   floorParent: {fileID: 3271494771074570560}
   trueWorldGeneration: {fileID: 766273096725587143}
   varietyPath: Prefabs/Generation/Normal/
