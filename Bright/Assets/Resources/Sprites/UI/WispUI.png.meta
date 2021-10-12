@@ -156,10 +156,10 @@ TextureImporter:
       name: WispUI_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1110
-        width: 512
-        height: 140
+        x: 37
+        y: 1096
+        width: 493
+        height: 139
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,10 +177,10 @@ TextureImporter:
       name: WispUI_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 970
-        width: 512
-        height: 140
+        x: 29
+        y: 1008
+        width: 63
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
