@@ -157,9 +157,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 37
-        y: 1096
+        y: 1065
         width: 493
-        height: 139
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,10 +177,10 @@ TextureImporter:
       name: WispUI_1
       rect:
         serializedVersion: 2
-        x: 29
-        y: 1008
-        width: 63
-        height: 66
+        x: 566
+        y: 1164
+        width: 36
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,8 +198,8 @@ TextureImporter:
       name: WispUI_2
       rect:
         serializedVersion: 2
-        x: 118
-        y: 997
+        x: 141
+        y: 998
         width: 32
         height: 72
       alignment: 0
@@ -209,8 +209,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1de7abaedfcc081c0800000000000000
-      internalID: -4503374236433613103
+      spriteID: fcaf0f4a4b42022b0800000000000000
+      internalID: -5611444777423668529
       vertices: []
       indices: 
       edges: []
@@ -219,8 +219,8 @@ TextureImporter:
       name: WispUI_3
       rect:
         serializedVersion: 2
-        x: 137
-        y: 1000
+        x: 160
+        y: 1001
         width: 65
         height: 66
       alignment: 0
@@ -230,8 +230,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d280f727b8220fa0800000000000000
-      internalID: -5836057400004541744
+      spriteID: dae484f80eb413e90800000000000000
+      internalID: -7047768514009477459
       vertices: []
       indices: 
       edges: []
@@ -240,8 +240,8 @@ TextureImporter:
       name: WispUI_4
       rect:
         serializedVersion: 2
-        x: 238
-        y: 1000
+        x: 261
+        y: 1001
         width: 65
         height: 66
       alignment: 0
@@ -251,8 +251,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b2bab5ae148d5270800000000000000
-      internalID: 8240888160322237112
+      spriteID: 7df37573761cc36b0800000000000000
+      internalID: -5315160811149770793
       vertices: []
       indices: 
       edges: []
@@ -261,8 +261,8 @@ TextureImporter:
       name: WispUI_5
       rect:
         serializedVersion: 2
-        x: 290
-        y: 997
+        x: 313
+        y: 998
         width: 32
         height: 72
       alignment: 0
@@ -272,8 +272,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9552698c643096e60800000000000000
-      internalID: 7955893819274569049
+      spriteID: ea7651d98626eea80800000000000000
+      internalID: -8435696850566813778
       vertices: []
       indices: 
       edges: []
@@ -282,10 +282,10 @@ TextureImporter:
       name: WispUI_6
       rect:
         serializedVersion: 2
-        x: 38
-        y: 969
-        width: 36
-        height: 30
+        x: 126
+        y: 905
+        width: 234
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,8 +293,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5144ed1307ccb7f00800000000000000
-      internalID: 1115710114949383189
+      spriteID: e7e0a17fb3f763f00800000000000000
+      internalID: 1096203454836772478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WispUI_7
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 790
+        width: 385
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afb8cfa3d7329c480800000000000000
+      internalID: -8878526169616708614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WispUI_8
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 652
+        width: 196
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48af1f9b04ae4b6d0800000000000000
+      internalID: -2975495890066605436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WispUI_9
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 499
+        width: 465
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f66516bb26ba60b0800000000000000
+      internalID: -5734570876648200459
       vertices: []
       indices: 
       edges: []
