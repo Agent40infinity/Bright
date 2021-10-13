@@ -8,7 +8,7 @@ using UnityEngine.Audio;
 public class GameManager : MonoBehaviour
 {
     public static bool gameActive = false; //Is the game paused.
-    public static bool enemiesExist = false;
+    public static EnemyManager enemyManager;
     public static WorldState worldState;
     public static bool startTransition = false;
     public static AudioMixer masterMixer; //Creates reference for the menu music

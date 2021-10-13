@@ -38,10 +38,10 @@ public class Player : MonoBehaviour
                 Projectile();
                 break;
         }
-
-        switch (GameManager.enemiesExist)
+        TrueSight();
+        switch (GameManager.enemyManager.spawnerState)
         {
-            case false:
+            case SpawnerState.Cleared:
                 TrueSight();
                 break;
         }

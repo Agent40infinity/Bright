@@ -70,6 +70,11 @@ public class PerkManager : MonoBehaviour
             }
         }
 
+        for (int i = 0; i < perkChances.Count; i++)
+        {
+            Debug.Log(perkChances[i]);
+        }
+
         return (PerkType)System.Enum.GetValues(typeof(PerkType)).GetValue(index);
     }
 
