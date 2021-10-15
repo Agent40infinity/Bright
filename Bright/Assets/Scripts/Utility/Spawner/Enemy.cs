@@ -49,16 +49,52 @@ public class Enemy : MonoBehaviour
                 break;
             case EnemyType.Sunflower:
                 weighting = 3;
-                maxHealth = 12;
+                maxHealth = 12; 
                 speed = 0;
                 break;
-        }
+        } 
     }
 
     public void Start()
     {
         anim = gameObject.GetComponent<Animator>();
         health = gameObject.GetComponent<EnemyHealth>();
+    }
+
+    public void Update()
+    {
+        Pathfinding();
+    }
+
+    public void Pathfinding()
+    { 
+        switch (enemyType)
+        { 
+            case EnemyType.Mushroom: case EnemyType.Wasp: case EnemyType.Flower: case EnemyType.SeedBomb:
+                
+                break;  
+        }
+    }
+
+    public IEnumerator FollowPath()
+    {
+        switch (enemyType)
+        {
+            case EnemyType.Mushroom:
+
+                break;
+            case EnemyType.Wasp:
+
+                break;
+            case EnemyType.Flower:
+
+                break;
+            case EnemyType.SeedBomb:
+
+                break;
+        }
+
+        yield return null;
     }
 }
 
