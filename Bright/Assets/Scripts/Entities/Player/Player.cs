@@ -39,12 +39,12 @@ public class Player : MonoBehaviour
                 break;
         }
         TrueSight();
-        switch (GameManager.enemyManager.spawnerState)
+        /*switch (GameManager.enemyManager.spawnerState)
         {
             case SpawnerState.Cleared:
                 TrueSight();
                 break;
-        }
+        }*/
     }
 
     public void Keypress()
