@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public int weighting;
     public float maxHealth;
     public float speed;
+    public float movementRange; //applies only to specific enem
 
     [Header("Files")]
     public string animPath = "Animations/Enemy/";
@@ -18,6 +19,19 @@ public class Enemy : MonoBehaviour
     [Header("References")]
     public Animator anim;
     public EnemyHealth health;
+
+    [Header("Attacking Details")]
+    public float shotDelay;
+    private float shotCooldown;
+    public GameObject projectile;
+    public float targetDistance;
+
+    [Header("Pathfinding")]
+    private Transform targetPlayer;
+    private Transform currentTargetLocation;
+    private Vector3[] path;
+    private int targetWaypoint;
+    const float pathRefreshRate = 0.1f;
 
     public Enemy(EnemyType enemyType)
     {
@@ -59,42 +73,116 @@ public class Enemy : MonoBehaviour
     {
         anim = gameObject.GetComponent<Animator>();
         health = gameObject.GetComponent<EnemyHealth>();
+        StartCoroutine(UpdatePath());
     }
 
-    public void Update()
+    //public void Update()
+    //{
+    //   Pathfinding();
+    //}
+
+    //public void Pathfinding()
+    //{ 
+    //    switch (enemyType)
+    //    { 
+    //        case EnemyType.Mushroom: case EnemyType.Wasp: case EnemyType.Flower: case EnemyType.SeedBomb:
+    //            
+    //            break;  
+    //    }
+    //}
+
+    IEnumerator UpdatePath()
     {
-        Pathfinding();
+        switch (enemyType)
+        {
+            case EnemyType.Mushroom: case EnemyType.Wasp: case EnemyType.SeedBomb:
+
+                PathfindingManager.PathRequest(transform.position, targetPlayer.position, OnPathFound);
+
+                while (true)
+                {
+                    yield return new WaitForSeconds(pathRefreshRate);
+                    PathfindingManager.PathRequest(transform.position, targetPlayer.position, OnPathFound);
+                }
+
+            case EnemyType.Flower:
+                Vector2 moveLocation = Random.insideUnitCircle * movementRange;
+                PathfindingManager.PathRequest(transform.position, moveLocation, OnPathFound);
+                while (true)
+                {
+                    Instantiate(projectile, targetPlayer.position, Quaternion.identity);
+                    yield return new WaitForSeconds(pathRefreshRate);
+                    moveLocation = Random.insideUnitCircle * movementRange;
+                    PathfindingManager.PathRequest(transform.position, moveLocation, OnPathFound);
+                }
+        }
     }
 
-    public void Pathfinding()
-    { 
-        switch (enemyType)
-        { 
-            case EnemyType.Mushroom: case EnemyType.Wasp: case EnemyType.Flower: case EnemyType.SeedBomb:
-                
-                break;  
+    public void OnPathFound(Vector3[] newPath, bool pathActive)
+    {
+        if (pathActive)
+        {
+            path = newPath;
+            StopCoroutine("FollowPath");
+            StartCoroutine("FollowPath");
         }
     }
 
     public IEnumerator FollowPath()
     {
-        switch (enemyType)
+        Vector3 curWaypoint = path[0];
+        while (true)
         {
-            case EnemyType.Mushroom:
+            if (transform.position == curWaypoint)
+            {
+                targetWaypoint++;
+                if (targetWaypoint >= path.Length)
+                {
+                    yield break;
+                }
+                curWaypoint = path[targetWaypoint];
+            }
 
-                break;
-            case EnemyType.Wasp:
+            switch (enemyType)
+            {
+                case EnemyType.Mushroom:
+                        transform.position = Vector3.MoveTowards(transform.position, curWaypoint, speed * Time.deltaTime);
+                    break;
+                case EnemyType.Wasp:
+                        if (Vector2.Distance(targetPlayer.position, transform.position) < targetDistance)
+                        {
+                            if (shotCooldown < 0)
+                            {
+                                shotCooldown = shotDelay;
+                                Instantiate(projectile, transform.position, Quaternion.identity);
+                            }
+                            else
+                            {
+                                shotCooldown -= Time.deltaTime;
+                            }
+                        }
+                        else
+                        {
+                            transform.position = Vector3.MoveTowards(transform.position, curWaypoint, speed * Time.deltaTime);
+                        }
+                    break;
+                case EnemyType.Flower:
+                        transform.position = Vector3.MoveTowards(transform.position, curWaypoint, speed * Time.deltaTime);
+                    break;
+                case EnemyType.SeedBomb:
 
-                break;
-            case EnemyType.Flower:
-
-                break;
-            case EnemyType.SeedBomb:
-
-                break;
+                    break;
+            }
+            yield return null;
         }
+    }
 
-        yield return null;
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<PlayerHealth>().DamagePlayer(1);
+        }
     }
 }
 
