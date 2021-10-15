@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
     public EnemyHealth health;
 
     [Header("Attacking Details")]
-    public float shotDelay;
+    public float shotDelay = 0.8f;
     private float shotCooldown;
     public GameObject projectile;
     public float targetDistance;
@@ -50,11 +50,13 @@ public class Enemy : MonoBehaviour
                 weighting = 1;
                 maxHealth = 6;
                 speed = 5;
+                projectile = Resources.Load("Enemies/Bullet") as GameObject;
                 break;
             case EnemyType.Flower:
                 weighting = 2;
                 maxHealth = 4;
                 speed = 4;
+                projectile = Resources.Load("Enemies/Thorns") as GameObject;
                 break;
             case EnemyType.SeedBomb:
                 weighting = 2;
@@ -73,6 +75,7 @@ public class Enemy : MonoBehaviour
     {
         anim = gameObject.GetComponent<Animator>();
         health = gameObject.GetComponent<EnemyHealth>();
+        targetPlayer = GameObject.FindGameObjectWithTag("Player").transform;
         StartCoroutine(UpdatePath());
     }
 
