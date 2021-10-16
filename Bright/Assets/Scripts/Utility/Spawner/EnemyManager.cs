@@ -16,6 +16,11 @@ public class EnemyManager : MonoBehaviour
         room = generation.roomLayout[GameManager.currentRoom.x, GameManager.currentRoom.y];
     }
 
+    public void GetEnemies()
+    { 
+        
+    }
+
     public void SpawnEnemies()
     { 
         
