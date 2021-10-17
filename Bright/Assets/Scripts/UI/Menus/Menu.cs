@@ -28,7 +28,7 @@ public class Menu : MonoBehaviour
     public GameObject loadParent;
     public GameObject logo;
     public GameObject warning;
-    //public bool isLoadRunning;
+    public bool isLoadRunning;
     #endregion
 
     public void Start() //Used to load resolutions and create list for the dropdown, collects both Width and Height seperately
@@ -39,15 +39,22 @@ public class Menu : MonoBehaviour
 
     public void Update()
     {
-        /*if (Input.GetKeyDown(GameManager.keybind["Pause"]) && isLoadRunning)
+        switch (isLoadRunning)
         {
-            StopCoroutine("LoadScreen");
-            logo.SetActive(false);
-            warning.SetActive(false);
-            loadParent.SetActive(false);
-            fade.FadeIn();
-            music.Play();
-        }*/
+            case true:
+                if (Input.GetKeyDown(GameManager.keybind["Pause"]))
+                {
+                    StopCoroutine("LoadScreen");
+                    logo.SetActive(false);
+                    warning.SetActive(false);
+                    loadParent.SetActive(false);
+                    fade.FadeOut();
+                    fade.FadeIn();
+                    music.Play();
+                    isLoadRunning = false;
+                }
+                break;
+        }
     }
 
     public void StartGame() //Trigger for Play Button
@@ -86,7 +93,7 @@ public class Menu : MonoBehaviour
 
     IEnumerator LoadScreen() //Called upon to show that the player has died; Makes the player un-hittable and dead.
     {
-        //isLoadRunning = true;
+        isLoadRunning = true;
         fade.FadeOut();
         yield return new WaitForSeconds(1);
         logo.SetActive(true);
@@ -104,6 +111,6 @@ public class Menu : MonoBehaviour
         loadParent.SetActive(false);
         fade.FadeIn();
         music.Play();
-        //isLoadRunning = false;
+        isLoadRunning = false;
     }
 }

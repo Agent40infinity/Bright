@@ -8,7 +8,6 @@ public class Enemy : MonoBehaviour
     public EnemyType enemyType;
 
     [Header("Attributes")]
-    public int weighting;
     public float maxHealth;
     public float speed;
     public float movementRange; //applies only to specific enem
@@ -28,12 +27,12 @@ public class Enemy : MonoBehaviour
 
     [Header("Pathfinding")]
     private Transform targetPlayer;
-    private Transform currentTargetLocation;
+    private Transform currentTargetLocation;    
     private Vector3[] path;
     private int targetWaypoint;
     const float pathRefreshRate = 0.1f;
 
-    public Enemy(EnemyType enemyType)
+    public void EnemySetup(EnemyType enemyType)
     {
         this.enemyType = enemyType;
         animPath += enemyType.ToString();
@@ -42,29 +41,24 @@ public class Enemy : MonoBehaviour
         switch (enemyType)
         {
             case EnemyType.Mushroom:
-                weighting = 1;
                 maxHealth = 6;
                 speed = 5;
                 break;
             case EnemyType.Wasp:
-                weighting = 1;
                 maxHealth = 6;
                 speed = 5;
                 projectile = Resources.Load("Enemies/Bullet") as GameObject;
                 break;
             case EnemyType.Flower:
-                weighting = 2;
                 maxHealth = 4;
                 speed = 4;
                 projectile = Resources.Load("Enemies/Thorns") as GameObject;
                 break;
             case EnemyType.SeedBomb:
-                weighting = 2;
                 maxHealth = 2;
                 speed = 3;
                 break;
             case EnemyType.Sunflower:
-                weighting = 3;
                 maxHealth = 12; 
                 speed = 0;
                 break;
@@ -76,6 +70,12 @@ public class Enemy : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
         health = gameObject.GetComponent<EnemyHealth>();
         targetPlayer = GameObject.FindGameObjectWithTag("Player").transform;
+        StartCoroutine("Awaken");
+    }
+
+    public IEnumerator Awaken()
+    {
+        yield return new WaitForSeconds(1.5f);
         StartCoroutine(UpdatePath());
     }
 
@@ -134,6 +134,7 @@ public class Enemy : MonoBehaviour
     public IEnumerator FollowPath()
     {
         Vector3 curWaypoint = path[0];
+
         while (true)
         {
             if (transform.position == curWaypoint)
@@ -149,42 +150,34 @@ public class Enemy : MonoBehaviour
             switch (enemyType)
             {
                 case EnemyType.Mushroom:
-                        transform.position = Vector3.MoveTowards(transform.position, curWaypoint, speed * Time.deltaTime);
+                    transform.position = Vector3.MoveTowards(transform.position, curWaypoint, speed * Time.deltaTime);
                     break;
                 case EnemyType.Wasp:
-                        if (Vector2.Distance(targetPlayer.position, transform.position) < targetDistance)
+                    if (Vector2.Distance(targetPlayer.position, transform.position) < targetDistance)
+                    {
+                        if (shotCooldown < 0)
                         {
-                            if (shotCooldown < 0)
-                            {
-                                shotCooldown = shotDelay;
-                                Instantiate(projectile, transform.position, Quaternion.identity);
-                            }
-                            else
-                            {
-                                shotCooldown -= Time.deltaTime;
-                            }
+                            shotCooldown = shotDelay;
+                            Instantiate(projectile, transform.position, Quaternion.identity);
                         }
                         else
                         {
-                            transform.position = Vector3.MoveTowards(transform.position, curWaypoint, speed * Time.deltaTime);
+                            shotCooldown -= Time.deltaTime;
                         }
+                    }
+                    else
+                    {
+                        transform.position = Vector3.MoveTowards(transform.position, curWaypoint, speed * Time.deltaTime);
+                    }
                     break;
                 case EnemyType.Flower:
-                        transform.position = Vector3.MoveTowards(transform.position, curWaypoint, speed * Time.deltaTime);
+                    transform.position = Vector3.MoveTowards(transform.position, curWaypoint, speed * Time.deltaTime);
                     break;
                 case EnemyType.SeedBomb:
 
                     break;
             }
             yield return null;
-        }
-    }
-
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            collision.gameObject.GetComponent<PlayerHealth>().DamagePlayer(1);
         }
     }
 }

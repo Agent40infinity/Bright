@@ -62,7 +62,7 @@ public class DungeonCamera : MonoBehaviour
 
                     if (room == GameManager.currentRoom)
                     {
-                        RoomStatus(room, true);
+                        RoomStatus(room, true);                        
                     }
                     else
                     {
