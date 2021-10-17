@@ -39,16 +39,12 @@ public class EnemyHealth : MonoBehaviour
     // Temporary damage takes damage each time hit by player
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Wisp")
         {
-            // take no damage from another enemy
-        }
-        else if (collision.gameObject.tag == "Terrain")
-        {
-            // take no damage from running into a wall
+            TakeDamage(1);
         }
         else {
-            TakeDamage(1);
+            // take no damage from running into other shit 
         }
     }
 }
