@@ -20,9 +20,10 @@ public class Enemy : MonoBehaviour
     public EnemyHealth health;
 
     [Header("Attacking Details")]
-    public float shotDelay = 0.8f;
+    public float shotDelay;
     private float shotCooldown;
-    public GameObject projectile;
+    public GameObject projectilePrefab;
+    public GameObject thornPrefab;
     public float targetDistance;
 
     [Header("Pathfinding")]
@@ -42,21 +43,21 @@ public class Enemy : MonoBehaviour
         {
             case EnemyType.Mushroom:
                 maxHealth = 6;
-                speed = 5;
+                speed = 2;
                 break;
             case EnemyType.Wasp:
                 maxHealth = 6;
-                speed = 5;
-                projectile = Resources.Load("Enemies/Bullet") as GameObject;
+                speed = 3;
+                shotDelay = .8f;
+                targetDistance = 2;
                 break;
             case EnemyType.Flower:
                 maxHealth = 4;
-                speed = 4;
-                projectile = Resources.Load("Enemies/Thorns") as GameObject;
+                speed = 3;
                 break;
             case EnemyType.SeedBomb:
                 maxHealth = 2;
-                speed = 3;
+                speed = 4;
                 break;
             case EnemyType.Sunflower:
                 maxHealth = 12; 
@@ -79,21 +80,6 @@ public class Enemy : MonoBehaviour
         StartCoroutine(UpdatePath());
     }
 
-    //public void Update()
-    //{
-    //   Pathfinding();
-    //}
-
-    //public void Pathfinding()
-    //{ 
-    //    switch (enemyType)
-    //    { 
-    //        case EnemyType.Mushroom: case EnemyType.Wasp: case EnemyType.Flower: case EnemyType.SeedBomb:
-    //            
-    //            break;  
-    //    }
-    //}
-
     IEnumerator UpdatePath()
     {
         switch (enemyType)
@@ -113,7 +99,7 @@ public class Enemy : MonoBehaviour
                 PathfindingManager.PathRequest(transform.position, moveLocation, OnPathFound);
                 while (true)
                 {
-                    Instantiate(projectile, targetPlayer.position, Quaternion.identity);
+                    Instantiate(thornPrefab, targetPlayer.position, Quaternion.identity);
                     yield return new WaitForSeconds(pathRefreshRate);
                     moveLocation = Random.insideUnitCircle * movementRange;
                     PathfindingManager.PathRequest(transform.position, moveLocation, OnPathFound);
@@ -153,21 +139,24 @@ public class Enemy : MonoBehaviour
                     transform.position = Vector3.MoveTowards(transform.position, curWaypoint, speed * Time.deltaTime);
                     break;
                 case EnemyType.Wasp:
-                    if (Vector2.Distance(targetPlayer.position, transform.position) < targetDistance)
+                    if (Vector2.Distance(targetPlayer.position, transform.position) > targetDistance)
                     {
-                        if (shotCooldown < 0)
+                        transform.position = Vector3.MoveTowards(transform.position, curWaypoint, speed * Time.deltaTime);
+                    }
+                    else
+                    {
+                        if (shotCooldown <= 0)
                         {
                             shotCooldown = shotDelay;
-                            Instantiate(projectile, transform.position, Quaternion.identity);
+
+                            EnemyBullet bullet = Instantiate(projectilePrefab, transform.position, Quaternion.identity).GetComponent<EnemyBullet>(); 
+                            bullet.transform.rotation = Quaternion.LookRotation(Vector3.forward, GameObject.FindWithTag("Player").transform.position - transform.position); 
+                            bullet.shotDirection = Vector2.up; 
                         }
                         else
                         {
                             shotCooldown -= Time.deltaTime;
                         }
-                    }
-                    else
-                    {
-                        transform.position = Vector3.MoveTowards(transform.position, curWaypoint, speed * Time.deltaTime);
                     }
                     break;
                 case EnemyType.Flower:

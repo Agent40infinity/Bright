@@ -11,14 +11,12 @@ public class RoseBehaviour : MonoBehaviour
     public int damageToPlayer;
     private Vector3[] path;
     private int targetWaypoint;
-    const float minUpdatePath = 6f;
-    private Rigidbody2D rb;
+    const float minUpdatePath = 4f;
     private Transform targetPlayer;
     private Transform currentTargetLocation;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         targetPlayer = GameObject.FindGameObjectWithTag("Player").transform;
         StartCoroutine(UpdatePath());
     }

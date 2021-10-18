@@ -6,26 +6,11 @@ public class EnemyBullet : MonoBehaviour
 {
     public float movementSpeed;
     public int damage;
-
-    private Transform target;
-    private Vector2 targetLoc;
-    private Rigidbody2D rb;
-
-    void Start()
-    {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
-        rb = GetComponent<Rigidbody2D>();
-        targetLoc = new Vector2(target.position.x, target.position.y);
-    }
+    public Vector2 shotDirection;
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, targetLoc, movementSpeed * Time.deltaTime);
-
-        if(transform.position.x == targetLoc.x && transform.position.y == targetLoc.y)
-        {
-            Explode();
-        }
+        transform.Translate(shotDirection.normalized * movementSpeed * Time.deltaTime);
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
