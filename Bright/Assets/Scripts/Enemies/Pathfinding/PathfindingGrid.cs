@@ -7,7 +7,7 @@ public class PathfindingGrid : MonoBehaviour
     public LayerMask wallMask;
     public Vector2 gridSize;
     public float nodeSize;
-    PathfindingNode[,] grid;
+    public PathfindingNode[,] grid;
 
     private int gridSizeX, gridSizeY;
 

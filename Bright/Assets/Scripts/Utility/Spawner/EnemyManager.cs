@@ -6,6 +6,9 @@ public class EnemyManager : MonoBehaviour
 {
     public SpawnerState spawnerState = SpawnerState.Idle;
     public List<GameObject> activeEnemies = new List<GameObject>();
+    public int activeIndex;
+
+    public List<Vector2Int> activeCoords = new List<Vector2Int>();
 
     public GameObject enemyParent;
     public Dictionary<EnemyType, int> weighting = new Dictionary<EnemyType, int>
@@ -18,14 +21,14 @@ public class EnemyManager : MonoBehaviour
     };
     public int maxWeight;
 
-    public List<GameObject> spawnpoints = new List<GameObject>();
-
     public Room room;
     public DungeonGeneration generation;
+    public PathfindingGrid pathfinding;
 
     public void Start()
     {
         generation = GameObject.FindWithTag("DungeonGeneration").GetComponent<DungeonGeneration>();
+        pathfinding = GameObject.FindWithTag("Pathfinding").GetComponent<PathfindingGrid>();
 
         room = generation.roomLayout[GameManager.currentRoom.x, GameManager.currentRoom.y];
     }
@@ -43,49 +46,67 @@ public class EnemyManager : MonoBehaviour
 
     public void SetupSpawn()
     {
+        DoorUpdate();
+        maxWeight = CalculateDifficulty();
+
+        List<EnemyType> enemiesToSpawn = GenerateEnemies();
+
+        for (int i = 0; i < enemiesToSpawn.Count; i++)
+        {
+            SpawnEnemy(enemiesToSpawn[i], GenerateSpawnLocation());
+        }
+    }
+
+    public void DoorUpdate()
+    {
         room.attachedDoors[0].UpdateDoor(true);
         for (int i = 0; i < room.attachedDoors.Count; i++)
         {
             room.attachedDoors[i].UpdateDoor(true);
         }
-
-        maxWeight = CalculateMaxWeight();
-        List<EnemyType> enemiesToSpawn = GenerateEnemies();
-        SpawnEnemies(new List<EnemyType>() { EnemyType.Wasp, EnemyType.Mushroom });
     }
 
-    public int CalculateMaxWeight()
+    public int CalculateDifficulty()
     {
-        int temp = spawnpoints.Count * room.difficulty;
+        int temp;
+        int difficulty = room.difficulty;
+
+        switch (difficulty)
+        {
+            case 1:
+                difficulty *= 2;
+                break;
+            case 2: case 3:
+                difficulty += 1;
+                break;
+        }
+
+        temp = Random.Range(difficulty, difficulty * 2);
 
         return temp;
     }
 
     public List<EnemyType> GenerateEnemies()
     {
-        List<EnemyType> temp = new List<EnemyType>();
+        List<EnemyType> temps = new List<EnemyType>() { EnemyType.Mushroom, EnemyType.Mushroom, EnemyType.Mushroom, EnemyType.Wasp };
 
         return temp;
     }
 
-    public void SpawnEnemies(List<EnemyType> enemyList)
+    public Vector2 GenerateSpawnLocation()
     {
-        int index = 0;
+        Vector2 temp = new Vector2();
 
-        for (int i = 0; i < enemyList.Count; i++)
-        {
-            activeEnemies.Add(Instantiate(enemyParent, spawnpoints[index].transform));
-            activeEnemies[i].GetComponent<Enemy>().EnemySetup(enemyList[i]);
+        pathfinding.grid;
 
-            if (index == spawnpoints.Count - 1)
-            {
-                index = 0;
-            }
-            else
-            {
-                index++;
-            }
-        }
+        return temp;
+    }
+
+    public void SpawnEnemy(EnemyType enemyList, Vector2 spawnpoint)
+    {
+        activeEnemies.Add(Instantiate(enemyParent, spawnpoint, Quaternion.identity, room.room.transform));
+        activeEnemies[activeIndex].GetComponent<Enemy>().EnemySetup(enemyList);
+        activeIndex++;
     }
 }
 

@@ -46,7 +46,11 @@ public class DungeonCamera : MonoBehaviour
         else
         {
             moveState = MoveState.Inactive;
-            pathfinding.DrawGrid();
+
+            if (pathfinding != null)
+            {
+                pathfinding.DrawGrid();
+            }
         }
     }
 
@@ -122,6 +126,8 @@ public class DungeonCamera : MonoBehaviour
     {
         cameraPos = resetPos;
         transform.position = resetPos;
+        generation = null;
+        Destroy(pathfinding.gameObject);
     }
 }
 

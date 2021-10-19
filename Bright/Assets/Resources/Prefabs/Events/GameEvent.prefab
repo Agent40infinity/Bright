@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4386946517993350379}
   m_Layer: 0
   m_Name: GameEvent
-  m_TagString: Untagged
+  m_TagString: GameEvent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,4 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42ea1127f8a05b459d17221a8b253bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Objectives: []
+  Checks: 
   eventState: 0
+  tutorialState: 0
+  oneTimeState: 0
+  dialogueRef: {fileID: 0}
