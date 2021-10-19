@@ -84,6 +84,28 @@ public class DungeonWallGenerate : DungeonLayout
         return "Normal/";
     }
 
+    public string DetermineType(string type, int index)
+    {
+        int variant = 0;
+
+        switch (type)
+        {
+            case "S":
+                variant = -1;
+                break;
+        }
+
+        if (forestVariants.ContainsKey(variant))
+        {
+            if (forestVariants[variant][index])
+            {
+                return "Forest/";
+            }
+        }
+
+        return "Normal/";
+    }
+
     public void AddWalls(Vector2Int selectedRoom, List<string> sidesToAdd, FillType type)
     {
         Transform room = roomLayout[selectedRoom.x, selectedRoom.y].room.transform;
@@ -110,24 +132,38 @@ public class DungeonWallGenerate : DungeonLayout
                     break;
             }
 
-            roomType = DetermineType(roomVariant, index);
+            if (roomVariant != 0)
+            {
+                roomType = DetermineType(roomVariant, index);
+            }
+            else
+            {
+                roomType = DetermineType(roomLayout[selectedRoom.x, selectedRoom.y].type, index);
+            }
 
             string path = fillPath + roomType + type.ToString() + "_" + sidesToAdd[i];
+
+            GameObject fill = null;
 
             switch (sidesToAdd[i])
             {
                 case "Left":
-                    Instantiate(Resources.Load(path) as GameObject, new Vector2((selectedRoom.y - generateOffset) * roomDimensions.x, ((-selectedRoom.x + generateOffset) * roomDimensions.y) + roomDimensions.y / 2 - 0.5f), Quaternion.identity, room);
+                    fill = Instantiate(Resources.Load(path) as GameObject, new Vector2((selectedRoom.y - generateOffset) * roomDimensions.x, ((-selectedRoom.x + generateOffset) * roomDimensions.y) + roomDimensions.y / 2 - 0.5f), Quaternion.identity, room);
                     break;
                 case "Right":
-                    Instantiate(Resources.Load(path) as GameObject, new Vector2((selectedRoom.y - generateOffset) * roomDimensions.x, ((-selectedRoom.x + generateOffset) * roomDimensions.y) - roomDimensions.y / 2 - 0.5f), Quaternion.identity, room);
+                    fill = Instantiate(Resources.Load(path) as GameObject, new Vector2((selectedRoom.y - generateOffset) * roomDimensions.x, ((-selectedRoom.x + generateOffset) * roomDimensions.y) - roomDimensions.y / 2 - 0.5f), Quaternion.identity, room);
                     break;
                 case "Up":
-                    Instantiate(Resources.Load(path) as GameObject, new Vector2(((selectedRoom.y - generateOffset) * roomDimensions.x) + roomDimensions.x / 2, (-selectedRoom.x + generateOffset) * roomDimensions.y), Quaternion.identity, room);
+                    fill = Instantiate(Resources.Load(path) as GameObject, new Vector2(((selectedRoom.y - generateOffset) * roomDimensions.x) + roomDimensions.x / 2, (-selectedRoom.x + generateOffset) * roomDimensions.y), Quaternion.identity, room);
                     break;
                 case "Down":
-                    Instantiate(Resources.Load(path) as GameObject, new Vector2(((selectedRoom.y - generateOffset) * roomDimensions.x) - roomDimensions.x / 2, (-selectedRoom.x + generateOffset) * roomDimensions.y), Quaternion.identity, room);
+                    fill = Instantiate(Resources.Load(path) as GameObject, new Vector2(((selectedRoom.y - generateOffset) * roomDimensions.x) - roomDimensions.x / 2, (-selectedRoom.x + generateOffset) * roomDimensions.y), Quaternion.identity, room);
                     break;
+            }
+
+            if (fill.GetComponentInChildren<Door>())
+            {
+                roomLayout[selectedRoom.x, selectedRoom.y].attachedDoors.Add(fill.GetComponentInChildren<Door>());
             }
         }
     }

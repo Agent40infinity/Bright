@@ -67,7 +67,10 @@ public class WaspBehaviour : MonoBehaviour
                 if (shotCooldown < 0)
                 {
                     shotCooldown = shotDelay;
-                    Instantiate(projectile, transform.position, Quaternion.identity);
+
+                    EnemyBullet bullet = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<EnemyBullet>();
+                    bullet.transform.rotation = Quaternion.LookRotation(Vector3.forward, GameObject.FindWithTag("Player").transform.position - transform.position);
+                    bullet.shotDirection = Vector2.up;
                 }
                 else
                 {

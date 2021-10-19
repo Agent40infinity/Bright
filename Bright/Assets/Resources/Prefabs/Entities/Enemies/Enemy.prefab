@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5026114311719054975}
   - component: {fileID: 4284442585269689058}
+  - component: {fileID: 4260904991000783566}
   - component: {fileID: 1920332683507733881}
   - component: {fileID: 9148447997012462266}
   - component: {fileID: 3139088683603582119}
@@ -48,12 +49,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 0
-  weighting: 0
   maxHealth: 0
   speed: 0
+  movementRange: 0
   animPath: Animations/Enemy/
-  anim: {fileID: 0}
-  health: {fileID: 0}
+  anim: {fileID: 1920332683507733881}
+  health: {fileID: 4260904991000783566}
+  shotDelay: 0.8
+  projectilePrefab: {fileID: 4503220454523596049, guid: ecf6f0607157760428b145c8b1e5fb5d,
+    type: 3}
+  thornPrefab: {fileID: 6400317253250238302, guid: a412e80d20b2c5b44b441c38a4a87624,
+    type: 3}
+  targetDistance: 0
+--- !u!114 &4260904991000783566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8541219651895737639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29089216219590d439649c444304baf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 6
+  curHealth: 0
 --- !u!95 &1920332683507733881
 Animator:
   serializedVersion: 3
@@ -111,7 +132,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 8
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -143,7 +164,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &5191648694266855655
 BoxCollider2D:
   m_ObjectHideFlags: 0
