@@ -18,6 +18,7 @@ TagManager:
   - UI
   - Wisp
   - Pathfinding
+  - GameEvent
   layers:
   - Default
   - TransparentFX

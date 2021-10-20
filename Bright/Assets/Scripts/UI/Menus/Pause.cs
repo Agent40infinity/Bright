@@ -13,6 +13,7 @@ public class Pause : MonoBehaviour
     public Settings optionsMenu;
     public Menu menu;
     public FadeController fade;
+    public GameObject gameEvent;
 
     public GameManager gameManager;
     #endregion
@@ -44,14 +45,35 @@ public class Pause : MonoBehaviour
         background.SetActive(false);
         Time.timeScale = 1f;
         pauseState = PauseState.Playing;
+        CheckEvent(false);
     }
 
     public void PauseG() //Trigger for pausing game
     {
+        CheckEvent(true);
         pauseMenu.SetActive(true);
         background.SetActive(true);
         Time.timeScale = 0f;
         pauseState = PauseState.Pause;
+    }
+
+    public void CheckEvent(bool pause)
+    {
+        switch (pause)
+        {
+            case true:
+                if (GameObject.FindWithTag("GameEvent"))
+                {
+                    gameEvent = GameObject.FindWithTag("GameEvent");
+                    gameEvent.SetActive(false);
+                }
+                break;
+            case false:
+                gameEvent.SetActive(true);
+                gameEvent = null;
+                break;
+        }
+
     }
 
     public void Menu() //Trigger for menu button

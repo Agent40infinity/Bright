@@ -210,6 +210,32 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &-5707247676149270647
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TrueSight
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 38689f062f162b04e8c0b11dace1f0e3, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1101 &-5653744244516724418
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -279,7 +305,10 @@ AnimatorStateMachine:
     m_Position: {x: -750, y: 900, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -846098699543521114}
-    m_Position: {x: -750, y: 1050, z: 0}
+    m_Position: {x: -530, y: 1050, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -5707247676149270647}
+    m_Position: {x: -530, y: 1120, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 4431617215946563865}
