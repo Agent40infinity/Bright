@@ -49,7 +49,7 @@ public class DungeonCamera : MonoBehaviour
 
             if (pathfinding != null)
             {
-                pathfinding.DrawGrid();
+                pathfinding.CallDrawGrid();
             }
         }
     }

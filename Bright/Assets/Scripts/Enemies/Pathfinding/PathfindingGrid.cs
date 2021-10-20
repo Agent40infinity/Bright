@@ -35,10 +35,14 @@ public class PathfindingGrid : MonoBehaviour
         gameObject.transform.parent = parent;
     }
 
+    public void CallDrawGrid()
+    {
+        DrawGrid();
+        gridState = GridState.Moved;
+    }
+
     public void DrawGrid()
     {
-        gridState = GridState.Moved;
-
         grid = new PathfindingNode[gridSizeX, gridSizeY];
         Vector3 bottomLeft = transform.position - Vector3.right * ( gridSize.x / 2) - Vector3.up * gridSize.y / 2;
 

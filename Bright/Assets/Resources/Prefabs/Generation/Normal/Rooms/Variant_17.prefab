@@ -1141,7 +1141,7 @@ GameObject:
   - component: {fileID: 3695851423405546688}
   - component: {fileID: 6338309127976914406}
   - component: {fileID: 1220254084843629534}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Walls_250
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1892,7 +1892,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8889654945361460928}
   m_Layer: 0
-  m_Name: Variant_17
+  m_Name: Variant_8
   m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1909,12 +1909,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5521093162230778262}
+  - {fileID: 7018130886834088368}
   - {fileID: 4915865955951773997}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &9065778167068355024
+--- !u!1001 &5776896854137637366
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1983,9 +1983,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef38cba295bb2364a93652a1f5798109, type: 3}
---- !u!4 &5521093162230778262 stripped
+--- !u!4 &7018130886834088368 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3552990252958441542, guid: ef38cba295bb2364a93652a1f5798109,
     type: 3}
-  m_PrefabInstance: {fileID: 9065778167068355024}
+  m_PrefabInstance: {fileID: 5776896854137637366}
   m_PrefabAsset: {fileID: 0}
