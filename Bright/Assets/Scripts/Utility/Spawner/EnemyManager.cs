@@ -51,7 +51,7 @@ public class EnemyManager : MonoBehaviour
                 {
                     case GridState.Moved:
                         pathfinding.gridState = GridState.Idle;
-                        SetupSpawn();
+                        StartCoroutine("Awaken");
                         spawnerState = SpawnerState.Active;
                         break;
                 }
@@ -62,16 +62,18 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
+    public IEnumerator Awaken()
+    {
+        yield return new WaitForSeconds(0.1f);
+        SetupSpawn();
+    }
+
     public void SetupSpawn()
     {
         DoorUpdate(true);
         maxWeight = CalculateDifficulty();
 
         List<EnemyType> enemiesToSpawn = GenerateEnemies();
-        for (int j = 0; j < enemiesToSpawn.Count; j++)
-        {
-            Debug.Log(enemiesToSpawn[j]);
-        }
 
         for (int i = 0; i < enemiesToSpawn.Count; i++)
         {
@@ -148,7 +150,7 @@ public class EnemyManager : MonoBehaviour
             case false:
                 if (enemies.Count <= 0)
                 {
-                    int chance = Random.Range(0, System.Enum.GetValues(typeof(EnemyType)).Length);
+                    int chance = Random.Range(0, System.Enum.GetValues(typeof(EnemyType)).Length - 1);
                     int fullStack = RandomChance();
                     if (fullStack <= 2)
                     {
@@ -166,7 +168,7 @@ public class EnemyManager : MonoBehaviour
                         return enemies[index];
                     }
 
-                    int chance = Random.Range(0, System.Enum.GetValues(typeof(EnemyType)).Length);
+                    int chance = Random.Range(0, System.Enum.GetValues(typeof(EnemyType)).Length - 1);
                     return (EnemyType)System.Enum.GetValues(typeof(EnemyType)).GetValue(chance);
                 }
         }
