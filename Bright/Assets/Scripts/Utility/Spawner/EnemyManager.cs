@@ -67,7 +67,11 @@ public class EnemyManager : MonoBehaviour
         DoorUpdate(true);
         maxWeight = CalculateDifficulty();
 
-        List<EnemyType> enemiesToSpawn = new List<EnemyType>() { EnemyType.Wasp, EnemyType.Mushroom };
+        List<EnemyType> enemiesToSpawn = GenerateEnemies();
+        for (int j = 0; j < enemiesToSpawn.Count; j++)
+        {
+            Debug.Log(enemiesToSpawn[j]);
+        }
 
         for (int i = 0; i < enemiesToSpawn.Count; i++)
         {
