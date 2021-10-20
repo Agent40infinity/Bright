@@ -33,6 +33,35 @@ public class Door : MonoBehaviour
 
         anim.SetBool("Locked", lockState);
     }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        switch (other.tag)
+        {
+            case "Player":
+                Vector3 direction = Vector3.zero;
+
+                switch (transform.rotation.z)
+                {
+                    case 0:
+                        direction = Vector2.up;
+                        break;
+                    case 90:
+                        direction = Vector2.left;
+                        break;
+                    case 180:
+                        direction = Vector2.down;
+                        break;
+                    case 270:
+                        direction = Vector2.right;
+                        break;
+                }
+
+                PlayerPhysics physics = other.GetComponent<PlayerPhysics>();
+                physics.TransitionCall(direction);
+                break;
+        }
+    }
 }
 
 public enum LockState

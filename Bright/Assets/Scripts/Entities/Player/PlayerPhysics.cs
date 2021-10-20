@@ -11,6 +11,8 @@ public class PlayerPhysics : MonoBehaviour
     public float slowMultiplier;
     public float slowApplied;
     public float rotation;
+    public bool doorActive;
+    public Vector3 lerpPosition;
 
     [Header("Reference")]
     public Rigidbody2D rigid;
@@ -23,6 +25,13 @@ public class PlayerPhysics : MonoBehaviour
     public void Update()
     {
         Keypress();
+
+        switch (doorActive)
+        {
+            case true:
+                LerpTransition();
+                break;
+        }
 
         switch (interactState)
         {
@@ -145,6 +154,26 @@ public class PlayerPhysics : MonoBehaviour
         else
         {
             anim.SetBool("isMoving", false);
+        }
+    }
+
+    public void TransitionCall(Vector3 direction)
+    {
+        lerpPosition = transform.position + (direction * 3);
+        doorActive = true;
+        Debug.Log("Cool");
+    }
+
+    public void LerpTransition()
+    {
+        if (transform.position != lerpPosition)
+        {
+            Vector3.Lerp(transform.position, lerpPosition, 100 * Time.deltaTime);
+            Debug.Log("What?");
+        }
+        else
+        {
+            doorActive = false;
         }
     }
 }

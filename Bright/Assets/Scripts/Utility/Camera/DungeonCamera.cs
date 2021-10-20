@@ -19,11 +19,7 @@ public class DungeonCamera : MonoBehaviour
 
     public void PathfindingCall()
     {
-    
-        {
-            pathfinding = GameObject.FindWithTag("Pathfinding").GetComponent<PathfindingGrid>();
-        }
-
+        pathfinding = GameObject.FindWithTag("Pathfinding").GetComponent<PathfindingGrid>();
         pathfinding.BindCamera(transform);
     }
 
