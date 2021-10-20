@@ -51,7 +51,7 @@ public class EnemyManager : MonoBehaviour
                 {
                     case GridState.Moved:
                         pathfinding.gridState = GridState.Idle;
-                        StartCoroutine("Awaken");
+                        SetupSpawn();
                         spawnerState = SpawnerState.Active;
                         break;
                 }
@@ -62,18 +62,12 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
-    public IEnumerator Awaken()
-    {
-        yield return new WaitForSeconds(0.1f);
-        SetupSpawn();
-    }
-
     public void SetupSpawn()
     {
         DoorUpdate(true);
         maxWeight = CalculateDifficulty();
 
-        List<EnemyType> enemiesToSpawn = GenerateEnemies();
+        List<EnemyType> enemiesToSpawn = new List<EnemyType>() { EnemyType.Wasp, EnemyType.Mushroom };
 
         for (int i = 0; i < enemiesToSpawn.Count; i++)
         {
