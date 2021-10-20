@@ -33,7 +33,7 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    void Death()
+    public void Death()
     {
         EnemyManager  manager = GetComponentInParent<EnemyManager>();
         manager.activeEnemies.Remove(gameObject);
