@@ -28,7 +28,7 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    void Death()
+    public void Death()
     {
         Destroy(gameObject);
     }

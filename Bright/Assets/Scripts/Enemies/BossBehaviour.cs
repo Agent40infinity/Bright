@@ -12,6 +12,7 @@ public class BossBehaviour : MonoBehaviour
     [Header("References")]
     public Animator anim;
     public EnemyHealth bossHealth;
+    public LineRenderer laser;
 
     [Header("Prefabs")]
     public GameObject enemyPrefab;
@@ -25,13 +26,16 @@ public class BossBehaviour : MonoBehaviour
         targetPlayer = GameObject.FindGameObjectWithTag("Player").transform;
         bossHealth = gameObject.GetComponent<EnemyHealth>();
         phase = BossPhase.Idle;
+        laser.enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         PhaseCheck();
-        
+
+        laser.SetPosition(0, transform.position);
+        laser.SetPosition(1, targetPlayer.position);
     }
 
     public void PhaseCheck()

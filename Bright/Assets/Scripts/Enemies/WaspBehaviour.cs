@@ -62,9 +62,17 @@ public class WaspBehaviour : MonoBehaviour
                 curWaypoint = path[targetWaypoint];
             }
 
-            if(Vector2.Distance(targetPlayer.position, transform.position) < targetDistance)
+            if (Vector2.Distance(targetPlayer.position, transform.position) > targetDistance)
             {
-                if (shotCooldown < 0)
+                transform.position = Vector3.MoveTowards(transform.position, curWaypoint, movementSpeed * Time.deltaTime);
+            }
+            else if (Vector2.Distance(targetPlayer.position, transform.position) < 1.5f)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, curWaypoint, -movementSpeed * Time.deltaTime);
+            }
+            else
+            {
+                if (shotCooldown <= 0)
                 {
                     shotCooldown = shotDelay;
 
@@ -76,14 +84,6 @@ public class WaspBehaviour : MonoBehaviour
                 {
                     shotCooldown -= Time.deltaTime;
                 }
-            }
-            //else if (distanceFromPlayer < minimumDistance)
-            //{
-            //    transform.position = Vector3.MoveTowards(transform.position, targetPlayer.position, movementSpeed * Time.deltaTime);
-            //}
-            else
-            {
-                transform.position = Vector3.MoveTowards(transform.position, curWaypoint, movementSpeed * Time.deltaTime);
             }
             yield return null;
         }

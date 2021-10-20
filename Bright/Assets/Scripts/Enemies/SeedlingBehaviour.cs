@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TempMushroom : MonoBehaviour
+public class SeedlingBehaviour : MonoBehaviour
 {
     public float movementSpeed;
+    public float lifespan;
+    private float lifeTimer;
 
     public int damageToPlayer;
+    public EnemyHealth health;
 
     const float minUpdatePath = 0.1f;
-    //public float updatePath;
     private Vector3[] path;
     private int targetWaypoint;
 
@@ -21,12 +23,22 @@ public class TempMushroom : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         targetPlayer = GameObject.FindGameObjectWithTag("Player").transform;
+        health = gameObject.GetComponent<EnemyHealth>();
         StartCoroutine(UpdatePath());
+        
+        lifeTimer = lifespan;
     }
 
     private void FixedUpdate()
     {
-       // PathfindingManager.PathRequest(transform.position, targetPlayer.position, OnPathFound);
+        if (lifeTimer <= 0)
+        {
+            health.Death();
+        }
+        else
+        {
+            lifeTimer -= Time.deltaTime;
+        }
     }
 
     IEnumerator UpdatePath()
@@ -36,7 +48,7 @@ public class TempMushroom : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(minUpdatePath);
-                PathfindingManager.PathRequest(transform.position, targetPlayer.position, OnPathFound);
+            PathfindingManager.PathRequest(transform.position, targetPlayer.position, OnPathFound);
         }
     }
 
@@ -74,6 +86,7 @@ public class TempMushroom : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerHealth>().DamagePlayer(damageToPlayer);
+            health.Death();
         }
     }
 }

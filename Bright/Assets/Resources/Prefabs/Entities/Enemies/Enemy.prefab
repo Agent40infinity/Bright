@@ -60,6 +60,8 @@ MonoBehaviour:
     type: 3}
   thornPrefab: {fileID: 6400317253250238302, guid: a412e80d20b2c5b44b441c38a4a87624,
     type: 3}
+  seedlingPrefab: {fileID: 2458668050274710078, guid: 1eb2f6951355a6345b2abdd7433b6e98,
+    type: 3}
   targetDistance: 0
 --- !u!114 &4260904991000783566
 MonoBehaviour:

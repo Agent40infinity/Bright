@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
     private float shotCooldown;
     public GameObject projectilePrefab;
     public GameObject thornPrefab;
+    public GameObject seedlingPrefab;
     public float targetDistance;
 
     [Header("Pathfinding")]
@@ -31,7 +32,7 @@ public class Enemy : MonoBehaviour
     private Transform currentTargetLocation;    
     private Vector3[] path;
     private int targetWaypoint;
-    const float pathRefreshRate = 0.1f;
+    private float pathRefreshRate = 0.1f;
 
     public void EnemySetup(EnemyType enemyType)
     {
@@ -54,10 +55,13 @@ public class Enemy : MonoBehaviour
             case EnemyType.Flower:
                 maxHealth = 4;
                 speed = 3;
+                pathRefreshRate = 5;
                 break;
             case EnemyType.SeedBomb:
                 maxHealth = 2;
                 speed = 4;
+                shotDelay = 2.5f;
+                pathRefreshRate = 2.5f;
                 break;
             case EnemyType.Sunflower:
                 maxHealth = 12; 
@@ -84,7 +88,7 @@ public class Enemy : MonoBehaviour
     {
         switch (enemyType)
         {
-            case EnemyType.Mushroom: case EnemyType.Wasp: case EnemyType.SeedBomb:
+            case EnemyType.Mushroom: case EnemyType.Wasp: 
 
                 PathfindingManager.PathRequest(transform.position, targetPlayer.position, OnPathFound);
 
@@ -94,7 +98,7 @@ public class Enemy : MonoBehaviour
                     PathfindingManager.PathRequest(transform.position, targetPlayer.position, OnPathFound);
                 }
 
-            case EnemyType.Flower:
+            case EnemyType.Flower: 
                 Vector2 moveLocation = Random.insideUnitCircle * movementRange;
                 PathfindingManager.PathRequest(transform.position, moveLocation, OnPathFound);
                 while (true)
@@ -103,6 +107,22 @@ public class Enemy : MonoBehaviour
                     yield return new WaitForSeconds(pathRefreshRate);
                     moveLocation = Random.insideUnitCircle * movementRange;
                     PathfindingManager.PathRequest(transform.position, moveLocation, OnPathFound);
+                }
+
+            case EnemyType.SeedBomb:
+                Vector2 randLocation = Random.insideUnitCircle * movementRange;
+                PathfindingManager.PathRequest(transform.position, randLocation, OnPathFound);
+                while (true)
+                {
+                    yield return new WaitForSeconds(pathRefreshRate);
+                    moveLocation = Random.insideUnitCircle * movementRange;
+                    PathfindingManager.PathRequest(transform.position, moveLocation, OnPathFound);
+                }
+
+            case EnemyType.Sunflower:
+                while (true)
+                {
+                    //
                 }
         }
     }
@@ -143,6 +163,10 @@ public class Enemy : MonoBehaviour
                     {
                         transform.position = Vector3.MoveTowards(transform.position, curWaypoint, speed * Time.deltaTime);
                     }
+                    else if (Vector2.Distance(targetPlayer.position, transform.position) < targetDistance * 0.75f)
+                    {
+                        transform.position = Vector3.MoveTowards(transform.position, curWaypoint, -speed * Time.deltaTime);
+                    }
                     else
                     {
                         if (shotCooldown <= 0)
@@ -163,7 +187,17 @@ public class Enemy : MonoBehaviour
                     transform.position = Vector3.MoveTowards(transform.position, curWaypoint, speed * Time.deltaTime);
                     break;
                 case EnemyType.SeedBomb:
+                    transform.position = Vector3.MoveTowards(transform.position, curWaypoint, speed * Time.deltaTime);
+                    if (shotCooldown <= 0)
+                    {
+                        shotCooldown = shotDelay;
 
+                        Instantiate(seedlingPrefab, transform.position, Quaternion.identity);
+                    }
+                    else
+                    {
+                        shotCooldown -= Time.deltaTime;
+                    }
                     break;
             }
             yield return null;
