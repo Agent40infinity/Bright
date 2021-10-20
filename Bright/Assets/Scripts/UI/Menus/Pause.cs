@@ -69,8 +69,11 @@ public class Pause : MonoBehaviour
                 }
                 break;
             case false:
-                gameEvent.SetActive(true);
-                gameEvent = null;
+                if (gameEvent != null)
+                {
+                    gameEvent.SetActive(true);
+                    gameEvent = null;
+                }
                 break;
         }
 

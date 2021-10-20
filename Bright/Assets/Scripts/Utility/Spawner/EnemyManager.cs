@@ -21,10 +21,16 @@ public class EnemyManager : MonoBehaviour
         { EnemyType.Sunflower, 3 },
     };
     public int maxWeight;
+    public bool fullStack = false;
 
     public Room room;
     public DungeonGeneration generation;
     public PathfindingGrid pathfinding;
+
+    public int RandomChance()
+    {
+        return Random.Range(1, 11);
+    }
 
     public void Start()
     {
@@ -45,7 +51,7 @@ public class EnemyManager : MonoBehaviour
                 {
                     case GridState.Moved:
                         pathfinding.gridState = GridState.Idle;
-                        SetupSpawn();
+                        StartCoroutine("Awaken");
                         spawnerState = SpawnerState.Active;
                         break;
                 }
@@ -54,6 +60,12 @@ public class EnemyManager : MonoBehaviour
                 CheckCompletion();
                 break;
         }
+    }
+
+    public IEnumerator Awaken()
+    {
+        yield return new WaitForSeconds(0.1f);
+        SetupSpawn();
     }
 
     public void SetupSpawn()
@@ -119,9 +131,49 @@ public class EnemyManager : MonoBehaviour
 
     public List<EnemyType> GenerateEnemies()
     {
-        List<EnemyType> temp = new List<EnemyType>() { EnemyType.Mushroom, EnemyType.Mushroom, EnemyType.Mushroom, EnemyType.Wasp };
+        List<EnemyType> temp = new List<EnemyType>();
+
+        for (int i = 0; i < maxWeight; i++)
+        {
+            temp.Add(SelectEnemyType(temp, temp.Count - 1));
+        }
 
         return temp;
+    }
+
+    public EnemyType SelectEnemyType(List<EnemyType> enemies, int index)
+    {
+        switch (fullStack)
+        {
+            case true:
+                return enemies[index];
+            case false:
+                if (enemies.Count <= 0)
+                {
+                    int chance = Random.Range(0, System.Enum.GetValues(typeof(EnemyType)).Length);
+                    int fullStack = RandomChance();
+                    if (fullStack <= 2)
+                    {
+                        this.fullStack = true;
+                    }
+
+                    return (EnemyType)System.Enum.GetValues(typeof(EnemyType)).GetValue(chance);
+                }
+                else
+                {
+                    int duplicate = RandomChance();
+
+                    if (duplicate > 5)
+                    {
+                        return enemies[index];
+                    }
+
+                    int chance = Random.Range(0, System.Enum.GetValues(typeof(EnemyType)).Length);
+                    return (EnemyType)System.Enum.GetValues(typeof(EnemyType)).GetValue(chance);
+                }
+        }
+
+        return (EnemyType)System.Enum.GetValues(typeof(EnemyType)).GetValue(0);
     }
 
     public Vector2 GenerateSpawnLocation()

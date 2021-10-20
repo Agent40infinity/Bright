@@ -37,8 +37,6 @@ public class PathfindingGrid : MonoBehaviour
 
     public void DrawGrid()
     {
-        gridState = GridState.Moved;
-
         grid = new PathfindingNode[gridSizeX, gridSizeY];
         Vector3 bottomLeft = transform.position - Vector3.right * ( gridSize.x / 2) - Vector3.up * gridSize.y / 2;
 
@@ -51,6 +49,8 @@ public class PathfindingGrid : MonoBehaviour
                 grid[x, y] = new PathfindingNode(isWalkable, thisWorldPos, x , y);
             }
         }
+
+        gridState = GridState.Moved;
     }
 
     public List<PathfindingNode> GetNeighbours(PathfindingNode node)
