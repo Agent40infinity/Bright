@@ -7,6 +7,7 @@ public class EnemyManager : MonoBehaviour
     public SpawnerState spawnerState = SpawnerState.Idle;
     public List<GameObject> activeEnemies = new List<GameObject>();
     public int activeIndex;
+    public int divider;
 
     public List<Vector2Int> activeCoords = new List<Vector2Int>();
 
@@ -31,6 +32,8 @@ public class EnemyManager : MonoBehaviour
         pathfinding = GameObject.FindWithTag("Pathfinding").GetComponent<PathfindingGrid>();
 
         room = generation.roomLayout[GameManager.currentRoom.x, GameManager.currentRoom.y];
+
+        divider = pathfinding.grid.GetLength(0) / (int)pathfinding.gridSize.x;
     }
 
     public void Update()
@@ -38,15 +41,24 @@ public class EnemyManager : MonoBehaviour
         switch (spawnerState)
         {
             case SpawnerState.Idle:
-                SetupSpawn();
-                spawnerState = SpawnerState.Active;
+                switch (pathfinding.gridState)
+                {
+                    case GridState.Moved:
+                        pathfinding.gridState = GridState.Idle;
+                        SetupSpawn();
+                        spawnerState = SpawnerState.Active;
+                        break;
+                }
+                break;
+            case SpawnerState.Active:
+                CheckCompletion();
                 break;
         }
     }
 
     public void SetupSpawn()
     {
-        DoorUpdate();
+        DoorUpdate(true);
         maxWeight = CalculateDifficulty();
 
         List<EnemyType> enemiesToSpawn = GenerateEnemies();
@@ -57,13 +69,35 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
-    public void DoorUpdate()
+    public void CheckCompletion()
     {
-        room.attachedDoors[0].UpdateDoor(true);
-        for (int i = 0; i < room.attachedDoors.Count; i++)
+        switch (activeEnemies.Count)
         {
-            room.attachedDoors[i].UpdateDoor(true);
+            case 0:
+                DoorUpdate(false);
+                spawnerState = SpawnerState.Cleared;
+                break;
         }
+    }    
+
+    public void DoorUpdate(bool locked)
+    {
+        switch (locked)
+        {
+            case true:
+                for (int i = 0; i < room.attachedDoors.Count; i++)
+                {
+                    room.attachedDoors[i].UpdateDoor(true);
+                }
+                break;
+            case false:
+                for (int i = 0; i < room.attachedDoors.Count; i++)
+                {
+                    room.attachedDoors[i].UpdateDoor(false);
+                }
+                break;
+        }
+
     }
 
     public int CalculateDifficulty()
@@ -73,10 +107,7 @@ public class EnemyManager : MonoBehaviour
 
         switch (difficulty)
         {
-            case 1:
-                difficulty *= 2;
-                break;
-            case 2: case 3:
+            case 1: case 2: case 3:
                 difficulty += 1;
                 break;
         }
@@ -88,23 +119,69 @@ public class EnemyManager : MonoBehaviour
 
     public List<EnemyType> GenerateEnemies()
     {
-        List<EnemyType> temps = new List<EnemyType>() { EnemyType.Mushroom, EnemyType.Mushroom, EnemyType.Mushroom, EnemyType.Wasp };
+        List<EnemyType> temp = new List<EnemyType>() { EnemyType.Mushroom, EnemyType.Mushroom, EnemyType.Mushroom, EnemyType.Wasp };
 
         return temp;
     }
 
     public Vector2 GenerateSpawnLocation()
     {
-        Vector2 temp = new Vector2();
+        Vector2Int selectedTile = Vector2Int.zero;
 
-        pathfinding.grid;
+        while (selectedTile == Vector2Int.zero || !CheckValidity(selectedTile))
+        {
+            selectedTile = new Vector2Int(Random.Range(divider, pathfinding.grid.GetLength(0) - divider), Random.Range(divider , pathfinding.grid.GetLength(1) - divider));
+        }
 
-        return temp;
+        //Debug.Log("Selected Tile: " + selectedTile + " | GridSize: " + pathfinding.grid.GetLength(0) + ", " + pathfinding.grid.GetLength(1));
+        activeCoords.Add(selectedTile);
+        return pathfinding.grid[selectedTile.x, selectedTile.y].worldPosition;
+    }
+
+    public bool CheckValidity(Vector2Int selected)
+    {
+        if (pathfinding.grid[selected.x, selected.y].walkable)
+        {
+            if (activeCoords.Count > 0)
+            {
+                Vector2Int posBounds = new Vector2Int(selected.x + divider, selected.y + divider);
+                Vector2Int negBounds = new Vector2Int(selected.x - divider, selected.y - divider);
+                int index = 0;
+
+                for (int i = negBounds.x; i <= posBounds.x; i++)
+                {
+                    for (int j = negBounds.y; j < posBounds.y; j++)
+                    {
+                        Vector2Int current = new Vector2Int(i, j);
+
+                        if (current.x <= 0 || current.y <= 0 || current == activeCoords[index] || !pathfinding.grid[current.x, current.y].walkable)
+                        {
+                            return false;
+                        }
+
+                        if (index != activeCoords.Count - 1)
+                        {
+                            index++;
+                        }
+                        else
+                        {
+                            index = 0;
+                        }
+                    }
+                }
+            }
+
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public void SpawnEnemy(EnemyType enemyList, Vector2 spawnpoint)
     {
-        activeEnemies.Add(Instantiate(enemyParent, spawnpoint, Quaternion.identity, room.room.transform));
+        activeEnemies.Add(Instantiate(enemyParent, spawnpoint, Quaternion.identity, transform));
         activeEnemies[activeIndex].GetComponent<Enemy>().EnemySetup(enemyList);
         activeIndex++;
     }

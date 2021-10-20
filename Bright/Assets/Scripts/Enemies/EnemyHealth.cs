@@ -22,14 +22,21 @@ public class EnemyHealth : MonoBehaviour
 
     public void HealthCheck()
     {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Death();
+        }
+
         if (curHealth <= 0)
         {
             Death();
         }
     }
 
-    public void Death()
+    void Death()
     {
+        EnemyManager  manager = GetComponentInParent<EnemyManager>();
+        manager.activeEnemies.Remove(gameObject);
         Destroy(gameObject);
     }
 

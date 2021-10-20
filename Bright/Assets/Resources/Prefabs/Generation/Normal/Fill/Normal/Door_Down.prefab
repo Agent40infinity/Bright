@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3470632347913232987}
   - component: {fileID: 4983622014249611347}
   - component: {fileID: 3399285180699843480}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,7 +348,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.7862154, g: 0.46795902, b: 0.472448, a: 1}
+    m_Data: {r: 0.75479805, g: 0.39278725, b: 0.41967526, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}

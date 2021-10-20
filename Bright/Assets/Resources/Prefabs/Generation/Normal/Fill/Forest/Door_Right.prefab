@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 1596453367057997099}
   - component: {fileID: 7596043568692111772}
   - component: {fileID: 8731316949369772554}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Underdoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

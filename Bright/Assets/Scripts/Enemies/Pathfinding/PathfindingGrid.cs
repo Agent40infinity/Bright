@@ -13,6 +13,8 @@ public class PathfindingGrid : MonoBehaviour
 
     public bool UpdateMe = false;
 
+    public GridState gridState = GridState.Idle;
+
     void Awake()
     {
         gridSizeX = Mathf.RoundToInt(gridSize.x / (nodeSize * 2));
@@ -35,6 +37,8 @@ public class PathfindingGrid : MonoBehaviour
 
     public void DrawGrid()
     {
+        gridState = GridState.Moved;
+
         grid = new PathfindingNode[gridSizeX, gridSizeY];
         Vector3 bottomLeft = transform.position - Vector3.right * ( gridSize.x / 2) - Vector3.up * gridSize.y / 2;
 
@@ -97,4 +101,10 @@ public class PathfindingGrid : MonoBehaviour
             }
         }
     }
+}
+
+public enum GridState
+{
+    Idle,
+    Moved
 }

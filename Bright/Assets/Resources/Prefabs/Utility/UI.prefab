@@ -1558,7 +1558,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5734570876648200459, guid: 3e0b26893751d4c4f820320f5e81fd7d,
+  m_Sprite: {fileID: 6416538779894519473, guid: 3e0b26893751d4c4f820320f5e81fd7d,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -4191,6 +4191,7 @@ MonoBehaviour:
   optionsMenu: {fileID: 4082147358694680833}
   menu: {fileID: 4082147358694680895}
   fade: {fileID: 5438225160522420381}
+  gameEvent: {fileID: 0}
   gameManager: {fileID: 0}
 --- !u!1 &4082147358695291898
 GameObject:
@@ -15648,7 +15649,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1115710114949383189, guid: 3e0b26893751d4c4f820320f5e81fd7d,
+  m_Sprite: {fileID: -7181760920358977794, guid: 3e0b26893751d4c4f820320f5e81fd7d,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
