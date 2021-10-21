@@ -112,6 +112,12 @@ public class EnemyManager : MonoBehaviour
         int temp;
         int difficulty = room.difficulty;
 
+        switch (room.type)
+        {
+            case "S":
+                return 3;
+        }
+
         switch (difficulty)
         {
             case 1: case 2: case 3:

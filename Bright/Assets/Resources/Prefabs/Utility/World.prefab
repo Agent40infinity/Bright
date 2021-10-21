@@ -133,7 +133,6 @@ MonoBehaviour:
   generateRoomCoords: []
   variantsLeft: 
   variantCount: 20
-  forestVariants: 
   floorParent: {fileID: 3271494771074570560}
   trueWorldGeneration: {fileID: 766273096725587143}
   varietyPath: Prefabs/Generation/Normal/
@@ -190,6 +189,7 @@ MonoBehaviour:
   gridSize: {x: 15, y: 9}
   nodeSize: 0.1
   UpdateMe: 0
+  gridState: 0
 --- !u!114 &4119892454049866097
 MonoBehaviour:
   m_ObjectHideFlags: 0
