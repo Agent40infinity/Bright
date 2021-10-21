@@ -21,6 +21,7 @@ public class PathfindingManager : MonoBehaviour
     public static void PathRequest(Vector3 startPoint, Vector3 endPoint, Action<Vector3[], bool> callback)
     {
         PathRequested newRequest = new PathRequested(startPoint, endPoint, callback);
+        //Debug.Log(startPoint + " " + endPoint);
         manager.pathRequestedQueue.Enqueue(newRequest);
         manager.TryNextProcess();
     }
