@@ -26,12 +26,12 @@ public class PlayerPhysics : MonoBehaviour
     {
         Keypress();
 
-        /*switch (doorActive)
+        switch (doorActive)
         {
             case true:
                 LerpTransition();
                 break;
-        }*/
+        }
 
         switch (interactState)
         {
@@ -157,10 +157,9 @@ public class PlayerPhysics : MonoBehaviour
         }
     }
 
-    /*public void TransitionCall(Vector3 direction)
+    public void TransitionCall(Vector3 direction)
     {
-        lerpPosition = transform.position + (direction * 2);
-        interactState = InteractState.Occupied;
+        lerpPosition = transform.position + (direction * 3);
         doorActive = true;
     }
 
@@ -174,7 +173,7 @@ public class PlayerPhysics : MonoBehaviour
         {
             doorActive = false;
         }
-    }*/
+    }
 }
 
 public enum InteractState

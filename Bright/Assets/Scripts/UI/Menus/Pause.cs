@@ -72,7 +72,6 @@ public class Pause : MonoBehaviour
                 Time.timeScale = 1f;
                 break;
         }
-        Debug.Log(pause);
     }
 
     public void CheckEvent(bool pause)
