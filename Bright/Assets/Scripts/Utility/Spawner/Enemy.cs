@@ -20,7 +20,8 @@ public class Enemy : MonoBehaviour
     public EnemyHealth health;
 
     [Header("Attacking Details")]
-    public float shotDelay;
+    public float maxShotDelay;
+    public float minShotDelay;
     private float shotCooldown;
     public GameObject projectilePrefab;
     public GameObject thornPrefab;
@@ -49,7 +50,7 @@ public class Enemy : MonoBehaviour
             case EnemyType.Wasp:
                 maxHealth = 6;
                 speed = 3;
-                shotDelay = .8f;
+                maxShotDelay = .8f;
                 targetDistance = 2;
                 break;
             case EnemyType.Flower:
@@ -60,7 +61,8 @@ public class Enemy : MonoBehaviour
             case EnemyType.SeedBomb:
                 maxHealth = 2;
                 speed = 4;
-                shotDelay = 2.5f;
+                minShotDelay = 1.5f;
+                maxShotDelay = 4f;
                 pathRefreshRate = 2.5f;
                 break;
             case EnemyType.Sunflower:
@@ -122,7 +124,7 @@ public class Enemy : MonoBehaviour
             case EnemyType.Sunflower:
                 while (true)
                 {
-                    //
+                    // no move
                 }
         }
     }
@@ -171,7 +173,7 @@ public class Enemy : MonoBehaviour
                     {
                         if (shotCooldown <= 0)
                         {
-                            shotCooldown = shotDelay;
+                            shotCooldown = maxShotDelay;
 
                             EnemyBullet bullet = Instantiate(projectilePrefab, transform.position, Quaternion.identity).GetComponent<EnemyBullet>(); 
                             bullet.transform.rotation = Quaternion.LookRotation(Vector3.forward, GameObject.FindWithTag("Player").transform.position - transform.position); 
@@ -190,7 +192,7 @@ public class Enemy : MonoBehaviour
                     transform.position = Vector3.MoveTowards(transform.position, curWaypoint, speed * Time.deltaTime);
                     if (shotCooldown <= 0)
                     {
-                        shotCooldown = shotDelay;
+                        shotCooldown = Random.Range(minShotDelay, maxShotDelay);
 
                         Instantiate(seedlingPrefab, transform.position, Quaternion.identity);
                     }
@@ -198,6 +200,9 @@ public class Enemy : MonoBehaviour
                     {
                         shotCooldown -= Time.deltaTime;
                     }
+                    break;
+                case EnemyType.Sunflower:
+                    // lololol 
                     break;
             }
             yield return null;

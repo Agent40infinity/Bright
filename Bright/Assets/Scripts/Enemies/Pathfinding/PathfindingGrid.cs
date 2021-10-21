@@ -75,7 +75,6 @@ public class PathfindingGrid : MonoBehaviour
                 }
             }
         }
-
         return neighbours;
     }
 
@@ -88,7 +87,6 @@ public class PathfindingGrid : MonoBehaviour
 
         int x = Mathf.RoundToInt((gridSizeX - 1) * locationX);
         int y = Mathf.RoundToInt((gridSizeY - 1) * locationY);
-        //Debug.Log(type + " " + x + " " + y);
         return grid[x, y];
     }
 

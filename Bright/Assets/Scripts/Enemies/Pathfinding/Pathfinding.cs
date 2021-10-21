@@ -5,12 +5,10 @@ using System;
 
 public class Pathfinding : MonoBehaviour
 {
-    //public Transform seeker, target;
-
     PathfindingGrid grid;
     PathfindingManager manager;
 
-    void Awake()
+    void Start()
     {
         grid = GetComponent<PathfindingGrid>();
         manager = GetComponent<PathfindingManager>();
@@ -19,13 +17,13 @@ public class Pathfinding : MonoBehaviour
     public void StartFindingPath(Vector3 startPoint, Vector3 endPoint)
     {
         StartCoroutine(FindPath(startPoint, endPoint));
+        // Debug.Log(startPoint + " " + endPoint);
     }
 
     IEnumerator FindPath(Vector3 startingPos, Vector3 targetPos)
     {
         PathfindingNode startingPoint = grid.NodeFromLocation(startingPos, "startingPos");
         PathfindingNode targetPoint = grid.NodeFromLocation(targetPos, "targetPos");
-
 
         Vector3[] waypoints = new Vector3[0];
         bool pathSuccess = false;
@@ -128,6 +126,6 @@ public class Pathfinding : MonoBehaviour
         {
             return 14 * distanceX + 10 * (distanceY - distanceX);
         }
-
+        
     }
 }
