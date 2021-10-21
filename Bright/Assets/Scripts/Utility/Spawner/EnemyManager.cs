@@ -112,6 +112,12 @@ public class EnemyManager : MonoBehaviour
         int temp;
         int difficulty = room.difficulty;
 
+        switch (room.type)
+        {
+            case "S":
+                return 3;
+        }
+
         switch (difficulty)
         {
             case 1: case 2: case 3:
@@ -145,7 +151,7 @@ public class EnemyManager : MonoBehaviour
             case false:
                 if (enemies.Count <= 0)
                 {
-                    int chance = Random.Range(0, System.Enum.GetValues(typeof(EnemyType)).Length - 1);
+                    int chance = Random.Range(0, System.Enum.GetValues(typeof(EnemyType)).Length - 2);
                     int fullStack = RandomChance();
                     if (fullStack <= 2)
                     {
@@ -163,7 +169,7 @@ public class EnemyManager : MonoBehaviour
                         return enemies[index];
                     }
 
-                    int chance = Random.Range(0, System.Enum.GetValues(typeof(EnemyType)).Length - 1);
+                    int chance = Random.Range(0, System.Enum.GetValues(typeof(EnemyType)).Length - 2);
                     return (EnemyType)System.Enum.GetValues(typeof(EnemyType)).GetValue(chance);
                 }
         }
