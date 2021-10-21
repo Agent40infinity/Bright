@@ -34,14 +34,14 @@ public class Door : MonoBehaviour
         anim.SetBool("Locked", lockState);
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
+    /*public void OnTriggerEnter2D(Collider2D other)
     {
         switch (other.tag)
         {
             case "Player":
                 Vector3 direction = Vector3.zero;
 
-                switch (transform.rotation.z)
+                switch (transform.rotation.eulerAngles.z)
                 {
                     case 0:
                         direction = Vector2.up;
@@ -61,7 +61,7 @@ public class Door : MonoBehaviour
                 physics.TransitionCall(direction);
                 break;
         }
-    }
+    }*/
 }
 
 public enum LockState

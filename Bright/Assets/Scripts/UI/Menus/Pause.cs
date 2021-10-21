@@ -8,6 +8,7 @@ public class Pause : MonoBehaviour
 {
     #region Variables
     public PauseState pauseState = PauseState.Playing; //Checks whether or not the game is paused
+    public OptionState optionState = OptionState.Option;
     public GameObject pauseMenu;
     public GameObject options, main, mainBackground, background; //Creates reference for the pause menu
     public Settings optionsMenu;
@@ -39,22 +40,39 @@ public class Pause : MonoBehaviour
     #region Pause
     public void ResumeG() //Trigger for resuming game and resume button
     {
-        optionsMenu.ChangeBetween(0);
-        OptionsCall(false);
-        pauseMenu.SetActive(false);
-        background.SetActive(false);
-        Time.timeScale = 1f;
-        pauseState = PauseState.Playing;
-        CheckEvent(false);
+        UpdatePause(false);
     }
 
     public void PauseG() //Trigger for pausing game
     {
-        CheckEvent(true);
-        pauseMenu.SetActive(true);
-        background.SetActive(true);
-        Time.timeScale = 0f;
-        pauseState = PauseState.Pause;
+        UpdatePause(true);
+    }
+
+    public void UpdatePause(bool pause)
+    {
+        switch (optionState)
+        {
+            case OptionState.Option:
+                OptionsCall(false);
+                break;
+        }
+
+        CheckEvent(pause);
+        pauseMenu.SetActive(pause);
+        background.SetActive(pause);
+
+        switch (pause)
+        {
+            case true:
+                pauseState = PauseState.Pause;
+                Time.timeScale = 0f;
+                break;
+            case false:
+                pauseState = PauseState.Playing;
+                Time.timeScale = 1f;
+                break;
+        }
+        Debug.Log(pause);
     }
 
     public void CheckEvent(bool pause)
@@ -102,6 +120,17 @@ public class Pause : MonoBehaviour
 
     public void OptionsCall(bool toggle)
     {
+        switch (toggle)
+        {
+            case true:
+                optionState = OptionState.Option;
+                break;
+            case false:
+                optionState = OptionState.Pause;
+                optionsMenu.ChangeBetween(0);
+                break;
+        }
+
         optionsMenu.ToggleOptions(toggle, LastMenuState.PauseMenu);
     }
     #endregion
@@ -111,4 +140,10 @@ public enum PauseState
 {
     Playing,
     Pause
+}
+
+public enum OptionState
+{ 
+    Pause,
+    Option
 }

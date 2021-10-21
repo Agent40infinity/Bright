@@ -126,7 +126,7 @@ public class Settings : MonoBehaviour
                     mainMenu.SetActive(true);
                     break;
                 case LastMenuState.PauseMenu:
-                    pauseMenu.SetActive(true);
+                    pauseMenu.SetActive(true); 
                     break;
             }
             options.SetActive(false);

@@ -26,12 +26,12 @@ public class PlayerPhysics : MonoBehaviour
     {
         Keypress();
 
-        switch (doorActive)
+        /*switch (doorActive)
         {
             case true:
                 LerpTransition();
                 break;
-        }
+        }*/
 
         switch (interactState)
         {
@@ -157,25 +157,24 @@ public class PlayerPhysics : MonoBehaviour
         }
     }
 
-    public void TransitionCall(Vector3 direction)
+    /*public void TransitionCall(Vector3 direction)
     {
-        lerpPosition = transform.position + (direction * 3);
+        lerpPosition = transform.position + (direction * 2);
+        interactState = InteractState.Occupied;
         doorActive = true;
-        Debug.Log("Cool");
     }
 
     public void LerpTransition()
     {
         if (transform.position != lerpPosition)
         {
-            Vector3.Lerp(transform.position, lerpPosition, 100 * Time.deltaTime);
-            Debug.Log("What?");
+            transform.position = Vector3.Lerp(transform.position, lerpPosition, 1000 * Time.deltaTime);
         }
         else
         {
             doorActive = false;
         }
-    }
+    }*/
 }
 
 public enum InteractState

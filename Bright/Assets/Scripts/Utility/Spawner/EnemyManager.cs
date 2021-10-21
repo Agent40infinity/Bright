@@ -51,7 +51,7 @@ public class EnemyManager : MonoBehaviour
                 {
                     case GridState.Moved:
                         pathfinding.gridState = GridState.Idle;
-                        StartCoroutine("Awaken");
+                        SetupSpawn();
                         spawnerState = SpawnerState.Active;
                         break;
                 }
@@ -60,12 +60,6 @@ public class EnemyManager : MonoBehaviour
                 CheckCompletion();
                 break;
         }
-    }
-
-    public IEnumerator Awaken()
-    {
-        yield return new WaitForSeconds(0.1f);
-        SetupSpawn();
     }
 
     public void SetupSpawn()
@@ -87,6 +81,7 @@ public class EnemyManager : MonoBehaviour
         {
             case 0:
                 DoorUpdate(false);
+                Debug.Log("Woo");
                 spawnerState = SpawnerState.Cleared;
                 break;
         }
