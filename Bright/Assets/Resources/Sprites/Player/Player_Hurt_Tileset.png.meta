@@ -38,6 +38,75 @@ TextureImporter:
   - first:
       213: -821557695999469266
     second: Player_HurtRed_6
+  - first:
+      213: 5382085005130307655
+    second: Player_Hurt_Front_1
+  - first:
+      213: -6101312210743828362
+    second: Player_Hurt_Front_2
+  - first:
+      213: -4001520732619435078
+    second: Player_Hurt_Front_3
+  - first:
+      213: 1931919153912797939
+    second: Player_Hurt_Front_4
+  - first:
+      213: -3516028002832647111
+    second: Player_Hurt_Front_5
+  - first:
+      213: -2656546937678712395
+    second: Player_Hurt_Front_6
+  - first:
+      213: -8856806885429984358
+    second: Player_Hurt_Back_1
+  - first:
+      213: 2260402277171286787
+    second: Player_Hurt_Back_2
+  - first:
+      213: 2627509908820805534
+    second: Player_Hurt_Back_3
+  - first:
+      213: -4483769581595141038
+    second: Player_Hurt_Back_4
+  - first:
+      213: 7123738057812927664
+    second: Player_Hurt_Back_5
+  - first:
+      213: -4354548957723056792
+    second: Player_Hurt_Left_1
+  - first:
+      213: 7498739789569695509
+    second: Player_Hurt_Left_2
+  - first:
+      213: 8993250715040246086
+    second: Player_Hurt_Left_3
+  - first:
+      213: 711630131200207511
+    second: Player_Hurt_Left_4
+  - first:
+      213: -9215146791123114814
+    second: Player_Hurt_Left_5
+  - first:
+      213: -3654438700032529276
+    second: Player_Hurt_Left_6
+  - first:
+      213: 5000893808965017593
+    second: Player_Hurt_Right_1
+  - first:
+      213: 7770999877339231278
+    second: Player_Hurt_Right_2
+  - first:
+      213: -3373418991577736815
+    second: Player_Hurt_Right_3
+  - first:
+      213: -3607408009812124479
+    second: Player_Hurt_Right_4
+  - first:
+      213: -3634364187002169629
+    second: Player_Hurt_Right_5
+  - first:
+      213: 1308607821494090437
+    second: Player_Hurt_Right_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -123,7 +192,238 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_Hurt_1
+      name: Player_Hurt_Front_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7489fb1fbc101ba40800000000000000
+      internalID: 5382085005130307655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Hurt_Front_2
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6706cd6ded8c35ba0800000000000000
+      internalID: -6101312210743828362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Hurt_Front_3
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab39bda381eb778c0800000000000000
+      internalID: -4001520732619435078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Hurt_Front_4
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fadeb71c3e8fca10800000000000000
+      internalID: 1931919153912797939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Hurt_Front_5
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c75def82f843fc0800000000000000
+      internalID: -3516028002832647111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Hurt_Front_6
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b1328a92ac022bd0800000000000000
+      internalID: -2656546937678712395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Hurt_Back_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9346b5201d461580800000000000000
+      internalID: -8856806885429984358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Hurt_Back_2
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303574c15ef8e5f10800000000000000
+      internalID: 2260402277171286787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Hurt_Back_3
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e974517475ac67420800000000000000
+      internalID: 2627509908820805534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Hurt_Back_4
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25cd152525376c1c0800000000000000
+      internalID: -4483769581595141038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Hurt_Back_5
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b4eed8350a9cd260800000000000000
+      internalID: 7123738057812927664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Hurt_Left_1
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +437,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a304438bfd8f00cd0800000000000000
-      internalID: -2593799745613578182
+      spriteID: 865aed95bc88193c0800000000000000
+      internalID: -4354548957723056792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Hurt_2
+      name: Player_Hurt_Left_2
       rect:
         serializedVersion: 2
         x: 250
@@ -158,14 +458,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4be88aca96e887bf0800000000000000
-      internalID: -326354388464922956
+      spriteID: 51f936ccb10e01860800000000000000
+      internalID: 7498739789569695509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Hurt_3
+      name: Player_Hurt_Left_3
       rect:
         serializedVersion: 2
         x: 500
@@ -179,14 +479,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db2d48531f5b0ff50800000000000000
-      internalID: 6913225475603354301
+      spriteID: 649600680e17ecc70800000000000000
+      internalID: 8993250715040246086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Hurt_4
+      name: Player_Hurt_Left_4
       rect:
         serializedVersion: 2
         x: 750
@@ -200,14 +500,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2ee135b4cda9f6d0800000000000000
-      internalID: -2956140620026876373
+      spriteID: 79a27ad75d730e900800000000000000
+      internalID: 711630131200207511
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Hurt_5
+      name: Player_Hurt_Left_5
       rect:
         serializedVersion: 2
         x: 1000
@@ -221,14 +521,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7786c3fffad61cec0800000000000000
-      internalID: -3548434428722386825
+      spriteID: 2c4a60241d83d1080800000000000000
+      internalID: -9215146791123114814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Hurt_6
+      name: Player_Hurt_Left_6
       rect:
         serializedVersion: 2
         x: 1250
@@ -242,14 +542,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bba23796b744bdd0800000000000000
-      internalID: -2471271445973259337
+      spriteID: 48cee174d53d84dc0800000000000000
+      internalID: -3654438700032529276
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_HurtRed_1
+      name: Player_Hurt_Right_1
       rect:
         serializedVersion: 2
         x: 0
@@ -263,14 +563,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1754bce8284f312d0800000000000000
-      internalID: -3309032459608570511
+      spriteID: 9ff5fc26c6eb66540800000000000000
+      internalID: 5000893808965017593
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_HurtRed_2
+      name: Player_Hurt_Right_2
       rect:
         serializedVersion: 2
         x: 250
@@ -284,14 +584,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2eaddf03b98f71040800000000000000
-      internalID: 4618433288317295330
+      spriteID: e24b866473328db60800000000000000
+      internalID: 7770999877339231278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_HurtRed_3
+      name: Player_Hurt_Right_3
       rect:
         serializedVersion: 2
         x: 500
@@ -305,14 +605,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db1ba708db3783480800000000000000
-      internalID: -8919251804265729603
+      spriteID: 199d370ec453f21d0800000000000000
+      internalID: -3373418991577736815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_HurtRed_4
+      name: Player_Hurt_Right_4
       rect:
         serializedVersion: 2
         x: 750
@@ -326,14 +626,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab70dc9f42ebbf250800000000000000
-      internalID: 5979581996283529146
+      spriteID: 1ccdf372789efedc0800000000000000
+      internalID: -3607408009812124479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_HurtRed_5
+      name: Player_Hurt_Right_5
       rect:
         serializedVersion: 2
         x: 1000
@@ -347,14 +647,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6465065fa8e914cf0800000000000000
-      internalID: -269760183006112186
+      spriteID: 3e695511705209dc0800000000000000
+      internalID: -3634364187002169629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_HurtRed_6
+      name: Player_Hurt_Right_6
       rect:
         serializedVersion: 2
         x: 1250
@@ -368,8 +668,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e299677d0ad3994f0800000000000000
-      internalID: -821557695999469266
+      spriteID: 5caf37e51eb192210800000000000000
+      internalID: 1308607821494090437
       vertices: []
       indices: 
       edges: []

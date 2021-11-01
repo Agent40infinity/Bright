@@ -68,6 +68,249 @@ TextureImporter:
   - first:
       213: 3324675327559387737
     second: Player_Heal_22
+  - first:
+      213: -4096405538103636465
+    second: Player_Heal_Front_1
+  - first:
+      213: 3825468617447141648
+    second: Player_Heal_Tileset_1
+  - first:
+      213: 7500400657973157192
+    second: Player_Heal_Tileset_2
+  - first:
+      213: 6878103923811657943
+    second: Player_Heal_Tileset_3
+  - first:
+      213: -8543616734769894734
+    second: Player_Heal_Tileset_4
+  - first:
+      213: 6222999883745343456
+    second: Player_Heal_Tileset_5
+  - first:
+      213: -9090502341112087763
+    second: Player_Heal_Tileset_6
+  - first:
+      213: -7882568509753273870
+    second: Player_Heal_Tileset_7
+  - first:
+      213: 2648546436172045344
+    second: Player_Heal_Tileset_8
+  - first:
+      213: 7667288547100578334
+    second: Player_Heal_Tileset_9
+  - first:
+      213: -6888367235370638553
+    second: Player_Heal_Tileset_10
+  - first:
+      213: 5651210831162246720
+    second: Player_Heal_Tileset_11
+  - first:
+      213: -6998515664864300124
+    second: Player_Heal_Tileset_12
+  - first:
+      213: 5195423670143095339
+    second: Player_Heal_Tileset_13
+  - first:
+      213: -4928940140345868028
+    second: Player_Heal_Tileset_14
+  - first:
+      213: 170455015216245620
+    second: Player_Heal_Tileset_15
+  - first:
+      213: -3041549299686871239
+    second: Player_Heal_Tileset_16
+  - first:
+      213: 3522955231930512829
+    second: Player_Heal_Tileset_17
+  - first:
+      213: -8549040990767431634
+    second: Player_Heal_Tileset_18
+  - first:
+      213: -4979601118059122770
+    second: Player_Heal_Tileset_19
+  - first:
+      213: -9158179450602918648
+    second: Player_Heal_Tileset_20
+  - first:
+      213: -1208275054049342743
+    second: Player_Heal_Tileset_21
+  - first:
+      213: 2491998614926278984
+    second: Player_Heal_Back_1
+  - first:
+      213: 3018186364445340269
+    second: Player_Heal_Tileset_23
+  - first:
+      213: 5132816962836554933
+    second: Player_Heal_Tileset_24
+  - first:
+      213: 8668904073815792094
+    second: Player_Heal_Tileset_25
+  - first:
+      213: 5158937450748891288
+    second: Player_Heal_Tileset_26
+  - first:
+      213: -599546805875260457
+    second: Player_Heal_Tileset_27
+  - first:
+      213: -603181061958963239
+    second: Player_Heal_Tileset_28
+  - first:
+      213: 543309248589614520
+    second: Player_Heal_Tileset_29
+  - first:
+      213: -4699400939358837923
+    second: Player_Heal_Tileset_30
+  - first:
+      213: 5531561823194303188
+    second: Player_Heal_Tileset_31
+  - first:
+      213: -4119931559452745032
+    second: Player_Heal_Tileset_32
+  - first:
+      213: -2149102795108531680
+    second: Player_Heal_Tileset_33
+  - first:
+      213: 5121223853432465944
+    second: Player_Heal_Tileset_34
+  - first:
+      213: 649361102231397084
+    second: Player_Heal_Tileset_35
+  - first:
+      213: -4277932641189036128
+    second: Player_Heal_Tileset_36
+  - first:
+      213: -8692138589288703003
+    second: Player_Heal_Right_1
+  - first:
+      213: 726908052108521826
+    second: Player_Heal_Tileset_38
+  - first:
+      213: 9115117968052972932
+    second: Player_Heal_Tileset_39
+  - first:
+      213: -5361230623562562460
+    second: Player_Heal_Tileset_40
+  - first:
+      213: 3343292618923564618
+    second: Player_Heal_Tileset_41
+  - first:
+      213: -8765073616728265722
+    second: Player_Heal_Tileset_42
+  - first:
+      213: -4330654498802783062
+    second: Player_Heal_Tileset_43
+  - first:
+      213: 2264331406226657449
+    second: Player_Heal_Tileset_44
+  - first:
+      213: -6557395805541015844
+    second: Player_Heal_Tileset_45
+  - first:
+      213: -1049925913691159647
+    second: Player_Heal_Tileset_46
+  - first:
+      213: -5897489112519650237
+    second: Player_Heal_Tileset_47
+  - first:
+      213: 5335095449309135093
+    second: Player_Heal_Tileset_48
+  - first:
+      213: -5252803248523646506
+    second: Player_Heal_Tileset_49
+  - first:
+      213: 2693105054020283268
+    second: Player_Heal_Tileset_50
+  - first:
+      213: 8159977500664030897
+    second: Player_Heal_Tileset_51
+  - first:
+      213: 635195914161069559
+    second: Player_Heal_Tileset_52
+  - first:
+      213: 8385958259310825398
+    second: Player_Heal_Tileset_53
+  - first:
+      213: 5766679102154444004
+    second: Player_Heal_Tileset_54
+  - first:
+      213: 3126784159421172817
+    second: Player_Heal_Tileset_55
+  - first:
+      213: -3933989602254547528
+    second: Player_Heal_Tileset_56
+  - first:
+      213: -1849072636103373116
+    second: Player_Heal_Tileset_57
+  - first:
+      213: -2138642398573827079
+    second: Player_Heal_Tileset_58
+  - first:
+      213: 3282433627714071764
+    second: Player_Heal_Left_1
+  - first:
+      213: -6579096694841941672
+    second: Player_Heal_Tileset_60
+  - first:
+      213: -1652445500261887959
+    second: Player_Heal_Tileset_61
+  - first:
+      213: 9113249627210689673
+    second: Player_Heal_Tileset_62
+  - first:
+      213: -4908077529974454633
+    second: Player_Heal_Tileset_63
+  - first:
+      213: 6141042563434406032
+    second: Player_Heal_Tileset_64
+  - first:
+      213: 3603877749402123792
+    second: Player_Heal_Tileset_65
+  - first:
+      213: -8276519982451814117
+    second: Player_Heal_Tileset_66
+  - first:
+      213: -8797667890843558441
+    second: Player_Heal_Tileset_67
+  - first:
+      213: -7291354086347849714
+    second: Player_Heal_Tileset_68
+  - first:
+      213: -7819602731441951758
+    second: Player_Heal_Tileset_69
+  - first:
+      213: 1837700921068749232
+    second: Player_Heal_Tileset_70
+  - first:
+      213: 8700493671223477956
+    second: Player_Heal_Tileset_71
+  - first:
+      213: 8084033583571999025
+    second: Player_Heal_Tileset_72
+  - first:
+      213: 898638150393230659
+    second: Player_Heal_Tileset_73
+  - first:
+      213: 923736946687617957
+    second: Player_Heal_Tileset_74
+  - first:
+      213: 2341864635282594778
+    second: Player_Heal_Tileset_75
+  - first:
+      213: -2490874889975447225
+    second: Player_Heal_Tileset_76
+  - first:
+      213: -2255082281106172455
+    second: Player_Heal_Tileset_77
+  - first:
+      213: 300037194326106420
+    second: Player_Heal_Tileset_78
+  - first:
+      213: -963371421102160340
+    second: Player_Heal_Tileset_79
+  - first:
+      213: -4213417566293818345
+    second: Player_Heal_Tileset_80
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -153,7 +396,1015 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_Heal_1
+      name: Player_Heal_Front_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0ec365edd4a627c0800000000000000
+      internalID: -4096405538103636465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 011775a707bc61530800000000000000
+      internalID: 3825468617447141648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d989bd8a6c61860800000000000000
+      internalID: 7500400657973157192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_3
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8a303b31fe37f50800000000000000
+      internalID: 6878103923811657943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_4
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba25f288d9fe6980800000000000000
+      internalID: -8543616734769894734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_5
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 1750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e730f36c698c5650800000000000000
+      internalID: 6222999883745343456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_6
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b3828c84c08d180800000000000000
+      internalID: -9090502341112087763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_7
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 1750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1d97a34bd7b9290800000000000000
+      internalID: -7882568509753273870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_8
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c592b73f681c420800000000000000
+      internalID: 2648546436172045344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_9
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 1750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12d9508f4ea76a60800000000000000
+      internalID: 7667288547100578334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_10
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7232b4dde7a9760a0800000000000000
+      internalID: -6888367235370638553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 046044e3f422d6e40800000000000000
+      internalID: 5651210831162246720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_12
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a3b1c0251740ee90800000000000000
+      internalID: -6998515664864300124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_13
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22198c2d4ad91840800000000000000
+      internalID: 5195423670143095339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_14
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40145879e03e89bb0800000000000000
+      internalID: -4928940140345868028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_15
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47be528eee39d5200800000000000000
+      internalID: 170455015216245620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_16
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 1500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93f6359d60f3ac5d0800000000000000
+      internalID: -3041549299686871239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_17
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db572d63e1d04e030800000000000000
+      internalID: 3522955231930512829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_18
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 1500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20cd0f7384bb5980800000000000000
+      internalID: -8549040990767431634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_19
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eafa2fa8a27e4eab0800000000000000
+      internalID: -4979601118059122770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_20
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 1500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80de781df4c97e080800000000000000
+      internalID: -9158179450602918648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_21
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ea4c647d385b3fe0800000000000000
+      internalID: -1208275054049342743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Back_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 841427f798b559220800000000000000
+      internalID: 2491998614926278984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_23
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6231b6e180c2e920800000000000000
+      internalID: 3018186364445340269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_24
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4e8f635dd6b3740800000000000000
+      internalID: 5132816962836554933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_25
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed91ab743522e4870800000000000000
+      internalID: 8668904073815792094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_26
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890d85a374a389740800000000000000
+      internalID: 5158937450748891288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_27
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 1250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3c5994b5bfda7f0800000000000000
+      internalID: -599546805875260457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_28
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9df61ba150211a7f0800000000000000
+      internalID: -603181061958963239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_29
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 1250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd4e5d02e83a8700800000000000000
+      internalID: 543309248589614520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_30
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5321608ebf58ceb0800000000000000
+      internalID: -4699400939358837923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_31
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 1250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dacb94bb2e04cc40800000000000000
+      internalID: 5531561823194303188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_32
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b2e5e3331013d6c0800000000000000
+      internalID: -4119931559452745032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022c1cfe46adc22e0800000000000000
+      internalID: -2149102795108531680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_34
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1000
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a691716fd321740800000000000000
+      internalID: 5121223853432465944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_35
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1000
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd265756b7ef20900800000000000000
+      internalID: 649361102231397084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_36
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1000
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aff0e4adeab1a4c0800000000000000
+      internalID: -4277932641189036128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Right_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb5bf681025f5780800000000000000
+      internalID: -8692138589288703003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_38
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 261bc46a50f761a00800000000000000
+      internalID: 726908052108521826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_39
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48de39b7f776f7e70800000000000000
+      internalID: 9115117968052972932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_40
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4648b9327251995b0800000000000000
+      internalID: -5361230623562562460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_41
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4edf136ce2c56e20800000000000000
+      internalID: 3343292618923564618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_42
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c63c42cf33c5680800000000000000
+      internalID: -8765073616728265722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_43
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaca9e99dac66e3c0800000000000000
+      internalID: -4330654498802783062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_44
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a096e1ca658c6f10800000000000000
+      internalID: 2264331406226657449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_45
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde5717e1437ff4a0800000000000000
+      internalID: -6557395805541015844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_46
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a306f9b1f9ed61f0800000000000000
+      internalID: -1049925913691159647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_47
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 750
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 344588df5e8e72ea0800000000000000
+      internalID: -5897489112519650237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_48
       rect:
         serializedVersion: 2
         x: 0
@@ -167,14 +1418,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c60020cbdfc23a70800000000000000
-      internalID: 8805328764190852805
+      spriteID: 5f0cfda6b011a0a40800000000000000
+      internalID: 5335095449309135093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Heal_2
+      name: Player_Heal_Tileset_49
       rect:
         serializedVersion: 2
         x: 250
@@ -188,14 +1439,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b267ba3528220a7c0800000000000000
-      internalID: -4062208920743348693
+      spriteID: 6d9eab8a64b4a17b0800000000000000
+      internalID: -5252803248523646506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Heal_3
+      name: Player_Heal_Tileset_50
       rect:
         serializedVersion: 2
         x: 500
@@ -209,14 +1460,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab81c702e64b8cb20800000000000000
-      internalID: 3154969924057438394
+      spriteID: 48b20b727c4df5520800000000000000
+      internalID: 2693105054020283268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Heal_4
+      name: Player_Heal_Tileset_51
       rect:
         serializedVersion: 2
         x: 750
@@ -230,14 +1481,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: add18e75dedd76510800000000000000
-      internalID: 1542445408849501658
+      spriteID: 1b6624ead401e3170800000000000000
+      internalID: 8159977500664030897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Heal_5
+      name: Player_Heal_Tileset_52
       rect:
         serializedVersion: 2
         x: 1000
@@ -251,14 +1502,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e0556762d2c781f0800000000000000
-      internalID: -1042650579779366679
+      spriteID: 7fd995a815ba0d800800000000000000
+      internalID: 635195914161069559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Heal_6
+      name: Player_Heal_Tileset_53
       rect:
         serializedVersion: 2
         x: 1250
@@ -272,14 +1523,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c0734a591e5073f0800000000000000
-      internalID: -905120062119907131
+      spriteID: 6bf897b2b98e06470800000000000000
+      internalID: 8385958259310825398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Heal_7
+      name: Player_Heal_Tileset_54
       rect:
         serializedVersion: 2
         x: 1500
@@ -293,14 +1544,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b260642863212950800000000000000
-      internalID: 6422453473800905397
+      spriteID: 4ec8599171c570050800000000000000
+      internalID: 5766679102154444004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Heal_8
+      name: Player_Heal_Tileset_55
       rect:
         serializedVersion: 2
         x: 1750
@@ -314,14 +1565,77 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26bcebd1ca19a4490800000000000000
-      internalID: -7761230839400182942
+      spriteID: 15c0e9760a1946b20800000000000000
+      internalID: 3126784159421172817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Heal_9
+      name: Player_Heal_Tileset_56
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b59987cc49a769c0800000000000000
+      internalID: -3933989602254547528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_57
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cec929fb36c656e0800000000000000
+      internalID: -1849072636103373116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_58
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 500
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fbea6bc1140252e0800000000000000
+      internalID: -2138642398573827079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Left_1
       rect:
         serializedVersion: 2
         x: 0
@@ -335,14 +1649,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84d733906aa19e020800000000000000
-      internalID: 2371455979208539464
+      spriteID: 4dca1ba4efb8d8d20800000000000000
+      internalID: 3282433627714071764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Heal_10
+      name: Player_Heal_Tileset_60
       rect:
         serializedVersion: 2
         x: 250
@@ -356,14 +1670,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39d703c3ef20330b0800000000000000
-      internalID: -5750249008267231853
+      spriteID: 851eff0e96a52b4a0800000000000000
+      internalID: -6579096694841941672
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Heal_11
+      name: Player_Heal_Tileset_61
       rect:
         serializedVersion: 2
         x: 500
@@ -377,14 +1691,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 117e492d68e4c4cf0800000000000000
-      internalID: -266751936956143855
+      spriteID: 920923292955119e0800000000000000
+      internalID: -1652445500261887959
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Heal_12
+      name: Player_Heal_Tileset_62
       rect:
         serializedVersion: 2
         x: 750
@@ -398,14 +1712,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3f24d7ea8da1e0c0800000000000000
-      internalID: -4548163336560955586
+      spriteID: 98caa5b7044c87e70800000000000000
+      internalID: 9113249627210689673
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Heal_13
+      name: Player_Heal_Tileset_63
       rect:
         serializedVersion: 2
         x: 1000
@@ -419,14 +1733,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d42e35b843c683350800000000000000
-      internalID: 5996661876775445069
+      spriteID: 796cbc79d7103ebb0800000000000000
+      internalID: -4908077529974454633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Heal_14
+      name: Player_Heal_Tileset_64
       rect:
         serializedVersion: 2
         x: 1250
@@ -440,14 +1754,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f6b20199677a6bb0800000000000000
-      internalID: -4942006345797552396
+      spriteID: 090ef00ccad593550800000000000000
+      internalID: 6141042563434406032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Heal_15
+      name: Player_Heal_Tileset_65
       rect:
         serializedVersion: 2
         x: 1500
@@ -461,14 +1775,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e67aa18b90438e940800000000000000
-      internalID: 5325563775713716078
+      spriteID: 01e3c0b08bb830230800000000000000
+      internalID: 3603877749402123792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Heal_16
+      name: Player_Heal_Tileset_66
       rect:
         serializedVersion: 2
         x: 1750
@@ -482,14 +1796,77 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d750dc41db88bcfb0800000000000000
-      internalID: -4626453846513875587
+      spriteID: b1199854de4e32d80800000000000000
+      internalID: -8276519982451814117
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Heal_17
+      name: Player_Heal_Tileset_67
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ddd8625aa768e580800000000000000
+      internalID: -8797667890843558441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_68
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00c4a7f618efca90800000000000000
+      internalID: -7291354086347849714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_69
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb6abbeeb03b7390800000000000000
+      internalID: -7819602731441951758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_70
       rect:
         serializedVersion: 2
         x: 0
@@ -503,14 +1880,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64d8bf90d60008a70800000000000000
-      internalID: 8827055737965088070
+      spriteID: 0b106bb4043d08910800000000000000
+      internalID: 1837700921068749232
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Heal_18
+      name: Player_Heal_Tileset_71
       rect:
         serializedVersion: 2
         x: 250
@@ -524,14 +1901,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8a6317a7ee24ca60800000000000000
-      internalID: 7693325635931040395
+      spriteID: 4c64fc395ec5eb870800000000000000
+      internalID: 8700493671223477956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Heal_19
+      name: Player_Heal_Tileset_72
       rect:
         serializedVersion: 2
         x: 500
@@ -545,14 +1922,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56f3699e80cda7290800000000000000
-      internalID: -7891753466176585883
+      spriteID: 139132596b1403070800000000000000
+      internalID: 8084033583571999025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Heal_20
+      name: Player_Heal_Tileset_73
       rect:
         serializedVersion: 2
         x: 750
@@ -566,14 +1943,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 314d9fcb65a3a3b60800000000000000
-      internalID: 7726552254919595027
+      spriteID: 3457dc7f2aa987c00800000000000000
+      internalID: 898638150393230659
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Heal_21
+      name: Player_Heal_Tileset_74
       rect:
         serializedVersion: 2
         x: 1000
@@ -587,14 +1964,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c3d1b4500ad5dc30800000000000000
-      internalID: 4383649507270841282
+      spriteID: 5ab283ddbd5c1dc00800000000000000
+      internalID: 923736946687617957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Heal_22
+      name: Player_Heal_Tileset_75
       rect:
         serializedVersion: 2
         x: 1250
@@ -608,8 +1985,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95acea4789e932e20800000000000000
-      internalID: 3324675327559387737
+      spriteID: adb91126a79ff7020800000000000000
+      internalID: 2341864635282594778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_76
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 741c21b1c72ae6dd0800000000000000
+      internalID: -2490874889975447225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_77
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d5936ffc9654b0e0800000000000000
+      internalID: -2255082281106172455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_78
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43166331d32f92400800000000000000
+      internalID: 300037194326106420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_79
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c264172fbca61a2f0800000000000000
+      internalID: -963371421102160340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Heal_Tileset_80
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7148aae0c0fe685c0800000000000000
+      internalID: -4213417566293818345
       vertices: []
       indices: 
       edges: []
