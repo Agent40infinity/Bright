@@ -11,9 +11,7 @@ public class PathfindingGrid : MonoBehaviour
 
     private int gridSizeX, gridSizeY;
 
-    //public bool UpdateMe = false;
-
-    //public GridState gridState = GridState.Idle;
+    public GridState gridState = GridState.Idle;
 
     void Awake()
     {
@@ -35,11 +33,10 @@ public class PathfindingGrid : MonoBehaviour
         gameObject.transform.parent = parent;
     }
 
-    //public void CallDrawGrid()
-    //{
-    //    DrawGrid();
-    //    gridState = GridState.Moved;
-    //}
+    public void CallDrawGrid()
+    {
+        StartCoroutine("delayGridState");
+    }
 
     public void DrawGrid()
     {
@@ -55,6 +52,13 @@ public class PathfindingGrid : MonoBehaviour
                 grid[x, y] = new PathfindingNode(isWalkable, thisWorldPos, x , y);
             }
         }
+    }
+
+    public IEnumerator delayGridState()
+    {
+        DrawGrid();
+        yield return new WaitForSeconds(0.1f);
+        gridState = GridState.Moved;
     }
 
     public List<PathfindingNode> GetNeighbours(PathfindingNode node)
@@ -105,8 +109,8 @@ public class PathfindingGrid : MonoBehaviour
     }
 }
 
-//public enum GridState
-//{
- //   Idle,
-//    Moved
-//}
+public enum GridState
+{
+    Idle,
+    Moved
+}

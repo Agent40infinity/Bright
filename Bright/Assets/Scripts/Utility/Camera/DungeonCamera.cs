@@ -16,7 +16,6 @@ public class DungeonCamera : MonoBehaviour
     [Header("Reference")]
     public DungeonGeneration generation;
     public PathfindingGrid pathfinding;
-    public GameObject pathfindingPrefab;
 
     public void PathfindingCall()
     {
@@ -38,13 +37,16 @@ public class DungeonCamera : MonoBehaviour
     {
         if (transform.position != cameraPos)
         {
-            Destroy(GameObject.FindWithTag("Pathfinding"));
             transform.position = Vector3.Lerp(transform.position, cameraPos, switchSpeed * Time.deltaTime);
         }
         else
         {
             moveState = MoveState.Inactive;
-            Instantiate(pathfindingPrefab, transform.position, transform.rotation);
+
+            if (pathfinding != null)
+            {
+                pathfinding.CallDrawGrid();
+            }
         }
     }
 

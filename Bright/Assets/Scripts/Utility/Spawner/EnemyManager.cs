@@ -47,11 +47,20 @@ public class EnemyManager : MonoBehaviour
         switch (spawnerState)
         {
             case SpawnerState.Idle:
-                SetupSpawn();
-                spawnerState = SpawnerState.Active;
+                switch (pathfinding.gridState)
+                {
+                    case GridState.Moved:
+                        pathfinding.gridState = GridState.Idle;
+                        SetupSpawn();
+                        spawnerState = SpawnerState.Active;
+                        break;
+                }
                 break;
             case SpawnerState.Active:
                 CheckCompletion();
+                break;
+            case SpawnerState.Cleared:
+                pathfinding.gridState = GridState.Idle;
                 break;
         }
     }
@@ -67,6 +76,8 @@ public class EnemyManager : MonoBehaviour
         {
             SpawnEnemy(enemiesToSpawn[i], GenerateSpawnLocation());
         }
+
+        Debug.Log("Enemies Spawned");
     }
 
     public void CheckCompletion()
