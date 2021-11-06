@@ -284,6 +284,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 6740516120160970101, guid: 4b7d10d9585ee574a9d87c4b451b21a7,
+        type: 3}
+      propertyPath: pathfindingPrefab
+      value: 
+      objectReference: {fileID: 531030351614847398, guid: 737edfacf0b560447a4052837196a29b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b7d10d9585ee574a9d87c4b451b21a7, type: 3}
 --- !u!114 &1412082655 stripped

@@ -135,6 +135,9 @@ MonoBehaviour:
   moveState: 1
   switchSpeed: 15
   generation: {fileID: 0}
+  pathfinding: {fileID: 0}
+  pathfindingPrefab: {fileID: 531030351614847398, guid: 737edfacf0b560447a4052837196a29b,
+    type: 3}
 --- !u!20 &6740516120160970100
 Camera:
   m_ObjectHideFlags: 0

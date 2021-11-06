@@ -17,14 +17,14 @@ public class Pathfinding : MonoBehaviour
     public void StartFindingPath(Vector3 startPoint, Vector3 endPoint)
     {
         StartCoroutine(FindPath(startPoint, endPoint));
-        // Debug.Log(startPoint + " " + endPoint);
+        Debug.Log(startPoint + " The Start and the End " + endPoint);
     }
 
     IEnumerator FindPath(Vector3 startingPos, Vector3 targetPos)
     {
         PathfindingNode startingPoint = grid.NodeFromLocation(startingPos, "startingPos");
         PathfindingNode targetPoint = grid.NodeFromLocation(targetPos, "targetPos");
-
+        Debug.Log(startingPoint + " " + targetPoint);
         Vector3[] waypoints = new Vector3[0];
         bool pathSuccess = false;
 
@@ -33,7 +33,6 @@ public class Pathfinding : MonoBehaviour
             PathfindingHeapCollection<PathfindingNode> openList = new PathfindingHeapCollection<PathfindingNode>(grid.MaxSize);
             HashSet<PathfindingNode> closedList = new HashSet<PathfindingNode>();
             openList.Add(startingPoint);
-
             while (openList.Count > 0)
             {
                 PathfindingNode currentNode = openList.RemoveFirst();

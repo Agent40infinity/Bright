@@ -43,18 +43,12 @@ public class EnemyManager : MonoBehaviour
     }
 
     public void Update()
-    { 
+    {
         switch (spawnerState)
         {
             case SpawnerState.Idle:
-                switch (pathfinding.gridState)
-                {
-                    case GridState.Moved:
-                        pathfinding.gridState = GridState.Idle;
-                        SetupSpawn();
-                        spawnerState = SpawnerState.Active;
-                        break;
-                }
+                SetupSpawn();
+                spawnerState = SpawnerState.Active;
                 break;
             case SpawnerState.Active:
                 CheckCompletion();
