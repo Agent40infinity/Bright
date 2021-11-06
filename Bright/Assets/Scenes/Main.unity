@@ -336,6 +336,21 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 531038766}
+    - target: {fileID: 4082147358768127313, guid: aecd507e9cccefb4aae7564449c4f47d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082147358845577999, guid: aecd507e9cccefb4aae7564449c4f47d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082147359270927868, guid: aecd507e9cccefb4aae7564449c4f47d,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.6666667
+      objectReference: {fileID: 0}
     - target: {fileID: 4082147359524886843, guid: aecd507e9cccefb4aae7564449c4f47d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -450,6 +465,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5701940731800011249, guid: aecd507e9cccefb4aae7564449c4f47d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aecd507e9cccefb4aae7564449c4f47d, type: 3}
