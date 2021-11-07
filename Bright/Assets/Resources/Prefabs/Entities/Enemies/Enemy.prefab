@@ -55,7 +55,8 @@ MonoBehaviour:
   animPath: Animations/Enemy/
   anim: {fileID: 1920332683507733881}
   health: {fileID: 4260904991000783566}
-  shotDelay: 0.8
+  maxShotDelay: 0
+  minShotDelay: 0
   projectilePrefab: {fileID: 4503220454523596049, guid: ecf6f0607157760428b145c8b1e5fb5d,
     type: 3}
   thornPrefab: {fileID: 6400317253250238302, guid: a412e80d20b2c5b44b441c38a4a87624,

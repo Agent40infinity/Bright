@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
     public PlayerPhysics physics;
     public Animator anim;
     public GameObject deathScreen;
+    public SpriteRenderer playerSprite;
 
     public void Awake()
     {
@@ -53,6 +54,7 @@ public class PlayerHealth : MonoBehaviour
         {
             case FrameState.Active:
                 iFrameTimer -= Time.deltaTime;
+
                 if (iFrameTimer < 0) //Checks that enough time has passed so the iFrame can end and allow the player to take damage again.
                 {
                     iFrameTimer = iFrameTimerReset;

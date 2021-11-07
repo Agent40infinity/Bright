@@ -9900,6 +9900,7 @@ MonoBehaviour:
   maxHealth: 3
   iFrameTimerReset: 1
   frameState: 0
+  flashLength: 1
   physics: {fileID: 7039946160677048483}
   anim: {fileID: 8647023159686334512}
   deathScreen: {fileID: 0}
