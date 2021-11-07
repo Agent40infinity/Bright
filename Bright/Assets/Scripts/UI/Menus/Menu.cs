@@ -35,7 +35,6 @@ public class Menu : MonoBehaviour
     public void Start() //Used to load resolutions and create list for the dropdown, collects both Width and Height seperately
     {
         gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
-        selectors = gameObject.GetComponentInParent<UIEvents>();
         StartCoroutine("LoadScreen");
     }
 

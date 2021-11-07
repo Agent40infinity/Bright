@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class UIEvents : MonoBehaviour
 {
     public GameObject previousSelected;
-    public List<GameObject> selectors = new List<GameObject>();
+    public List<RectTransform> selectors = new List<RectTransform>();
     public float offset;
 
     public void Start()
@@ -30,13 +30,13 @@ public class UIEvents : MonoBehaviour
             case "Button":
                 if (selected != previousSelected)
                 {
-                    RectTransform rect = selected.GetComponent<RectTransform>();
-                    float rectPosition = rect.sizeDelta.x / 2 + offset;
+                    RectTransform rect = selected.GetComponentInChildren<RectTransform>();
+                    float rectPosition = rect.rect.width / 2 + offset;
 
                     Visibility(true);
 
-                    selectors[0].transform.position = new Vector2(selected.transform.position.x + rectPosition, selected.transform.position.y);
-                    selectors[1].transform.position = new Vector2(selected.transform.position.x - rectPosition, selected.transform.position.y);
+                    selectors[0].position = new Vector2(rect.position.x + rectPosition, rect.position.y);
+                    selectors[1].position = new Vector2(rect.position.x - rectPosition, rect.position.y);
 
                     previousSelected = selected;
                 }
@@ -48,7 +48,7 @@ public class UIEvents : MonoBehaviour
     {
         for (int i = 0; i < selectors.Count; i++)
         {
-            selectors[i].SetActive(active);
+            selectors[i].gameObject.SetActive(active);
         }
     }
 }

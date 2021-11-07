@@ -23,8 +23,7 @@ public class Settings : MonoBehaviour
     public GameObject pauseMenu;
 
     public void Start()
-    {
-        selectors = gameObject.GetComponentInParent<UIEvents>();
+    { 
 
         resolutions = Screen.resolutions;
         resolutionDropdown.ClearOptions();
