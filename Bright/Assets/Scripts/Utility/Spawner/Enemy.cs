@@ -72,11 +72,6 @@ public class Enemy : MonoBehaviour
         } 
     }
 
-    public void Awake()
-    {
-        
-    }
-
     public void Start()
     {
         anim = gameObject.GetComponent<Animator>();

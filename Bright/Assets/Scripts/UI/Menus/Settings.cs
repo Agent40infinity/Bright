@@ -10,12 +10,13 @@ public class Settings : MonoBehaviour
 {
     public GameObject mainMenu, options, general, video, audioRef, controls;
     public AudioMixer masterMixer;
+    public UIEvents selectors;
 
     Resolution[] resolutions; //Creates reference for all resolutions within Unity
     public Dropdown resolutionDropdown; //Creates reference for the resolution dropdown 
 
     //public Text up, down, left, right, jump, attack, dash;
-    public TextMeshProUGUI moveLeft, moveRight, moveUp, moveDown, shootLeft, shootRight, shootUp, shootDown, attack, heal, parry, trueSight, interact, switchWeapon, inventory, pause;
+    public TextMeshProUGUI moveLeft, moveRight, moveUp, moveDown, shootLeft, shootRight, shootUp, shootDown, attack, heal, trueSight, interact, switchWeapon, pause;
     private GameObject currentKey;
 
     public LastMenuState lastMenuState;
@@ -23,6 +24,8 @@ public class Settings : MonoBehaviour
 
     public void Start()
     {
+        selectors = gameObject.GetComponentInParent<UIEvents>();
+
         resolutions = Screen.resolutions;
         resolutionDropdown.ClearOptions();
 
@@ -58,11 +61,9 @@ public class Settings : MonoBehaviour
         shootDown.text = CheckSpecial(GameManager.keybind["ShootDown"]);
         attack.text = CheckSpecial(GameManager.keybind["Melee"]);
         heal.text = CheckSpecial(GameManager.keybind["Heal"]);
-        parry.text = CheckSpecial(GameManager.keybind["Parry"]);
         trueSight.text = CheckSpecial(GameManager.keybind["TrueSight"]);
         interact.text = CheckSpecial(GameManager.keybind["Interact"]);
         switchWeapon.text = CheckSpecial(GameManager.keybind["SwitchWeapon"]);
-        inventory.text = CheckSpecial(GameManager.keybind["Inventory"]);
         pause.text = CheckSpecial(GameManager.keybind["Pause"]);
     }
 
@@ -118,7 +119,7 @@ public class Settings : MonoBehaviour
             pauseMenu.SetActive(false);
             options.SetActive(true);
         }
-        else if (toggle == false)
+        else
         {
             switch (lastMenuState)
             {
@@ -131,6 +132,8 @@ public class Settings : MonoBehaviour
             }
             options.SetActive(false);
         }
+
+        selectors.Visibility(false);
     }
 
     public void ChangeBetween(int option) //Trigger for Settings - sets active layer/pannel
@@ -164,6 +167,8 @@ public class Settings : MonoBehaviour
                 controls.SetActive(true);
                 break;
         }
+
+        selectors.Visibility(false);
     }
 
     public void MasterVolume(float volume) //Trigger for changing volume of game's master channel

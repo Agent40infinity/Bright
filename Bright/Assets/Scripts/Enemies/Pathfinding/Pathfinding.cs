@@ -17,14 +17,14 @@ public class Pathfinding : MonoBehaviour
     public void StartFindingPath(Vector3 startPoint, Vector3 endPoint)
     {
         StartCoroutine(FindPath(startPoint, endPoint));
-        //Debug.Log(startPoint + " The Start and the End " + endPoint);
     }
 
     IEnumerator FindPath(Vector3 startingPos, Vector3 targetPos)
     {
+        Debug.Log("Path found");
         PathfindingNode startingPoint = grid.NodeFromLocation(startingPos, "startingPos");
         PathfindingNode targetPoint = grid.NodeFromLocation(targetPos, "targetPos");
-        //Debug.Log(startingPoint + " " + targetPoint);
+        Debug.Log("Enemy Origin: " + startingPos + " | Player Origin: " + targetPos + "\n" + "Enemy To Grid: " + new Vector2(startingPoint.gridX, startingPoint.gridY) + " | Player to Grid: " + new Vector2(targetPoint.gridX, targetPoint.gridY));
         Vector3[] waypoints = new Vector3[0];
         bool pathSuccess = false;
 

@@ -84,13 +84,35 @@ public class PathfindingGrid : MonoBehaviour
 
     public PathfindingNode NodeFromLocation(Vector2 worldPosition, string type)
     {
-        float locationX = (worldPosition.x + gridSize.x / 2) / gridSize.x;
-        float locationY = (worldPosition.y + gridSize.y / 2) / gridSize.y;
+        DungeonGeneration dungeon = GameManager.dungeonRef.GetComponent<DungeonGeneration>();
+        Vector2Int worldStart = new Vector2Int(dungeon.roomMaxWidth / 2, dungeon.roomMaxHeight / 2);
+        Vector2 offset = new Vector2Int(GameManager.currentRoom.y - worldStart.y, -(GameManager.currentRoom.x - worldStart.x));
+        //Debug.Log("New Path, Offset: " + offset);
+        //Debug.Log("World Position: " + worldPosition);
+        float locationX = Mathf.Abs((worldPosition.x + gridSize.x / 2) / gridSize.x);
+        float locationY = Mathf.Abs((worldPosition.y + gridSize.y / 2) / gridSize.y);
+        //Debug.Log("Pre-Calculate: " + new Vector2(locationX, locationY));
+
+        switch (Mathf.Sign(offset.x))
+        {
+            case 1:
+                locationX = Mathf.Abs(locationX - offset.x);
+                switch (Mathf.Sign(offset.y))
+                {
+                    case 1:
+                        locationY = Mathf.Abs(locationY - offset.y);
+                        break;
+                }
+                break;
+        }
+
+        //Debug.Log("Location Calculation: " + new Vector2(locationX, locationY));
         locationX = Mathf.Clamp01(locationX);
         locationY = Mathf.Clamp01(locationY);
+        //Debug.Log("Clamp calculation: " + new Vector2(locationX, locationY));
 
         int x = Mathf.RoundToInt((gridSizeX - 1) * locationX);
-        int y = Mathf.RoundToInt((gridSizeY - 1) * locationY);
+        int y = Mathf.RoundToInt((gridSizeY - 1) * locationY); 
         return grid[x, y];
     }
 

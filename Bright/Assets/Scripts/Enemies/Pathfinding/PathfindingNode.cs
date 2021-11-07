@@ -19,6 +19,7 @@ public class PathfindingNode : IHeapItem<PathfindingNode>
     {
         walkable = isWalkable;
         worldPosition = thisWorldPos;
+        //Debug.Log("Node Position: " + new Vector2(gridPosX, gridPosY) + "World Position: " + thisWorldPos);
         gridX = gridPosX;
         gridY = gridPosY;
     }

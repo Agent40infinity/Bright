@@ -15,6 +15,7 @@ public class Pause : MonoBehaviour
     public Menu menu;
     public FadeController fade;
     public GameObject gameEvent;
+    public UIEvents selectors;
 
     public GameManager gameManager;
     #endregion
@@ -66,10 +67,15 @@ public class Pause : MonoBehaviour
             case true:
                 pauseState = PauseState.Pause;
                 Time.timeScale = 0f;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
                 break;
             case false:
                 pauseState = PauseState.Playing;
                 Time.timeScale = 1f;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                selectors.Visibility(false);
                 break;
         }
     }
@@ -111,6 +117,7 @@ public class Pause : MonoBehaviour
         main.SetActive(true);
         mainBackground.SetActive(true);
         background.SetActive(false);
+        selectors.Visibility(false);
 
         fade.FadeIn();
         menu.music.Play();
