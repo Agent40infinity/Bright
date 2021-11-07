@@ -17,11 +17,8 @@ public class PlayerHealth : MonoBehaviour
     public PlayerPhysics physics;
     public Animator anim;
     public GameObject deathScreen;
-<<<<<<< Updated upstream
-    public SpriteRenderer playerSprite;
-=======
-    public AudioSource audio;
->>>>>>> Stashed changes
+
+    public AudioSource death;
 
     public void Awake()
     {
@@ -88,7 +85,7 @@ public class PlayerHealth : MonoBehaviour
     public IEnumerator Death()
     {
         anim.SetBool("isDead", true);
-        audio.Play();
+        death.Play();
         yield return new WaitForSeconds(1.9f);
         deathScreen.SetActive(true);
         Cursor.lockState = CursorLockMode.None;

@@ -9901,11 +9901,10 @@ MonoBehaviour:
   maxHealth: 3
   iFrameTimerReset: 1
   frameState: 0
-  flashLength: 1
   physics: {fileID: 7039946160677048483}
   anim: {fileID: 8647023159686334512}
   deathScreen: {fileID: 0}
-  audio: {fileID: 3102542712841829619}
+  death: {fileID: 3102542712841829619}
 --- !u!114 &7039946160677048483
 MonoBehaviour:
   m_ObjectHideFlags: 0
