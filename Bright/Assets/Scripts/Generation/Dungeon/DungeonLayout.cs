@@ -31,6 +31,8 @@ public class DungeonLayout : MonoBehaviour
         { -1, new List<bool> { false, false, false, true } },
         { 2, new List<bool> { true, true, true, true } },
         { 4, new List<bool> { true, true, true, true } },
+        { 18, new List<bool> {true, true, true, true } },
+        { 20, new List<bool> { false, true, true, false } },
     };
 
     [Header("Difficulty")]
